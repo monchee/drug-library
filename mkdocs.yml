@@ -44,6 +44,9 @@ theme:
     - content.footnote.tooltips
     - toc.follow
   topbar_style: primary
+  icon:
+    logo: material/test-tube
+  favicon: assets/test-tube.svg
 
 plugins:
   - search:
