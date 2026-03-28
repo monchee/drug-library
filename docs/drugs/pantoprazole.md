@@ -3,7 +3,7 @@ title: Pantoprazole
 tags: [ppi, gastric, intravenous, spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
 ---
 
 # Pantoprazole (Somac)
@@ -77,3 +77,8 @@ Prepare in this order, using a fresh syringe for each step.
     Testing with concentrations >0.4 mg/mL may cause false-positive (irritant) results and is generally avoided unless clinically indicated.
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
+
+---
+
+## Notes
+- **Spreadsheet discrepancy:** The Medication List 2021 spreadsheet labels the SPT concentration as "Neat (40 mg/mL)". This is a spreadsheet labelling error — the correct reconstituted concentration is **4 mg/mL** (40 mg powder + 10 mL NS). The spreadsheet needs correction. This page reflects the correct calculation.

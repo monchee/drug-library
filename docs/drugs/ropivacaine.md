@@ -3,7 +3,7 @@ title: Ropivacaine
 tags: [local-anaesthetic, amide, spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
 ---
 
 # Ropivacaine (Naropin)
@@ -26,7 +26,7 @@ version: 1.1
 ### Equipment needed
 - 1 × Ropivacaine 2 mg/mL vial (Plain)
 - Normal saline (NS) — for IDT dilutions
-- 1 mL syringes × 5 (for test doses/dilutions)
+- 1 mL syringes × 2 (one for SPT, one for IDT)
 - 25 G needles
 
 ### Step 1 — Prepare the SPT solution (2 mg/mL — neat)
@@ -36,23 +36,9 @@ version: 1.1
 ### Step 2 — Prepare IDT dilutions
 Prepare in this order, using a fresh syringe for each step.
 
-1. **IDT 0.002 mg/mL (1:1,000):**
-    - **A:** Draw **0.1 mL** of stock (2 mg/mL) into a 1 mL syringe. Add **0.9 mL NS**. Mix. (This is 0.2 mg/mL — 1:10).
-    - **B:** Draw **0.1 mL** of **A** (0.2 mg/mL) into a new 1 mL syringe. Add **0.9 mL NS**. Mix. (This is 0.02 mg/mL — 1:100).
-    - **C:** Draw **0.1 mL** of **B** (0.02 mg/mL) into a new 1 mL syringe. Add **0.9 mL NS**. Mix. (This is **0.002 mg/mL — 1:1,000**).
-    - Label: **"Ropivacaine IDT 0.002 mg/mL"**.
-
-2. **IDT 0.02 mg/mL (1:100):**
-    - Draw **0.1 mL** of syringe **B** (0.02 mg/mL) into a new 1 mL syringe.
-    - Label: **"Ropivacaine IDT 0.02 mg/mL"**.
-
-3. **IDT 0.2 mg/mL (1:10):**
-    - Draw **0.1 mL** of syringe **A** (0.2 mg/mL) into a new 1 mL syringe.
+1. **IDT 0.2 mg/mL (1:10):**
+    - Draw **0.1 mL** of stock (2 mg/mL) into a 1 mL syringe. Add **0.9 mL NS**. Mix. (This is **0.2 mg/mL — 1:10**).
     - Label: **"Ropivacaine IDT 0.2 mg/mL"**.
-
-4. **IDT 2 mg/mL (Neat):**
-    - Draw up a fresh **0.5 mL** of stock (2 mg/mL) into a 1 mL syringe.
-    - Label: **"Ropivacaine IDT 2 mg/mL — Neat"**.
 
 ---
 
@@ -72,9 +58,12 @@ Prepare in this order, using a fresh syringe for each step.
 ### Dilution series
 | Step | Dilution | Concentration | Preparation |
 |---|---|---|---|
-| 1 | 1:1,000 | 0.002 mg/mL | 0.1 mL of 0.02 mg/mL + 0.9 mL NS |
-| 2 | 1:100 | 0.02 mg/mL | 0.1 mL of 0.2 mg/mL + 0.9 mL NS |
-| 3 | 1:10 | 0.2 mg/mL | 0.1 mL neat + 0.9 mL NS |
-| 4 | Neat | 2 mg/mL | Undiluted stock |
+| 1 | 1:10 | 0.2 mg/mL | 0.1 mL neat + 0.9 mL NS |
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
+
+---
+
+## Notes
+- **Med Chart 2021 (authoritative, GA Test):** IDT at 1:10 only.
+- **Medication List 2021 alternative:** Lists a fuller IDT series: 1:1,000, 1:100, 1:10, and Neat. This page follows Med Chart 2021 (1:10 only). Confirm with the clinical team whether the fuller series is required.

@@ -4,6 +4,19 @@ All significant updates to this library are recorded here in plain language. Ent
 
 ---
 
+## 28 March 2026 — Version 0.4
+
+**Author:** RPAH Allergy Nurses
+**Change:** Major content expansion — 28 new drug protocols, data corrections, and review workflow.
+
+- **28 New Drug Pages:** Added protocol pages for azithromycin, betamethasone, celestone-chronodose, droperidol, gentamicin, glycopyrronium, granisetron, medroxyprogesterone, metoclopramide, neostigmine, ondansetron, protamine, tramadol, triamcinolone, actrapid, humulin-nph, humulin-r, novorapid, optisulin, protaphane, metacresol, urografin, cyproterone-ethinylestradiol, drospirenone-ethinylestradiol, ethinylestradiol-levonorgestrel, ethinylestradiol-norethisterone, levonorgestrel, and xylocaine.
+- **10 Drug Pages Corrected:** Updated conflicting drug pages to match the Med Chart 2021 reference spreadsheet.
+- **Protocols for Review:** Created a new reference page (`reference/protocols-for-review.md`) listing 6 protocols with calculation concerns flagged for clinical team review.
+- **Drug Index Updated:** Expanded the drug index to include all 28 new entries (94 total protocols).
+- **Navigation Updated:** Added Protocols for Review entry to the site navigation.
+
+---
+
 ## 28 March 2026 — Version 0.3
 
 **Author:** RPAH Allergy Nurses

@@ -3,7 +3,7 @@ title: Sugammadex
 tags: [reversal-agent, sugammadex, spt, idt, intravenous]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
 ---
 
 # Sugammadex (Bridion)
@@ -26,7 +26,7 @@ version: 1.1
 ### Equipment needed
 - 1 × Sugammadex 100 mg/mL vial
 - Normal saline (NS) — for IDT dilutions
-- 1 mL syringes × 3 (for test doses/dilutions)
+- 1 mL syringes × 4 (for test doses/dilutions)
 - 25 G needles
 
 ### Step 1 — Prepare the SPT solution (100 mg/mL — neat)
@@ -41,6 +41,11 @@ Prepare in this order, using a fresh syringe for each step.
     - Draw **0.1 mL** of this 10 mg/mL into a new 1 mL syringe. Add **0.9 mL NS**. Mix. (This is 1 mg/mL — 1:100).
     - Draw **0.1 mL** of this 1 mg/mL into a new 1 mL syringe. Add **0.9 mL NS**. Mix. (This is **0.1 mg/mL — 1:1,000**).
     - Label: **"Sugammadex IDT 0.1 mg/mL"**.
+
+2. **IDT 1 mg/mL (1:100):**
+    - Draw **0.1 mL** of stock (100 mg/mL) into a 1 mL syringe. Add **0.9 mL NS**. Mix. (This is 10 mg/mL — 1:10).
+    - Draw **0.1 mL** of this 10 mg/mL into a new 1 mL syringe. Add **0.9 mL NS**. Mix. (This is **1 mg/mL — 1:100**).
+    - Label: **"Sugammadex IDT 1 mg/mL"**.
 
 ---
 
@@ -61,5 +66,12 @@ Prepare in this order, using a fresh syringe for each step.
 | Step | Dilution | Concentration | Preparation |
 |---|---|---|---|
 | 1 | 1:1,000 | 0.1 mg/mL | 0.1 mL of 1 mg/mL + 0.9 mL NS |
+| 2 | 1:100 | 1 mg/mL | 0.1 mL of 10 mg/mL + 0.9 mL NS |
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
+
+---
+
+## Notes
+- **IDT 1:100 added** per Medication List 2021 which lists both 1:1,000 and 1:100.
+- The Medication List includes a second entry for "Mix with Rocuronium 1:1" testing — this is a separate protocol for combined agent testing and is not covered on this page.

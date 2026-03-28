@@ -3,7 +3,7 @@ title: Ketamine
 tags: [hypnotic, anaesthetic-agent, intravenous, spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
 ---
 
 # Ketamine
@@ -26,7 +26,7 @@ version: 1.1
 ### Equipment needed
 - 1 × Ketamine 100 mg/mL vial
 - Normal saline (NS) — for IDT dilutions
-- 1 mL syringes × 4 (for test doses/dilutions)
+- 1 mL syringes × 3 (for test doses/dilutions)
 - 25 G needles
 
 ### Step 1 — Prepare the SPT solution (100 mg/mL — neat)
@@ -67,7 +67,12 @@ Prepare in this order, using a fresh syringe for each step.
 | Step | Dilution | Concentration | Preparation |
 |---|---|---|---|
 | 1 | 1:1,000 | 0.1 mg/mL | 0.1 mL of 1 mg/mL + 0.9 mL NS |
-| 2 | 1:100 | 1 mg/mL | 0.1 mL of 10 mg/mL + 0.9 mL NS |
-| 3 | 1:10 | 10 mg/mL | 0.1 mL neat + 0.9 mL NS |
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
+
+---
+
+## Notes
+- **Med Chart 2021 (authoritative):** IDT at 1:1,000 only.
+- **Medication List 2021 alternative:** Lists IDT at 1:100.
+- **Spreadsheet note:** "ANZZAG: 1:1,000 Initial & Max, Protocol from department — 1:100, 1:10". The department protocol uses a broader range (1:100, 1:10) which differs from the Med Chart. This page follows Med Chart 2021 (1:1,000 only). Confirm with the clinical team which protocol to follow.

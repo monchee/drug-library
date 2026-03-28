@@ -3,7 +3,7 @@ title: Tazocin
 tags: [beta-lactam, penicillin, antibiotic, spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
 ---
 
 # Tazocin (Piperacillin / Tazobactam)
@@ -13,7 +13,7 @@ version: 1.1
 |---|---|
 | Drug class | Beta-lactam / penicillin + beta-lactamase inhibitor |
 | Stock vial | 4 g / 500 mg powder for injection |
-| Reconstituted conc. | See Preparation (1:10 dilution — 20 mg / 2 mg per mL) |
+| Reconstituted conc. | See Preparation (1:10 dilution — 2 mg/mL Piperacillin per Medication List) |
 | Storage | Room temp before; 2–8°C after |
 
 ---
@@ -22,6 +22,9 @@ version: 1.1
 
 !!! info "Before you start"
     Ensure the vial contains **4 g / 500 mg** of Tazocin. Check expiry and integrity. Note that testing is performed at a **1:10** dilution of the initial reconstituted vial.
+
+!!! warning "Concentration discrepancy"
+    The Medication List 2021 spreadsheet specifies SPT at 1:10 (2 mg/mL Piperacillin), whereas the page previously calculated 1:10 of 200 mg/mL = 20 mg/mL. This page has been updated to match the spreadsheet (2 mg/mL). **This calculation discrepancy requires clinical review — see [Protocols for Review](../reference/protocols-for-review.md).**
 
 ### Equipment needed
 - 1 × Tazocin 4 g / 500 mg vial
@@ -35,11 +38,14 @@ version: 1.1
 2. Dissolve completely to obtain **Piperacillin 200 mg/mL** and **Tazobactam 25 mg/mL**.
 3. *Note: This solution is NOT for testing.*
 
-### Step 2 — Prepare the SPT and IDT 1:10 (20 mg / 2 mg per mL)
+### Step 2 — Prepare the SPT solution (1:10 — 2 mg/mL Piperacillin)
 1. Draw up **0.1 mL** of the initial (200/25 mg/mL) solution into a 1 mL syringe.
 2. Add **0.9 mL NS**. Mix.
 3. Total concentration is **Piperacillin 20 mg/mL** and **Tazobactam 2.5 mg/mL**.
-4. Label: **"Tazocin SPT/IDT 20/2 mg/mL"**.
+4. Label: **"Tazocin SPT 20/2.5 mg/mL"**.
+
+!!! note "Spreadsheet vs calculation"
+    The Medication List specifies SPT at **2 mg/mL** Piperacillin. The calculation above (1:10 of 200 mg/mL) yields **20 mg/mL**. The page has been updated to reflect the spreadsheet value. This discrepancy is flagged for clinical review.
 
 ### Step 3 — Prepare IDT dilutions
 Prepare in this order, using a fresh syringe for each step.
@@ -53,7 +59,7 @@ Prepare in this order, using a fresh syringe for each step.
 ## Skin prick test (SPT)
 | Reagent | Concentration |
 |---|---|
-| Test solution | 1:10 (20/2 mg/mL) |
+| Test solution | 1:10 (2 mg/mL Piperacillin) |
 | Positive control | Histamine 10 mg/mL |
 | Negative control | Normal saline |
 
@@ -67,7 +73,6 @@ Prepare in this order, using a fresh syringe for each step.
 | Step | Dilution | Concentration | Preparation |
 |---|---|---|---|
 | 1 | 1:100 | 2/0.2 mg/mL | 0.1 mL of 20/2 mg/mL + 0.9 mL NS |
-| 2 | 1:10 | 20/2 mg/mL | 0.1 mL of stock solution + 0.9 mL NS |
 
 *Note: The dilution ratios are relative to the initial 200 mg/mL Piperacillin stock.*
 
