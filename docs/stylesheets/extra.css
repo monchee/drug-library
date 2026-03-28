@@ -64,3 +64,79 @@
   background-color: rgba(0, 38, 100, 0.08);
   color: #D7153A;
 }
+
+/* ============================================================
+   Print Stylesheet — Optimised for bedside clinical use
+   ============================================================ */
+
+@media print {
+  /* Hide navigation, header, footer, and sidebar */
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-nav,
+  .md-top,
+  .md-search,
+  .md-announce {
+    display: none !important;
+  }
+
+  /* Reset content margins for full-width printing */
+  .md-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .md-content__inner {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .md-main__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure tables have borders for print */
+  .md-typeset table:not([class]) {
+    border: 1px solid #000;
+    box-shadow: none;
+  }
+
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    border: 1px solid #ccc;
+    padding: 4pt 8pt;
+  }
+
+  /* Force white backgrounds */
+  body,
+  .md-typeset {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+
+  /* Show link URLs in print */
+  .md-typeset a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #555;
+  }
+
+  /* Avoid page breaks inside important elements */
+  .md-typeset table,
+  .md-typeset .admonition,
+  .md-typeset details {
+    page-break-inside: avoid;
+  }
+
+  /* Add page break before major sections */
+  .md-typeset h1 {
+    page-break-before: always;
+  }
+
+  .md-typeset h1:first-of-type {
+    page-break-before: avoid;
+  }
+}

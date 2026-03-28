@@ -1,0 +1,7 @@
+mkdocs-materialx>=10.0
+pymdown-extensions>=10.0
+mkdocs-document-dates
+mkdocs-glightbox
+mkdocs-minify-plugin
+mkdocs-table-reader-plugin
+openpyxl
