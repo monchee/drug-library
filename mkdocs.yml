@@ -38,16 +38,12 @@ theme:
     - content.code.annotate
     - toc.follow
     - navigation.footer
+  topbar_style: primary
   icon:
     repo: fontawesome/brands/github
 
 plugins:
   - search
-  - document-dates:
-      type: git
-      locale: en
-      show_created: false
-      show_updated: true
 
 markdown_extensions:
   - admonition

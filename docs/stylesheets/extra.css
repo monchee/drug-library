@@ -10,11 +10,36 @@
   --md-accent-fg-color--transparent: rgba(215, 21, 58, 0.1);
 }
 
-/* Dark mode adjustments */
+/* Force header and tabs to absolute SLHD Navy */
+.md-header, .md-tabs {
+  background-color: #002664 !important;
+}
+
+.md-tabs {
+  border-bottom: 3px solid #D7153A;
+}
+
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+  color: #ffffff;
+}
+
+/* Dark mode adjustments — ensures readability while maintaining brand tone */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color:        #002664;
-  --md-primary-bg-color:        #ffffff;
-  --md-accent-fg-color:         #D7153A;
+  --md-primary-fg-color:        #2B80FF;   /* Accessible lighter navy for links */
+  --md-accent-fg-color:         #FF5277;   /* Accessible soft red for alerts */
+  
+  /* Remove primary-bg-color override to allow the theme's dark background to work */
+}
+
+/* Ensure the top header stays dark navy in both modes for branding consistency */
+[data-md-color-scheme="default"] .md-header, 
+[data-md-color-scheme="default"] .md-tabs {
+  background-color: #002664 !important;
+}
+
+[data-md-color-scheme="slate"] .md-header, 
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: #001A45 !important; /* Slightly deeper navy for dark mode bar */
 }
 
 /* Hide default "Made with Material for MkDocs" */

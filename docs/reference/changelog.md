@@ -4,6 +4,19 @@ All significant updates to this library are recorded here in plain language. Ent
 
 ---
 
+## 28 March 2026 — Version 0.3
+
+**Author:** RPAH Allergy Nurses
+**Change:** Branding and metadata finalization.
+
+- **Authorship Update:** Standardized all site-wide attribution to "RPAH Allergy Nurses".
+- **Top Bar Style:** Enabled `primary` topbar style for increased clinical visibility.
+- **Dark Mode Fix:** Recalibrated colors for the Slate theme to resolve link readability and background contrast.
+- **Navigation Rail:** Added a 3px SLHD Red bottom border to the tab navigation for institutional alignment.
+- **Manual Cleanup:** Removed automated Git-based authorship metadata to ensure clinical anonymity.
+
+---
+
 ## 28 March 2026 — Version 0.2
 
 **Author:** RPAH Allergy Nurses
