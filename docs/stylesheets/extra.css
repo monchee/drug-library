@@ -143,5 +143,5 @@
 
 /* Hide inline tags on pages (tags index page still works) */
 .md-content__inner .md-tags {
-  display: none;
+  display: none !important;
 }
