@@ -53,7 +53,7 @@ plugins:
       locale: en
       show_created: true
       show_updated: true
-      show_author: text
+      show_author: false
       exclude:
         - index.md
         - '*/index.md'
