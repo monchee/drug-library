@@ -3,9 +3,7 @@ hide:
   - navigation
 ---
 
-# RPAH Drug Allergy Testing Library
-
-Welcome to the **Royal Prince Alfred Hospital Drug Allergy Testing Library**. This library provides clinical protocols for the **Department of Clinical Immunology and Allergy**.
+Welcome to the **Drug Allergy Testing Library**. This library provides clinical protocols for the **Department of Clinical Immunology and Allergy at Royal Prince Alfred Hospital**.
 
 | Clinical Category | Drug Protocol Links |
 | :--- | :--- |

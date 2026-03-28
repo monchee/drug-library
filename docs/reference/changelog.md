@@ -53,7 +53,3 @@ This version includes individual drug pages for all agents currently tested by t
 Each drug page includes a stock concentration overview, skin prick test (SPT) protocol, intradermal test (IDT) dilution series, and where applicable, an oral or intravenous challenge protocol. Clinical data was sourced from the department's internal reference spreadsheets (*Medication List 2021* and *Med Chart 2021*).
 
 Reference pages are also included for anaphylaxis emergency management and a general mixing and dilution guide.
-
----
-
-*Add new entries above this line.*
