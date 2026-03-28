@@ -6,7 +6,7 @@ All significant updates to this library are recorded here in plain language. Ent
 
 ## 28 March 2026 — Version 0.2
 
-**Author:** RPA Allergy Nurses
+**Author:** RPAH Allergy Nurses
 **Change:** Clinical workflow & QA upgrades.
 
 - **Macros:** Configured standard macros for injecting unified text/warnings.
@@ -19,7 +19,7 @@ All significant updates to this library are recorded here in plain language. Ent
 
 ## 28 March 2026 — Version 0.1
 
-**Author:** RPA Allergy Nurses
+**Author:** RPAH Allergy Nurses
 **Change:** First published version of the RPAH Drug Allergy Testing Library.
 
 This version includes individual drug pages for all agents currently tested by the department, covering the following groups:
