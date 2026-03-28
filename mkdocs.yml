@@ -43,6 +43,8 @@ theme:
     - content.tooltips
     - content.footnote.tooltips
     - toc.follow
+    - header.autohide
+    - navigation.instant.prefetch
   topbar_style: primary
   icon:
     logo: material/test-tube
@@ -62,6 +64,8 @@ plugins:
         - '*/index.md'
   - tags:
       tags_file: reference/tags.md
+  - meta
+  - privacy
   - glightbox
   - table-reader:
       data_path: reference
@@ -100,6 +104,7 @@ markdown_extensions:
   - pymdownx.betterem
   - pymdownx.caret
   - pymdownx.tilde
+  - pymdownx.smartsymbols
 
 extra_css:
   - stylesheets/extra.css
