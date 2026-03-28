@@ -1,6 +1,6 @@
 # Drug Page Verification Report
 
-**Date:** 2026-03-28  
+**Date:** 2026-03-28 (updated 2026-03-29)
 **Scope:** All 66 drug pages in `docs/drugs/` compared against `reference/Med Chart 2021.xlsx` and `reference/Medication List 2021.xlsx`
 
 ## Summary
@@ -8,9 +8,11 @@
 | Metric | Count |
 |--------|-------|
 | Total drug pages | 66 |
-| ✅ Match spreadsheet data | 51 |
-| ⚠️ Discrepancies found | 10 |
+| ✅ Match spreadsheet data | 53 |
+| ⚠️ Discrepancies requiring clinical review | 6 (see protocols-for-review.md) |
 | ❌ No spreadsheet SPT/IDT data (oral challenge / desensitisation only) | 5 |
+
+> **Update 2026-03-29:** Pages have been updated since the initial report. Amoxicillin, Ampicillin, Augmentin, Ketamine, Ropivacaine now follow Med Chart 2021. Sugammadex now includes IDT 1:100. Cephalexin and Cefuroxime now include full SPT/IDT data. Paracetamol now includes IDT 1:10. All known discrepancies are documented in `docs/reference/protocols-for-review.md`.
 
 ---
 
@@ -20,23 +22,20 @@
 
 | | Page | Med Chart | Medication List |
 |---|---|---|---|
-| **SPT** | Neat (100 mg/mL) | 1:5 (20 mg/mL) | Neat (100 mg/mL) |
-| **IDT** | 1:10 (10 mg/mL), 1:100 (1 mg/mL) | 1:10 (10 mg/mL), 1:5 (20 mg/mL) | 1:100 (10 mg/mL) |
+| **SPT** | 1:5 (20 mg/mL) | 1:5 (20 mg/mL) | Neat (100 mg/mL) |
+| **IDT** | 1:10 (10 mg/mL), 1:5 (20 mg/mL) | 1:10 (10 mg/mL), 1:5 (20 mg/mL) | 1:100 (10 mg/mL) |
 
-- The page follows **Medication List** for SPT (Neat/100 mg/mL).
-- Med Chart disagrees, specifying SPT at 1:5 (20 mg/mL).
-- **Internal page inconsistency:** Step 2 preparation heading says "SPT solution (20 mg/mL)" but the SPT table says "Neat (100 mg/mL)".
-- IDT: Page has 1:10 and 1:100; Med Chart has 1:10 and 1:5; Med List has only 1:100.
+- **Updated:** Page now follows Med Chart 2021 (1:5/20 mg/mL). Medication List alternative noted in page Notes.
+- Discrepancy between spreadsheets remains — see `docs/reference/protocols-for-review.md`.
 
 ### 1.2 Ampicillin — Same SPT conflict as Amoxicillin
 
 | | Page | Med Chart | Medication List |
 |---|---|---|---|
-| **SPT** | Neat (100 mg/mL) | 1:5 (20 mg/mL) | Neat (100 mg/mL) |
-| **IDT** | 1:10 (10 mg/mL), 1:100 (1 mg/mL) | 1:10 (10 mg/mL), 1:5 (20 mg/mL) | 1:100 (10 mg/mL) |
+| **SPT** | 1:5 (20 mg/mL) | 1:5 (20 mg/mL) | Neat (100 mg/mL) |
+| **IDT** | 1:10 (10 mg/mL), 1:5 (20 mg/mL) | 1:10 (10 mg/mL), 1:5 (20 mg/mL) | 1:100 (10 mg/mL) |
 
-- Same pattern as amoxicillin. Page follows Medication List. Med Chart disagrees.
-- **Internal page inconsistency:** Step 2 says "SPT solution (50 mg/mL — neat)" but SPT table says "Neat (100 mg/mL)".
+- **Updated:** Page now follows Med Chart 2021. Medication List alternative noted in page Notes.
 
 ### 1.3 Augmentin — Different stock formulation used
 
@@ -98,22 +97,20 @@
 | | Page | Medication List (entry 1) | Medication List (entry 2) |
 |---|---|---|---|
 | **SPT** | Neat (100 mg/mL) | Neat (100 mg/mL) | Neat (100mg/10mg/mL) |
-| **IDT** | 1:1,000 (0.1 mg/mL) | 1:1,000 (0.1 mg/mL), 1:100 (1 mg/mL) | 1:1,000, 1:100 (mix with rocuronium) |
+| **IDT** | 1:1,000 (0.1 mg/mL), 1:100 (1 mg/mL) | 1:1,000 (0.1 mg/mL), 1:100 (1 mg/mL) | 1:1,000, 1:100 (mix with rocuronium) |
 
-- Page only lists IDT 1:1,000. Spreadsheet has additional 1:100 step.
-- The second spreadsheet entry is for "Mix with Rocuronium 1:1" testing — a special case.
+- **Updated:** Page now includes both IDT 1:1,000 and 1:100 per Medication List (entry 1).
+- The second spreadsheet entry is for "Mix with Rocuronium 1:1" testing — a separate protocol not covered on this page.
 
-### 1.9 Cephalexin — Page is oral challenge only; spreadsheet has SPT/IDT data
+### 1.9 Cephalexin — SPT/IDT data now added
 
-- Page only documents oral graded challenge protocol.
-- Spreadsheet (Med Chart + Medication List) has full SPT/IDT data: SPT Neat (2 mg/mL), IDT 1:100, 1:10, Neat.
-- Page note says: "Not routinely used for skin testing."
+- **Updated:** Page now includes full SPT/IDT data (SPT Neat 2 mg/mL, IDT 1:100, 1:10, Neat) per spreadsheet.
+- Oral graded challenge protocol also retained.
 
-### 1.10 Cefuroxime — Page is oral challenge only; spreadsheet has SPT/IDT data
+### 1.10 Cefuroxime — SPT/IDT data now added
 
-- Page only documents oral graded challenge protocol.
-- Spreadsheet (Medication List/Others) has SPT Neat (25 mg/mL) and IDT data.
-- Page note says: "Not routinely used for skin testing. If required, test with Cefazolin and Penicillins."
+- **Updated:** Page now includes full SPT/IDT data (SPT Neat 25 mg/mL, IDT 1:100, 1:10) per Medication List.
+- Oral graded challenge protocol also retained.
 
 ---
 
@@ -182,11 +179,11 @@ These drugs appear in the spreadsheets but don't have dedicated pages in `docs/d
 
 ## 5. Pages That Match Spreadsheet Data (✅)
 
-The following 51 drug pages have SPT/IDT data that correctly matches one or both reference spreadsheets:
+The following 53 drug pages have SPT/IDT data that correctly matches one or both reference spreadsheets:
 
-alfentanil, benzylpenicillin, cefazolin, cefepime, cefotaxime, ceftazidime, ceftriaxone, chlorhexidine, ciprofloxacin, cis-atracurium, clindamycin, dalteparin, dexamethasone, doxycycline, enoxaparin, fentanyl, heparin, ketamine, latex, levofloxacin, lignocaine, mepivacaine, methylprednisolone, metronidazole, midazolam, omnipaque, oxycodone, pancuronium, paracetamol, parecoxib, penicillin-major-ppl, penicillin-minor-md, propofol, remifentanil, rocuronium, ropivacaine, suxamethonium, thiopental, tranexamic-acid, vancomycin, vecuronium, visipaque, ultravist, fluconazole, morphine, lansoprazole, omeprazole, esomeprazole, rabeprazole, hydrocortisone, patent-blue, sugammadex
+alfentanil, ampicillin, amoxicillin, augmentin, benzylpenicillin, cefazolin, cefepime, cefotaxime, ceftazidime, ceftriaxone, cephalexin, cefuroxime, chlorhexidine, ciprofloxacin, cis-atracurium, clindamycin, dalteparin, dexamethasone, doxycycline, enoxaparin, fentanyl, heparin, ketamine, latex, levofloxacin, lignocaine, mepivacaine, methylprednisolone, metronidazole, midazolam, omnipaque, oxycodone, pancuronium, paracetamol, parecoxib, penicillin-major-ppl, penicillin-minor-md, propofol, remifentanil, rocuronium, ropivacaine, suxamethonium, thiopental, tranexamic-acid, vancomycin, vecuronium, visipaque, ultravist, fluconazole, morphine, lansoprazole, omeprazole, esomeprazole, rabeprazole, hydrocortisone, patent-blue, sugammadex
 
-> **Note:** Some of these have minor informational differences (e.g., stock vial description format) but the clinical testing concentrations (SPT and IDT dilution series) are consistent.
+> **Note:** Amoxicillin, Ampicillin, Augmentin, Ketamine, and Ropivacaine are listed here because they match Med Chart 2021 (authoritative). Unresolved conflicts with Medication List 2021 are documented in `docs/reference/protocols-for-review.md`. Tazocin remains flagged — concentration unresolved.
 
 ---
 

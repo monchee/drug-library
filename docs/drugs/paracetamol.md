@@ -36,9 +36,12 @@ version: 1.1
 ### Step 2 — Prepare IDT dilutions
 Prepare in this order, using a fresh syringe for each step.
 
-1. **IDT 0.1 mg/mL (1:100):**
-    - Draw **0.1 mL** of stock (10 mg/mL) into a 1 mL syringe. Add **0.9 mL NS**. Mix. (This is 1 mg/mL — 1:10).
-    - Draw **0.1 mL** of this 1 mg/mL into a new 1 mL syringe. Add **0.9 mL NS**. Mix. (This is **0.1 mg/mL — 1:100**).
+1. **IDT 1 mg/mL (1:10):**
+    - Draw **0.1 mL** of stock (10 mg/mL) into a 1 mL syringe. Add **0.9 mL NS**. Mix. (This is **1 mg/mL — 1:10**).
+    - Label: **"Paracetamol IDT 1 mg/mL"**.
+
+2. **IDT 0.1 mg/mL (1:100):**
+    - Draw **0.1 mL** of the 1 mg/mL syringe into a new 1 mL syringe. Add **0.9 mL NS**. Mix. (This is **0.1 mg/mL — 1:100**).
     - Label: **"Paracetamol IDT 0.1 mg/mL"**.
 
 ---
@@ -59,7 +62,8 @@ Prepare in this order, using a fresh syringe for each step.
 ### Dilution series
 | Step | Dilution | Concentration | Preparation |
 |---|---|---|---|
-| 1 | 1:100 | 0.1 mg/mL | 0.1 mL of 1 mg/mL + 0.9 mL NS |
+| 1 | 1:10 | 1 mg/mL | 0.1 mL of stock (10 mg/mL) + 0.9 mL NS |
+| 2 | 1:100 | 0.1 mg/mL | 0.1 mL of 1 mg/mL + 0.9 mL NS |
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 **Delayed Reading:** If history is suggestive of a delayed reaction, re-read at 24 and 48 hours.

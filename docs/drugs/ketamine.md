@@ -33,20 +33,19 @@ version: 1.2
 1. Draw up **0.5–1 mL** of the stock (100 mg/mL) into a 1 mL syringe.
 2. Label: **"Ketamine SPT 100 mg/mL"**.
 
-### Step 2 — Prepare IDT dilutions
-Prepare in this order, using a fresh syringe for each step.
+### Step 2 — Prepare IDT dilution
+Prepare the following, using a fresh syringe for each step.
 
-1. **IDT 10 mg/mL (1:10):**
-    - Draw **0.1 mL** of stock (100 mg/mL) into a 1 mL syringe. Add **0.9 mL NS**. Mix. (This is **10 mg/mL — 1:10**).
-    - Label: **"Ketamine IDT 10 mg/mL"**.
-
-2. **IDT 1 mg/mL (1:100):**
-    - Draw **0.1 mL** of the 10 mg/mL syringe into a new 1 mL syringe. Add **0.9 mL NS**. Mix. (This is **1 mg/mL — 1:100**).
-    - Label: **"Ketamine IDT 1 mg/mL"**.
-
-3. **IDT 0.1 mg/mL (1:1,000):**
+1. **IDT 10 mg/mL (1:10) — intermediate:**
+    - Draw **0.1 mL** of stock (100 mg/mL) into a 1 mL syringe. Add **0.9 mL NS**. Mix. (This is **10 mg/mL**).
+2. **IDT 1 mg/mL (1:100) — intermediate:**
+    - Draw **0.1 mL** of the 10 mg/mL syringe into a new 1 mL syringe. Add **0.9 mL NS**. Mix. (This is **1 mg/mL**).
+3. **IDT 0.1 mg/mL (1:1,000) — test dose:**
     - Draw **0.1 mL** of the 1 mg/mL syringe into a new 1 mL syringe. Add **0.9 mL NS**. Mix. (This is **0.1 mg/mL — 1:1,000**).
     - Label: **"Ketamine IDT 0.1 mg/mL"**.
+
+!!! note "Higher concentrations"
+    Per Med Chart 2021, IDT is performed at 1:1,000 only. Intermediate syringes (1:10, 1:100) are required to reach 1:1,000 but are not injected. If the clinical team directs a broader series, see [Protocols for Review](../reference/protocols-for-review.md).
 
 ---
 

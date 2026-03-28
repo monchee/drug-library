@@ -38,14 +38,13 @@ version: 1.2
 2. Dissolve completely to obtain **Piperacillin 200 mg/mL** and **Tazobactam 25 mg/mL**.
 3. *Note: This solution is NOT for testing.*
 
-### Step 2 — Prepare the SPT solution (1:10 — 2 mg/mL Piperacillin)
+### Step 2 — Prepare the SPT solution (1:10 dilution)
 1. Draw up **0.1 mL** of the initial (200/25 mg/mL) solution into a 1 mL syringe.
 2. Add **0.9 mL NS**. Mix.
-3. Total concentration is **Piperacillin 20 mg/mL** and **Tazobactam 2.5 mg/mL**.
-4. Label: **"Tazocin SPT 20/2.5 mg/mL"**.
+3. By calculation: **Piperacillin 20 mg/mL** and **Tazobactam 2.5 mg/mL**.
 
-!!! note "Spreadsheet vs calculation"
-    The Medication List specifies SPT at **2 mg/mL** Piperacillin. The calculation above (1:10 of 200 mg/mL) yields **20 mg/mL**. The page has been updated to reflect the spreadsheet value. This discrepancy is flagged for clinical review.
+!!! warning "Unresolved concentration — label pending clinical review"
+    The Medication List 2021 specifies SPT at **2 mg/mL** Piperacillin. The calculation above (1:10 of 200 mg/mL) gives **20 mg/mL** — 10× higher. **Do not label or use this syringe until the correct concentration is confirmed.** See [Protocols for Review](../reference/protocols-for-review.md) for details.
 
 ### Step 3 — Prepare IDT dilutions
 Prepare in this order, using a fresh syringe for each step.
@@ -59,11 +58,14 @@ Prepare in this order, using a fresh syringe for each step.
 ## Skin prick test (SPT)
 | Reagent | Concentration |
 |---|---|
-| Test solution | 1:10 (2 mg/mL Piperacillin) |
+| Test solution | 1:10 — **⚠️ concentration under review** (Medication List: 2 mg/mL; calculation: 20 mg/mL) |
 | Positive control | Histamine 10 mg/mL |
 | Negative control | Normal saline |
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
+
+!!! warning "Concentration unresolved"
+    See [Protocols for Review](../reference/protocols-for-review.md) before proceeding.
 
 ---
 
