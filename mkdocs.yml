@@ -60,7 +60,8 @@ plugins:
       exclude:
         - index.md
         - '*/index.md'
-  - tags
+  - tags:
+      tags_file: reference/tags.md
   - glightbox
   - table-reader:
       data_path: reference
@@ -107,22 +108,17 @@ nav:
   - Home: index.md
   - Drug Index:
       - drugs/index.md
-      - Anaesthetics:
-          - Alfentanil: drugs/alfentanil.md
-          - Fentanyl: drugs/fentanyl.md
-          - Ketamine: drugs/ketamine.md
-          - Midazolam: drugs/midazolam.md
-          - Morphine: drugs/morphine.md
-          - Oxycodone: drugs/oxycodone.md
-          - Propofol: drugs/propofol.md
-          - Remifentanil: drugs/remifentanil.md
-          - Thiopental: drugs/thiopental.md
-      - Antibiotics:
+      - Penicillins:
           - Amoxicillin: drugs/amoxicillin.md
           - Ampicillin: drugs/ampicillin.md
           - Augmentin (Amoxicillin/Clavulanate): drugs/augmentin.md
-          - Bactrim (Trimethoprim/Sulfa): drugs/bactrim.md
           - Benzylpenicillin: drugs/benzylpenicillin.md
+          - Flucloxacillin: drugs/flucloxacillin.md
+          - Penicillin Major (PPL): drugs/penicillin-major-ppl.md
+          - Penicillin Minor (MD): drugs/penicillin-minor-md.md
+          - Phenoxymethylpenicillin: drugs/phenoxymethylpenicillin.md
+          - Tazocin (Piperacillin/Tazobactam): drugs/tazocin.md
+      - Cephalosporins:
           - Cefazolin: drugs/cefazolin.md
           - Cefepime: drugs/cefepime.md
           - Cefotaxime: drugs/cefotaxime.md
@@ -130,59 +126,97 @@ nav:
           - Ceftriaxone: drugs/ceftriaxone.md
           - Cefuroxime: drugs/cefuroxime.md
           - Cephalexin: drugs/cephalexin.md
+      - Antibiotics — Other:
+          - Azithromycin: drugs/azithromycin.md
+          - Bactrim (Trimethoprim/Sulfa): drugs/bactrim.md
           - Ciprofloxacin: drugs/ciprofloxacin.md
           - Clindamycin: drugs/clindamycin.md
           - Doxycycline: drugs/doxycycline.md
-          - Flucloxacillin: drugs/flucloxacillin.md
+          - Fluconazole: drugs/fluconazole.md
+          - Gentamicin: drugs/gentamicin.md
           - Levofloxacin: drugs/levofloxacin.md
           - Metronidazole: drugs/metronidazole.md
-          - Phenoxymethylpenicillin: drugs/phenoxymethylpenicillin.md
-          - Tazocin (Piperacillin/Tazobactam): drugs/tazocin.md
           - Vancomycin: drugs/vancomycin.md
+      - Antiemetics:
+          - Droperidol: drugs/droperidol.md
+          - Granisetron: drugs/granisetron.md
+          - Metoclopramide: drugs/metoclopramide.md
+          - Ondansetron: drugs/ondansetron.md
+      - Anticoagulants:
+          - Dalteparin: drugs/dalteparin.md
+          - Enoxaparin: drugs/enoxaparin.md
+          - Heparin: drugs/heparin.md
+      - Corticosteroids:
+          - Betamethasone: drugs/betamethasone.md
+          - Celestone Chronodose: drugs/celestone-chronodose.md
+          - Dexamethasone: drugs/dexamethasone.md
+          - Hydrocortisone: drugs/hydrocortisone.md
+          - Methylprednisolone: drugs/methylprednisolone.md
+          - Triamcinolone: drugs/triamcinolone.md
+      - Hormonal Contraceptives:
+          - Cyproterone/Ethinylestradiol: drugs/cyproterone-ethinylestradiol.md
+          - Drospirenone/Ethinylestradiol: drugs/drospirenone-ethinylestradiol.md
+          - Ethinylestradiol/Levonorgestrel: drugs/ethinylestradiol-levonorgestrel.md
+          - Ethinylestradiol/Norethisterone: drugs/ethinylestradiol-norethisterone.md
+          - Levonorgestrel: drugs/levonorgestrel.md
+          - Medroxyprogesterone: drugs/medroxyprogesterone.md
+      - Hypnotics & Sedatives:
+          - Ketamine: drugs/ketamine.md
+          - Midazolam: drugs/midazolam.md
+          - Propofol: drugs/propofol.md
+          - Thiopental: drugs/thiopental.md
+      - Insulins:
+          - Actrapid: drugs/actrapid.md
+          - Humulin NPH: drugs/humulin-nph.md
+          - Humulin R: drugs/humulin-r.md
+          - Novorapid: drugs/novorapid.md
+          - Optisulin: drugs/optisulin.md
+          - Protaphane: drugs/protaphane.md
       - Local Anaesthetics:
           - Bupivacaine: drugs/bupivacaine.md
           - Lignocaine: drugs/lignocaine.md
           - Mepivacaine: drugs/mepivacaine.md
           - Ropivacaine: drugs/ropivacaine.md
+          - Xylocaine: drugs/xylocaine.md
       - Neuromuscular Blocking Agents:
           - Cis-Atracurium: drugs/cis-atracurium.md
           - Pancuronium: drugs/pancuronium.md
           - Rocuronium: drugs/rocuronium.md
-          - Sugammadex: drugs/sugammadex.md
           - Suxamethonium: drugs/suxamethonium.md
           - Vecuronium: drugs/vecuronium.md
+      - Neuromuscular Reversal Agents:
+          - Glycopyrronium: drugs/glycopyrronium.md
+          - Neostigmine: drugs/neostigmine.md
+          - Protamine: drugs/protamine.md
+          - Sugammadex: drugs/sugammadex.md
       - NSAIDs & Analgesics:
           - Aspirin: drugs/aspirin.md
           - Paracetamol: drugs/paracetamol.md
           - Parecoxib: drugs/parecoxib.md
-      - Contrast Media:
-          - Omnipaque (Iohexol): drugs/omnipaque.md
-          - Ultravist (Iopromide): drugs/ultravist.md
-          - Visipaque (Iodixanol): drugs/visipaque.md
-      - Corticosteroids:
-          - Dexamethasone: drugs/dexamethasone.md
-          - Hydrocortisone: drugs/hydrocortisone.md
-          - Methylprednisolone: drugs/methylprednisolone.md
-      - Anticoagulants:
-          - Dalteparin: drugs/dalteparin.md
-          - Enoxaparin: drugs/enoxaparin.md
-          - Heparin: drugs/heparin.md
-      - Antifungals:
-          - Fluconazole: drugs/fluconazole.md
+      - Opioids:
+          - Alfentanil: drugs/alfentanil.md
+          - Fentanyl: drugs/fentanyl.md
+          - Morphine: drugs/morphine.md
+          - Oxycodone: drugs/oxycodone.md
+          - Remifentanil: drugs/remifentanil.md
+          - Tramadol: drugs/tramadol.md
       - Proton Pump Inhibitors:
           - Esomeprazole: drugs/esomeprazole.md
           - Lansoprazole: drugs/lansoprazole.md
           - Omeprazole: drugs/omeprazole.md
           - Pantoprazole: drugs/pantoprazole.md
           - Rabeprazole: drugs/rabeprazole.md
-      - Skin Antiseptics:
+      - Contrast Media:
+          - Omnipaque (Iohexol): drugs/omnipaque.md
+          - Ultravist (Iopromide): drugs/ultravist.md
+          - Urografin: drugs/urografin.md
+          - Visipaque (Iodixanol): drugs/visipaque.md
+      - Other:
           - Chlorhexidine: drugs/chlorhexidine.md
-          - Povidone-Iodine: drugs/povidone-iodine.md
-      - Miscellaneous:
           - Latex: drugs/latex.md
+          - Metacresol: drugs/metacresol.md
           - Patent Blue: drugs/patent-blue.md
-          - Penicillin Major (PPL): drugs/penicillin-major-ppl.md
-          - Penicillin Minor (MD): drugs/penicillin-minor-md.md
+          - Povidone-Iodine: drugs/povidone-iodine.md
           - Rosuvastatin: drugs/rosuvastatin.md
           - Tranexamic Acid: drugs/tranexamic-acid.md
   - Reference:
