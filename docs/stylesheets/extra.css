@@ -129,6 +129,27 @@
     color: #555;
   }
 
+  /* Dilution table column widths for print */
+  .md-typeset table:not([class]):has(th:nth-child(4)) {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .md-typeset table:not([class]):has(th:nth-child(4)) th:nth-child(1),
+  .md-typeset table:not([class]):has(th:nth-child(4)) td:nth-child(1) {
+    width: 5%;
+  }
+
+  .md-typeset table:not([class]):has(th:nth-child(4)) th:nth-child(2),
+  .md-typeset table:not([class]):has(th:nth-child(4)) td:nth-child(2) {
+    width: 10%;
+  }
+
+  .md-typeset table:not([class]):has(th:nth-child(4)) th:nth-child(3),
+  .md-typeset table:not([class]):has(th:nth-child(4)) td:nth-child(3) {
+    width: 15%;
+  }
+
   /* Avoid page breaks inside important elements */
   .md-typeset table,
   .md-typeset .admonition,
@@ -149,4 +170,43 @@
 /* Hide inline tags on pages (tags index page still works) */
 .md-content__inner .md-tags {
   display: none !important;
+}
+
+/* ============================================================
+   Dilution Series Tables — widen Preparation column
+   Targets 4-column tables only (Step | Dilution | Conc. | Preparation)
+   On mobile (<600px) falls back to browser auto-layout to avoid
+   squishing the Step/Dilution/Concentration headers.
+   ============================================================ */
+
+/* word-wrap applies at all sizes */
+.md-typeset table:not([class]):has(th:nth-child(4)) td,
+.md-typeset table:not([class]):has(th:nth-child(4)) th {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Fixed column widths only on tablet and wider */
+@media (min-width: 600px) {
+  .md-typeset table:not([class]):has(th:nth-child(4)) {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .md-typeset table:not([class]):has(th:nth-child(4)) th:nth-child(1),
+  .md-typeset table:not([class]):has(th:nth-child(4)) td:nth-child(1) {
+    width: 5%;
+  }
+
+  .md-typeset table:not([class]):has(th:nth-child(4)) th:nth-child(2),
+  .md-typeset table:not([class]):has(th:nth-child(4)) td:nth-child(2) {
+    width: 10%;
+  }
+
+  .md-typeset table:not([class]):has(th:nth-child(4)) th:nth-child(3),
+  .md-typeset table:not([class]):has(th:nth-child(4)) td:nth-child(3) {
+    width: 15%;
+  }
+
+  /* Column 4 (Preparation) gets the remaining ~70% automatically */
 }
