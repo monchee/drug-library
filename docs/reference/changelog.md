@@ -4,16 +4,18 @@ All significant updates to this library are recorded here in plain language. Ent
 
 ---
 
-## 28 March 2026 — Version 0.4
+## 29 March 2026 — Version 0.4
 
 **Author:** RPAH Allergy Nurses
-**Change:** Major content expansion — 28 new drug protocols, data corrections, and review workflow.
+**Change:** Major content expansion — 28 new drug protocols, data corrections, UI refinements, and complete navigation.
 
-- **28 New Drug Pages:** Added protocol pages for azithromycin, betamethasone, celestone-chronodose, droperidol, gentamicin, glycopyrronium, granisetron, medroxyprogesterone, metoclopramide, neostigmine, ondansetron, protamine, tramadol, triamcinolone, actrapid, humulin-nph, humulin-r, novorapid, optisulin, protaphane, metacresol, urografin, cyproterone-ethinylestradiol, drospirenone-ethinylestradiol, ethinylestradiol-levonorgestrel, ethinylestradiol-norethisterone, levonorgestrel, and xylocaine.
-- **10 Drug Pages Corrected:** Updated conflicting drug pages to match the Med Chart 2021 reference spreadsheet.
+- **28 New Drug Pages:** Added protocol pages for azithromycin, betamethasone, celestone-chronodose, droperidol, gentamicin, glycopyrronium, granisetron, medroxyprogesterone, metoclopramide, neostigmine, ondansetron, protamine, tramadol, triamcinolone, actrapid, humulin-nph, humulin-r, novorapid, optisulin, protaphane, metacresol, urografin, cyproterone-ethinylestradiol, drospirenone-ethinylestradiol, ethinylestradiol-levonorgestrel, ethinylestradiol-norethisterone, levonorgestrel, and xylocaine (94 total).
+- **10 Drug Pages Corrected:** Updated conflicting drug pages to match the Med Chart 2021 reference spreadsheet. Fixed internal inconsistencies in Ketamine, Paracetamol, and Tazocin pages.
 - **Protocols for Review:** Created a new reference page (`reference/protocols-for-review.md`) listing 6 protocols with calculation concerns flagged for clinical team review.
-- **Drug Index Updated:** Expanded the drug index to include all 28 new entries (94 total protocols).
-- **Navigation Updated:** Added Protocols for Review entry to the site navigation.
+- **Home Page Redesign:** Expanded home table from 12 rows (44 drugs) to 17 rows (all 94 drugs), organized by clinical category with Material icons for quick visual scanning.
+- **Navigation Overhaul:** Restructured sidebar navigation to match home table categories (17 categories), ensuring all 94 drugs are discoverable in the sidebar menu.
+- **Branding:** Added test tube logo to header (Material Design icon) and favicon (custom SVG in SLHD Navy).
+- **Tags Index:** Configured tags plugin to populate the Tags reference page for protocol browsing by tag.
 
 ---
 
