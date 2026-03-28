@@ -4,16 +4,6 @@ site_author: RPAH Allergy Nurses
 site_url: https://drug-library.pages.dev
 copyright: "Copyright &copy; 2026 Department of Clinical Immunology and Allergy - Royal Prince Alfred Hospital"
 
-repo_name: monchee/drug-library
-repo_url: https://github.com/monchee/drug-library
-edit_uri: edit/main/docs/
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/monchee/drug-library
-      name: GitHub
-
 theme:
   name: materialx
   palette:
@@ -50,14 +40,10 @@ theme:
     - content.tabs.link
     - content.code.copy
     - content.code.annotate
-    - content.action.edit
-    - content.action.view
     - content.tooltips
     - content.footnote.tooltips
     - toc.follow
   topbar_style: primary
-  icon:
-    repo: fontawesome/brands/github
 
 plugins:
   - search:
@@ -67,7 +53,7 @@ plugins:
       locale: en
       show_created: true
       show_updated: true
-      show_author: true
+      show_author: text
       exclude:
         - index.md
         - '*/index.md'
