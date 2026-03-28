@@ -1,0 +1,150 @@
+site_name: RPAH Drug Allergy Testing Library
+site_description: Clinical drug allergy testing protocols for RPAH Clinical Immunology & Allergy
+site_author: RPAH Clinical Immunology & Allergy
+site_url: https://drug-library.pages.dev
+
+theme:
+  name: materialx
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - search.highlight
+    - search.share
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - document-dates:
+      type: git
+      locale: en
+      show_created: false
+      show_updated: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Drug Protocols:
+    - drugs/index.md
+    - Anaesthetics:
+      - Alfentanil: drugs/alfentanil.md
+      - Fentanyl: drugs/fentanyl.md
+      - Ketamine: drugs/ketamine.md
+      - Midazolam: drugs/midazolam.md
+      - Morphine: drugs/morphine.md
+      - Oxycodone: drugs/oxycodone.md
+      - Propofol: drugs/propofol.md
+      - Remifentanil: drugs/remifentanil.md
+      - Thiopental: drugs/thiopental.md
+    - Antibiotics:
+      - Amoxicillin: drugs/amoxicillin.md
+      - Ampicillin: drugs/ampicillin.md
+      - Augmentin (Amoxicillin/Clavulanate): drugs/augmentin.md
+      - Bactrim (Trimethoprim/Sulfa): drugs/bactrim.md
+      - Benzylpenicillin: drugs/benzylpenicillin.md
+      - Cefazolin: drugs/cefazolin.md
+      - Cefepime: drugs/cefepime.md
+      - Cefotaxime: drugs/cefotaxime.md
+      - Ceftazidime: drugs/ceftazidime.md
+      - Ceftriaxone: drugs/ceftriaxone.md
+      - Cefuroxime: drugs/cefuroxime.md
+      - Cephalexin: drugs/cephalexin.md
+      - Ciprofloxacin: drugs/ciprofloxacin.md
+      - Clindamycin: drugs/clindamycin.md
+      - Doxycycline: drugs/doxycycline.md
+      - Flucloxacillin: drugs/flucloxacillin.md
+      - Levofloxacin: drugs/levofloxacin.md
+      - Metronidazole: drugs/metronidazole.md
+      - Phenoxymethylpenicillin: drugs/phenoxymethylpenicillin.md
+      - Tazocin (Piperacillin/Tazobactam): drugs/tazocin.md
+      - Vancomycin: drugs/vancomycin.md
+    - Local Anaesthetics:
+      - Bupivacaine: drugs/bupivacaine.md
+      - Lignocaine: drugs/lignocaine.md
+      - Mepivacaine: drugs/mepivacaine.md
+      - Ropivacaine: drugs/ropivacaine.md
+    - Neuromuscular Blocking Agents:
+      - Cis-Atracurium: drugs/cis-atracurium.md
+      - Pancuronium: drugs/pancuronium.md
+      - Rocuronium: drugs/rocuronium.md
+      - Sugammadex: drugs/sugammadex.md
+      - Suxamethonium: drugs/suxamethonium.md
+      - Vecuronium: drugs/vecuronium.md
+    - NSAIDs & Analgesics:
+      - Aspirin: drugs/aspirin.md
+      - Paracetamol: drugs/paracetamol.md
+      - Parecoxib: drugs/parecoxib.md
+    - Contrast Media:
+      - Omnipaque (Iohexol): drugs/omnipaque.md
+      - Ultravist (Iopromide): drugs/ultravist.md
+      - Visipaque (Iodixanol): drugs/visipaque.md
+    - Corticosteroids:
+      - Dexamethasone: drugs/dexamethasone.md
+      - Hydrocortisone: drugs/hydrocortisone.md
+      - Methylprednisolone: drugs/methylprednisolone.md
+    - Anticoagulants:
+      - Dalteparin: drugs/dalteparin.md
+      - Enoxaparin: drugs/enoxaparin.md
+      - Heparin: drugs/heparin.md
+    - Antifungals:
+      - Fluconazole: drugs/fluconazole.md
+    - Proton Pump Inhibitors:
+      - Esomeprazole: drugs/esomeprazole.md
+      - Lansoprazole: drugs/lansoprazole.md
+      - Omeprazole: drugs/omeprazole.md
+      - Pantoprazole: drugs/pantoprazole.md
+      - Rabeprazole: drugs/rabeprazole.md
+    - Skin Antiseptics:
+      - Chlorhexidine: drugs/chlorhexidine.md
+      - Povidone-Iodine: drugs/povidone-iodine.md
+    - Miscellaneous:
+      - Latex: drugs/latex.md
+      - Patent Blue: drugs/patent-blue.md
+      - Penicillin Major (PPL): drugs/penicillin-major-ppl.md
+      - Penicillin Minor (MD): drugs/penicillin-minor-md.md
+      - Rosuvastatin: drugs/rosuvastatin.md
+      - Tranexamic Acid: drugs/tranexamic-acid.md

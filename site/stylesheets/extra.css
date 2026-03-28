@@ -1,0 +1,94 @@
+/* ============================================================
+   RPAH Drug Library — Custom Theme (MaterialX)
+   SLHD / NSW Health Branding: Navy + Red
+   ============================================================ */
+
+:root {
+  --md-primary-fg-color:        #002664;   /* SLHD Navy */
+  --md-primary-fg-color--light: #146CFD;
+  --md-primary-fg-color--dark:  #001A45;
+  --md-primary-bg-color:        #ffffff;
+  --md-accent-fg-color:         #D7153A;   /* SLHD Red */
+  --md-accent-fg-color--transparent: rgba(215, 21, 58, 0.1);
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #002664;
+  --md-primary-bg-color:        #ffffff;
+  --md-accent-fg-color:         #D7153A;
+}
+
+/* Header */
+.md-header {
+  background-color: #002664 !important;
+  border-bottom: 3px solid #D7153A;
+}
+
+/* Navigation tabs */
+.md-tabs {
+  background-color: #002664;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  border-bottom-color: #D7153A;
+}
+
+/* Footer — black with custom branding */
+.md-footer {
+  background-color: #000000 !important;
+}
+
+.md-footer-meta {
+  background-color: #0a0a0a !important;
+}
+
+/* Hide default "Made with Material for MkDocs" */
+.md-footer-meta__inner > :last-child {
+  display: none;
+}
+
+/* Admonitions — red accent for warnings */
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-left-color: #D7153A;
+}
+
+.md-typeset .admonition.warning > .admonition-title,
+.md-typeset details.warning > summary {
+  background-color: rgba(215, 21, 58, 0.08);
+  color: #D7153A;
+}
+
+/* Table styling — clinical precision */
+.md-typeset table:not([class]) {
+  font-size: 0.78rem;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: #002664;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: rgba(0, 38, 100, 0.04);
+}
+
+/* Tags */
+.md-tag {
+  background-color: rgba(0, 38, 100, 0.1);
+  color: #002664;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Code blocks */
+.md-typeset code {
+  background-color: rgba(0, 38, 100, 0.08);
+  color: #D7153A;
+}
