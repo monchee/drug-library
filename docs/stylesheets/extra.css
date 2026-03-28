@@ -15,6 +15,11 @@
   background-color: #002664 !important;
 }
 
+/* SLHD Red accent border below header (visible on all viewports) */
+.md-header {
+  border-bottom: 3px solid #D7153A !important;
+}
+
 .md-tabs {
   border-bottom: 3px solid #D7153A;
 }
