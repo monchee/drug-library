@@ -6,6 +6,7 @@ copyright: "Copyright &copy; 2026 Department of Clinical Immunology and Allergy 
 
 theme:
   name: materialx
+  custom_dir: overrides
   palette:
     - scheme: default
       primary: custom

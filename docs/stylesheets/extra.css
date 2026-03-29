@@ -15,11 +15,14 @@
   background-color: #002664 !important;
 }
 
-/* SLHD Red accent border below header (visible on all viewports) */
-.md-header {
-  border-bottom: 3px solid #D7153A !important;
+/* SLHD Red accent border — on mobile (no tabs), header gets the border */
+@media screen and (max-width: 76.1875em) {
+  .md-header {
+    border-bottom: 3px solid #D7153A !important;
+  }
 }
 
+/* On desktop, tabs is the bottom-most nav element — only it gets the border */
 .md-tabs {
   border-bottom: 3px solid #D7153A;
 }
