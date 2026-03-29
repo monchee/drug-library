@@ -257,28 +257,38 @@
 }
 
 @media screen and (max-width: 76.1875em) {
-  /* Hide the "SCRATCH" acronym on mobile, show full wording instead */
+  /* Stack SCRATCH + subtitle vertically in mobile header */
+  .md-header__title .md-header__topic:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .md-header__title .md-header__topic:first-child .md-ellipsis {
-    display: none;
+    font-size: 0.85em;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
   }
 
   .md-header__topic .scratch-subtitle {
-    display: inline;
+    display: block;
     margin-left: 0;
-    font-size: 0.62em;
+    font-size: 0.58em;
     font-weight: inherit;
-    opacity: 1;
+    opacity: 0.85;
     white-space: normal;
-    line-height: 1.25;
-    vertical-align: middle;
+    line-height: 1.2;
+    margin-top: 0.1em;
   }
 
-  /* Allow header to grow for two-line subtitle */
+  /* Keep header compact — just enough room for two lines */
   .md-header__inner {
     height: auto;
     min-height: 3rem;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
     align-items: center;
   }
 
