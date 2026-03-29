@@ -4,6 +4,18 @@ All significant updates to this library are recorded here in plain language. Ent
 
 ---
 
+## 29 March 2026 — Version 0.5
+
+**Author:** RPAH Allergy Nurses
+**Change:** Site hardening — search engine blocking, announcement bar, and UI fixes.
+
+- **Search Engine Blocking:** Added `robots.txt` (`Disallow: /`) and Cloudflare Pages `_headers` (`X-Robots-Tag: noindex, nofollow`) to prevent public indexing. All pages also carry a `<meta name="robots" content="noindex, nofollow">` tag for complete coverage.
+- **Announcement Bar:** Persistent banner on all pages linking to the Protocols for Review page, noting that some protocols are under clinical review. Dismissible per user session.
+- **Link Preview Descriptions:** All drug pages now include a default meta description for internal sharing via Teams or email.
+- **Double Border Fix:** Corrected a visual bug where two SLHD Red border lines appeared at the top of the page on desktop due to both the header and tabs bar carrying a `border-bottom` style.
+
+---
+
 ## 29 March 2026 — Version 0.4
 
 **Author:** RPAH Allergy Nurses
