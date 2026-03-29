@@ -4,8 +4,17 @@
   <meta name="robots" content="noindex, nofollow">
 {% endblock %}
 
-{% block announce %}
-  <a href="{{ 'reference/protocols-for-review/' | url }}">
-    Some protocols are under clinical review — verify before use
-  </a>
+{% block scripts %}
+  {{ super() }}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var topic = document.querySelector('.md-header__title .md-header__topic:first-child');
+      if (topic) {
+        var sub = document.createElement('span');
+        sub.className = 'scratch-subtitle';
+        sub.textContent = 'Skin & Challenge Reference for Allergy Testing';
+        topic.appendChild(sub);
+      }
+    });
+  </script>
 {% endblock %}

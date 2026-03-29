@@ -7,6 +7,9 @@ Welcome to **SCRATCH** — **Skin & Challenge Reference for Allergy Testing Clin
 
 This handbook provides clinical protocols for the **Department of Clinical Immunology and Allergy at Royal Prince Alfred Hospital**.
 
+!!! warning "Some protocols are under clinical review"
+    Verify data before use. [View flagged protocols](reference/protocols-for-review.md)
+
 | Clinical Category | Drug Protocol Links |
 | :--- | :--- |
 | :material-pill: **Penicillins** | [Amoxicillin](drugs/amoxicillin.md), [Ampicillin](drugs/ampicillin.md), [Augmentin](drugs/augmentin.md), [Benzylpenicillin](drugs/benzylpenicillin.md), [Flucloxacillin](drugs/flucloxacillin.md), [Penicillin Major (PPL)](drugs/penicillin-major-ppl.md), [Penicillin Minor (MD)](drugs/penicillin-minor-md.md), [Phenoxymethylpenicillin](drugs/phenoxymethylpenicillin.md), [Tazocin](drugs/tazocin.md) |
