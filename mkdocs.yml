@@ -46,6 +46,7 @@ theme:
     - toc.follow
     - header.autohide
     - navigation.instant.prefetch
+    - announce.dismiss
   topbar_style: primary
   icon:
     logo: material/test-tube

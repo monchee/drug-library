@@ -1,4 +1,11 @@
 {% extends "base.html" %}
+
 {% block extrahead %}
   <meta name="robots" content="noindex, nofollow">
+{% endblock %}
+
+{% block announce %}
+  <a href="{{ 'reference/protocols-for-review/' | url }}">
+    Some protocols are under clinical review — verify before use
+  </a>
 {% endblock %}
