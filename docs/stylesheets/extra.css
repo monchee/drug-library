@@ -279,5 +279,11 @@
     min-height: 3rem;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
+    align-items: center;
+  }
+
+  .md-header__title {
+    display: flex;
+    align-items: center;
   }
 }
