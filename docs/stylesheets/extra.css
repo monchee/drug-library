@@ -176,6 +176,33 @@
 }
 
 /* ============================================================
+   Mobile drawer — SCRATCH title + subtitle
+   ============================================================ */
+
+.scratch-nav-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.scratch-nav-subtitle-mobile {
+  font-size: 0.62em;
+  font-weight: 400;
+  opacity: 0.65;
+  white-space: normal;
+  margin-top: 0.15em;
+}
+
+/* Allow drawer title to grow taller for two-line content */
+.md-nav--primary > .md-nav__title {
+  height: auto;
+  min-height: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  align-items: center;
+}
+
+/* ============================================================
    Dilution Series Tables — widen Preparation column
    Targets 4-column tables only (Step | Dilution | Conc. | Preparation)
    On mobile (<600px) falls back to browser auto-layout to avoid
@@ -230,6 +257,36 @@
 
 @media screen and (max-width: 76.1875em) {
   .md-header__topic .scratch-subtitle {
-    display: none;
+    display: block;
+    margin-left: 0;
+    font-size: 0.62em;
+    white-space: normal;
+    line-height: 1.2;
+    margin-top: 0.1em;
+  }
+
+  /* Allow the header to grow to fit two lines */
+  .md-header__inner {
+    height: auto;
+    min-height: 3rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    align-items: center;
+  }
+
+  /* Prevent the title area from clipping */
+  .md-header__title {
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .md-header__topic {
+    white-space: normal;
+  }
+
+  .md-ellipsis {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 }

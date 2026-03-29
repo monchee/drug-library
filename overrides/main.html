@@ -8,12 +8,33 @@
   {{ super() }}
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      // Desktop header subtitle
       var topic = document.querySelector('.md-header__title .md-header__topic:first-child');
       if (topic) {
         var sub = document.createElement('span');
         sub.className = 'scratch-subtitle';
         sub.textContent = 'Skin & Challenge Reference for Allergy Testing Clinical Handbook';
         topic.appendChild(sub);
+      }
+
+      // Mobile drawer subtitle
+      var navTitle = document.querySelector('.md-nav--primary > .md-nav__title');
+      if (navTitle) {
+        var textNode = Array.from(navTitle.childNodes)
+          .find(function(n) { return n.nodeType === Node.TEXT_NODE && n.textContent.trim(); });
+        if (textNode) {
+          var wrapper = document.createElement('span');
+          wrapper.className = 'scratch-nav-title-wrapper';
+          var titleText = document.createElement('span');
+          titleText.className = 'scratch-nav-title-text';
+          titleText.textContent = textNode.textContent;
+          var drawerSub = document.createElement('span');
+          drawerSub.className = 'scratch-nav-subtitle-mobile';
+          drawerSub.textContent = 'Skin & Challenge Reference for Allergy Testing Clinical Handbook';
+          wrapper.appendChild(titleText);
+          wrapper.appendChild(drawerSub);
+          navTitle.replaceChild(wrapper, textNode);
+        }
       }
     });
   </script>
