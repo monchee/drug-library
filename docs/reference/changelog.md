@@ -1,6 +1,6 @@
 # Changelog
 
-All significant updates to this library are recorded here in plain language. Entries are listed in reverse chronological order, with the most recent at the top.
+All significant updates to SCRATCH are recorded here in plain language. Entries are listed in reverse chronological order, with the most recent at the top.
 
 ---
 
@@ -60,7 +60,7 @@ All significant updates to this library are recorded here in plain language. Ent
 ## 28 March 2026 — Version 0.1
 
 **Author:** RPAH Allergy Nurses
-**Change:** First published version of the RPAH Drug Allergy Testing Library.
+**Change:** First published version of SCRATCH.
 
 This version includes individual drug pages for all agents currently tested by the department, covering the following groups:
 

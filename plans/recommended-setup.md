@@ -231,10 +231,10 @@ plugins:
 ## Proposed Final `mkdocs.yml` Structure
 
 ```yaml
-site_name: RPAH Drug Allergy Testing Library
-site_description: Clinical drug allergy testing protocols for RPAH Clinical Immunology & Allergy
+site_name: SCRATCH
+site_description: Skin & Challenge Reference for Allergy Testing Clinical Handbook — RPAH Clinical Immunology & Allergy
 site_author: RPAH Allergy Nurses
-site_url: https://drug-library.pages.dev
+site_url: https://scratch.pages.dev
 copyright: "Copyright &copy; 2026 Department of Clinical Immunology and Allergy - Royal Prince Alfred Hospital"
 
 repo_name: your-org/drug-library

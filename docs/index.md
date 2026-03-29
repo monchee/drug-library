@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-Welcome to the **Drug Allergy Testing Library**. This library provides clinical protocols for the **Department of Clinical Immunology and Allergy at Royal Prince Alfred Hospital**.
+Welcome to **SCRATCH** — Skin & Challenge Reference for Allergy Testing Clinical Handbook. This handbook provides clinical protocols for the **Department of Clinical Immunology and Allergy at Royal Prince Alfred Hospital**.
 
 | Clinical Category | Drug Protocol Links |
 | :--- | :--- |
