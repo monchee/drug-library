@@ -265,10 +265,19 @@
   .md-header__topic .scratch-subtitle {
     display: inline;
     margin-left: 0;
-    font-size: inherit;
+    font-size: 0.62em;
     font-weight: inherit;
     opacity: 1;
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.25;
     vertical-align: middle;
+  }
+
+  /* Allow header to grow for two-line subtitle */
+  .md-header__inner {
+    height: auto;
+    min-height: 3rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
   }
 }
