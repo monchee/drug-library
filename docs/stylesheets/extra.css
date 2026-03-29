@@ -257,36 +257,6 @@
 
 @media screen and (max-width: 76.1875em) {
   .md-header__topic .scratch-subtitle {
-    display: block;
-    margin-left: 0;
-    font-size: 0.62em;
-    white-space: normal;
-    line-height: 1.2;
-    margin-top: 0.1em;
-  }
-
-  /* Allow the header to grow to fit two lines */
-  .md-header__inner {
-    height: auto;
-    min-height: 3rem;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-    align-items: center;
-  }
-
-  /* Prevent the title area from clipping */
-  .md-header__title {
-    white-space: normal;
-    line-height: 1.2;
-  }
-
-  .md-header__topic {
-    white-space: normal;
-  }
-
-  .md-ellipsis {
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
+    display: none;
   }
 }
