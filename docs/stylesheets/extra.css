@@ -256,7 +256,18 @@
 }
 
 @media screen and (max-width: 76.1875em) {
-  .md-header__topic .scratch-subtitle {
+  /* Hide the "SCRATCH" acronym on mobile, show full wording instead */
+  .md-header__title .md-header__topic:first-child .md-ellipsis {
     display: none;
+  }
+
+  .md-header__topic .scratch-subtitle {
+    display: inline;
+    margin-left: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    opacity: 1;
+    white-space: nowrap;
+    vertical-align: middle;
   }
 }
