@@ -65,5 +65,5 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Notes
-- **Med Chart 2021 (authoritative, GA Test):** IDT at 1:10 only.
-- **Medication List 2021 alternative:** Lists a fuller IDT series: 1:1,000, 1:100, 1:10, and Neat. This page follows Med Chart 2021 (1:10 only). Confirm with the clinical team whether the fuller series is required.
+- **Spreadsheet 1 (authoritative, GA Test):** IDT at 1:10 only.
+- **Spreadsheet 2 alternative:** Lists a fuller IDT series: 1:1,000, 1:100, 1:10, and Neat. This page follows Spreadsheet 1 (1:10 only). Confirm with the clinical team whether the fuller series is required.

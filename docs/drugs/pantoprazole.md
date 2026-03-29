@@ -81,4 +81,4 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Notes
-- **Spreadsheet discrepancy:** The Medication List 2021 spreadsheet labels the SPT concentration as "Neat (40 mg/mL)". This is a spreadsheet labelling error — the correct reconstituted concentration is **4 mg/mL** (40 mg powder + 10 mL NS). The spreadsheet needs correction. This page reflects the correct calculation.
+- **Spreadsheet discrepancy:** The Spreadsheet 2 spreadsheet labels the SPT concentration as "Neat (40 mg/mL)". This is a spreadsheet labelling error — the correct reconstituted concentration is **4 mg/mL** (40 mg powder + 10 mL NS). The spreadsheet needs correction. This page reflects the correct calculation.

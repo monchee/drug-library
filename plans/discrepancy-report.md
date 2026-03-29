@@ -1,7 +1,7 @@
 # Drug Page Verification Report
 
 **Date:** 2026-03-28 (updated 2026-03-29)
-**Scope:** All 66 drug pages in `docs/drugs/` compared against `reference/Med Chart 2021.xlsx` and `reference/Medication List 2021.xlsx`
+**Scope:** All 66 drug pages in `docs/drugs/` compared against `reference/Spreadsheet 1.xlsx` and `reference/Spreadsheet 2.xlsx`
 
 ## Summary
 
@@ -12,7 +12,7 @@
 | ⚠️ Discrepancies requiring clinical review | 6 (see protocols-for-review.md) |
 | ❌ No spreadsheet SPT/IDT data (oral challenge / desensitisation only) | 5 |
 
-> **Update 2026-03-29:** Pages have been updated since the initial report. Amoxicillin, Ampicillin, Augmentin, Ketamine, Ropivacaine now follow Med Chart 2021. Sugammadex now includes IDT 1:100. Cephalexin and Cefuroxime now include full SPT/IDT data. Paracetamol now includes IDT 1:10. All known discrepancies are documented in `docs/reference/protocols-for-review.md`.
+> **Update 2026-03-29:** Pages have been updated since the initial report. Amoxicillin, Ampicillin, Augmentin, Ketamine, Ropivacaine now follow Spreadsheet 1. Sugammadex now includes IDT 1:100. Cephalexin and Cefuroxime now include full SPT/IDT data. Paracetamol now includes IDT 1:10. All known discrepancies are documented in `docs/reference/protocols-for-review.md`.
 
 ---
 
@@ -25,7 +25,7 @@
 | **SPT** | 1:5 (20 mg/mL) | 1:5 (20 mg/mL) | Neat (100 mg/mL) |
 | **IDT** | 1:10 (10 mg/mL), 1:5 (20 mg/mL) | 1:10 (10 mg/mL), 1:5 (20 mg/mL) | 1:100 (10 mg/mL) |
 
-- **Updated:** Page now follows Med Chart 2021 (1:5/20 mg/mL). Medication List alternative noted in page Notes.
+- **Updated:** Page now follows Spreadsheet 1 (1:5/20 mg/mL). Medication List alternative noted in page Notes.
 - Discrepancy between spreadsheets remains — see `docs/reference/protocols-for-review.md`.
 
 ### 1.2 Ampicillin — Same SPT conflict as Amoxicillin
@@ -35,7 +35,7 @@
 | **SPT** | 1:5 (20 mg/mL) | 1:5 (20 mg/mL) | Neat (100 mg/mL) |
 | **IDT** | 1:10 (10 mg/mL), 1:5 (20 mg/mL) | 1:10 (10 mg/mL), 1:5 (20 mg/mL) | 1:100 (10 mg/mL) |
 
-- **Updated:** Page now follows Med Chart 2021. Medication List alternative noted in page Notes.
+- **Updated:** Page now follows Spreadsheet 1. Medication List alternative noted in page Notes.
 
 ### 1.3 Augmentin — Different stock formulation used
 
@@ -183,7 +183,7 @@ The following 53 drug pages have SPT/IDT data that correctly matches one or both
 
 alfentanil, ampicillin, amoxicillin, augmentin, benzylpenicillin, cefazolin, cefepime, cefotaxime, ceftazidime, ceftriaxone, cephalexin, cefuroxime, chlorhexidine, ciprofloxacin, cis-atracurium, clindamycin, dalteparin, dexamethasone, doxycycline, enoxaparin, fentanyl, heparin, ketamine, latex, levofloxacin, lignocaine, mepivacaine, methylprednisolone, metronidazole, midazolam, omnipaque, oxycodone, pancuronium, paracetamol, parecoxib, penicillin-major-ppl, penicillin-minor-md, propofol, remifentanil, rocuronium, ropivacaine, suxamethonium, thiopental, tranexamic-acid, vancomycin, vecuronium, visipaque, ultravist, fluconazole, morphine, lansoprazole, omeprazole, esomeprazole, rabeprazole, hydrocortisone, patent-blue, sugammadex
 
-> **Note:** Amoxicillin, Ampicillin, Augmentin, Ketamine, and Ropivacaine are listed here because they match Med Chart 2021 (authoritative). Unresolved conflicts with Medication List 2021 are documented in `docs/reference/protocols-for-review.md`. Tazocin remains flagged — concentration unresolved.
+> **Note:** Amoxicillin, Ampicillin, Augmentin, Ketamine, and Ropivacaine are listed here because they match Spreadsheet 1 (authoritative). Unresolved conflicts with Spreadsheet 2 are documented in `docs/reference/protocols-for-review.md`. Tazocin remains flagged — concentration unresolved.
 
 ---
 

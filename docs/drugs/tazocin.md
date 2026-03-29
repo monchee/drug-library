@@ -24,7 +24,7 @@ version: 1.2
     Ensure the vial contains **4 g / 500 mg** of Tazocin. Check expiry and integrity. Note that testing is performed at a **1:10** dilution of the initial reconstituted vial.
 
 !!! warning "Concentration discrepancy"
-    The Medication List 2021 spreadsheet specifies SPT at 1:10 (2 mg/mL Piperacillin), whereas the page previously calculated 1:10 of 200 mg/mL = 20 mg/mL. This page has been updated to match the spreadsheet (2 mg/mL). **This calculation discrepancy requires clinical review — see [Protocols for Review](../reference/protocols-for-review.md).**
+    The Spreadsheet 2 spreadsheet specifies SPT at 1:10 (2 mg/mL Piperacillin), whereas the page previously calculated 1:10 of 200 mg/mL = 20 mg/mL. This page has been updated to match the spreadsheet (2 mg/mL). **This calculation discrepancy requires clinical review — see [Protocols for Review](../reference/protocols-for-review.md).**
 
 ### Equipment needed
 - 1 × Tazocin 4 g / 500 mg vial
@@ -44,7 +44,7 @@ version: 1.2
 3. By calculation: **Piperacillin 20 mg/mL** and **Tazobactam 2.5 mg/mL**.
 
 !!! warning "Unresolved concentration — label pending clinical review"
-    The Medication List 2021 specifies SPT at **2 mg/mL** Piperacillin. The calculation above (1:10 of 200 mg/mL) gives **20 mg/mL** — 10× higher. **Do not label or use this syringe until the correct concentration is confirmed.** See [Protocols for Review](../reference/protocols-for-review.md) for details.
+    The Spreadsheet 2 specifies SPT at **2 mg/mL** Piperacillin. The calculation above (1:10 of 200 mg/mL) gives **20 mg/mL** — 10× higher. **Do not label or use this syringe until the correct concentration is confirmed.** See [Protocols for Review](../reference/protocols-for-review.md) for details.
 
 ### Step 3 — Prepare IDT dilutions
 Prepare in this order, using a fresh syringe for each step.

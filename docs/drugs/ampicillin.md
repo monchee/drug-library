@@ -81,4 +81,4 @@ Prepare in this order, using a fresh syringe for each step.
 ## Notes
 - Cross-reactivity with amoxicillin is high — if positive, both are likely affected.
 - Often tested alongside other beta-lactams.
-- **Medication List alternative:** The Medication List 2021 spreadsheet lists SPT as Neat (100 mg/mL) and IDT as 1:100 only. This page follows Med Chart 2021 which specifies SPT 1:5 (20 mg/mL) and IDT 1:10 + 1:5.
+- **Medication List alternative:** The Spreadsheet 2 spreadsheet lists SPT as Neat (100 mg/mL) and IDT as 1:100 only. This page follows Spreadsheet 1 which specifies SPT 1:5 (20 mg/mL) and IDT 1:10 + 1:5.

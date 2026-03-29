@@ -45,7 +45,7 @@ Prepare the following, using a fresh syringe for each step.
     - Label: **"Ketamine IDT 0.1 mg/mL"**.
 
 !!! note "Higher concentrations"
-    Per Med Chart 2021, IDT is performed at 1:1,000 only. Intermediate syringes (1:10, 1:100) are required to reach 1:1,000 but are not injected. If the clinical team directs a broader series, see [Protocols for Review](../reference/protocols-for-review.md).
+    Per Spreadsheet 1, IDT is performed at 1:1,000 only. Intermediate syringes (1:10, 1:100) are required to reach 1:1,000 but are not injected. If the clinical team directs a broader series, see [Protocols for Review](../reference/protocols-for-review.md).
 
 ---
 
@@ -72,6 +72,6 @@ Prepare the following, using a fresh syringe for each step.
 ---
 
 ## Notes
-- **Med Chart 2021 (authoritative):** IDT at 1:1,000 only.
-- **Medication List 2021 alternative:** Lists IDT at 1:100.
-- **Spreadsheet note:** "ANZZAG: 1:1,000 Initial & Max, Protocol from department — 1:100, 1:10". The department protocol uses a broader range (1:100, 1:10) which differs from the Med Chart. This page follows Med Chart 2021 (1:1,000 only). Confirm with the clinical team which protocol to follow.
+- **Spreadsheet 1 (authoritative):** IDT at 1:1,000 only.
+- **Spreadsheet 2 alternative:** Lists IDT at 1:100.
+- **Spreadsheet note:** "ANZZAG: 1:1,000 Initial & Max, Protocol from department — 1:100, 1:10". The department protocol uses a broader range (1:100, 1:10) which differs from the Med Chart. This page follows Spreadsheet 1 (1:1,000 only). Confirm with the clinical team which protocol to follow.

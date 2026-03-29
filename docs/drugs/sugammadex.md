@@ -73,5 +73,5 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Notes
-- **IDT 1:100 added** per Medication List 2021 which lists both 1:1,000 and 1:100.
+- **IDT 1:100 added** per Spreadsheet 2 which lists both 1:1,000 and 1:100.
 - The Medication List includes a second entry for "Mix with Rocuronium 1:1" testing — this is a separate protocol for combined agent testing and is not covered on this page.

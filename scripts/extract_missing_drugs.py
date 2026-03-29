@@ -367,11 +367,11 @@ def extract_all_spreadsheet_data():
     """Extract drug data from both reference spreadsheets."""
     all_drugs = {}
 
-    # Parse Med Chart 2021.xlsx
-    wb1_path = REF_DIR / "Med Chart 2021.xlsx"
+    # Parse Spreadsheet 1.xlsx
+    wb1_path = REF_DIR / "Spreadsheet 1.xlsx"
     if wb1_path.exists():
         wb1 = openpyxl.load_workbook(wb1_path, data_only=True)
-        print(f"Med Chart 2021.xlsx sheets: {wb1.sheetnames}")
+        print(f"Spreadsheet 1.xlsx sheets: {wb1.sheetnames}")
         for sheet_name in wb1.sheetnames:
             # Skip non-SPT/IDT sheets
             skip = False
@@ -389,15 +389,15 @@ def extract_all_spreadsheet_data():
                 key = normalize_drug_name(drug_name)
                 if key not in all_drugs:
                     all_drugs[key] = []
-                all_drugs[key].append({**drug_data, "original_name": drug_name, "workbook": "Med Chart 2021.xlsx"})
+                all_drugs[key].append({**drug_data, "original_name": drug_name, "workbook": "Spreadsheet 1.xlsx"})
     else:
         print(f"WARNING: {wb1_path} not found!")
 
-    # Parse Medication List 2021.xlsx
-    wb2_path = REF_DIR / "Medication List 2021.xlsx"
+    # Parse Spreadsheet 2.xlsx
+    wb2_path = REF_DIR / "Spreadsheet 2.xlsx"
     if wb2_path.exists():
         wb2 = openpyxl.load_workbook(wb2_path, data_only=True)
-        print(f"Medication List 2021.xlsx sheets: {wb2.sheetnames}")
+        print(f"Spreadsheet 2.xlsx sheets: {wb2.sheetnames}")
         for sheet_name in wb2.sheetnames:
             skip = False
             for skip_pattern in SKIP_SHEETS:
@@ -414,7 +414,7 @@ def extract_all_spreadsheet_data():
                 key = normalize_drug_name(drug_name)
                 if key not in all_drugs:
                     all_drugs[key] = []
-                all_drugs[key].append({**drug_data, "original_name": drug_name, "workbook": "Medication List 2021.xlsx"})
+                all_drugs[key].append({**drug_data, "original_name": drug_name, "workbook": "Spreadsheet 2.xlsx"})
     else:
         print(f"WARNING: {wb2_path} not found!")
 

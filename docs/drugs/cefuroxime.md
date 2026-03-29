@@ -110,4 +110,4 @@ Prepare in this order, using a fresh syringe for each step.
 
 ## Notes
 - Cefuroxime axetil is the oral form.
-- SPT/IDT data sourced from Medication List 2021.
+- SPT/IDT data sourced from Spreadsheet 2.

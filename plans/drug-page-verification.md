@@ -4,8 +4,8 @@
 Systematically verify that all 65 drug pages in `docs/drugs/` accurately reflect the clinical data contained in the two reference Excel spreadsheets.
 
 ## Reference Sources
-1. `reference/Med Chart 2021.xlsx` — Contains sheets: Drug Testing 1 Page, 2 Page Drug, Penicillins-NU, DAP-Penicillin, GA Test, Contrast, List of testing drug, Oral ABs, Drug Testing 2 Pages (2)
-2. `reference/Medication List 2021.xlsx` — Contains sheets: Click This List, Local Anesthetics, Cephalosporin, Penicillin, Hypnotics, Opioids, Muscle Relaxant, PPI, Others, For OGC, For IV Challenge, For SC or IM Challenge, Desensitisation
+1. `reference/Spreadsheet 1.xlsx` — Contains sheets: Drug Testing 1 Page, 2 Page Drug, Penicillins-NU, DAP-Penicillin, GA Test, Contrast, List of testing drug, Oral ABs, Drug Testing 2 Pages (2)
+2. `reference/Spreadsheet 2.xlsx` — Contains sheets: Click This List, Local Anesthetics, Cephalosporin, Penicillin, Hypnotics, Opioids, Muscle Relaxant, PPI, Others, For OGC, For IV Challenge, For SC or IM Challenge, Desensitisation
 
 ## Data Points to Compare
 For each drug, extract and compare:

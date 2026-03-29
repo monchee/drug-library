@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Verify that all drug pages in docs/drugs/ accurately reflect the data
-in the reference spreadsheets (Med Chart 2021.xlsx and Medication List 2021.xlsx).
+in the reference spreadsheets (Spreadsheet 1.xlsx and Spreadsheet 2.xlsx).
 """
 
 import os
@@ -144,8 +144,8 @@ def extract_all_spreadsheet_data():
     """Extract drug data from both reference spreadsheets."""
     all_drugs = {}
     
-    # Parse Med Chart 2021.xlsx
-    wb1 = openpyxl.load_workbook(REF_DIR / "Med Chart 2021.xlsx", data_only=True)
+    # Parse Spreadsheet 1.xlsx
+    wb1 = openpyxl.load_workbook(REF_DIR / "Spreadsheet 1.xlsx", data_only=True)
     for sheet_name in wb1.sheetnames:
         ws = wb1[sheet_name]
         drugs = extract_drugs_from_sheet(ws, f"Med Chart/{sheet_name}")
@@ -155,8 +155,8 @@ def extract_all_spreadsheet_data():
                 all_drugs[key] = {"med_chart": [], "med_list": []}
             all_drugs[key]["med_chart"].append({**drug_data, "original_name": drug_name})
     
-    # Parse Medication List 2021.xlsx
-    wb2 = openpyxl.load_workbook(REF_DIR / "Medication List 2021.xlsx", data_only=True)
+    # Parse Spreadsheet 2.xlsx
+    wb2 = openpyxl.load_workbook(REF_DIR / "Spreadsheet 2.xlsx", data_only=True)
     for sheet_name in wb2.sheetnames:
         ws = wb2[sheet_name]
         drugs = extract_drugs_from_sheet(ws, f"Medication List/{sheet_name}")
@@ -545,8 +545,8 @@ def generate_report(spreadsheet_data, page_data):
     report_lines.append("# Drug Page Verification Report")
     report_lines.append("")
     report_lines.append("This report compares all drug pages in `docs/drugs/` against the two reference spreadsheets:")
-    report_lines.append("- `reference/Med Chart 2021.xlsx`")
-    report_lines.append("- `reference/Medication List 2021.xlsx`")
+    report_lines.append("- `reference/Spreadsheet 1.xlsx`")
+    report_lines.append("- `reference/Spreadsheet 2.xlsx`")
     report_lines.append("")
     
     # ── Summary ──
