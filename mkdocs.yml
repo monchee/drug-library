@@ -231,3 +231,4 @@ nav:
       - Protocols for Review: reference/protocols-for-review.md
       - Tags: reference/tags.md
       - Changelog: reference/changelog.md
+  - Testing: testing.md

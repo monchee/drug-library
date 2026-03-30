@@ -95,5 +95,5 @@ Prepare in this order, using a fresh syringe for each step.
 
 ## Notes
 - Observe a minimum of 30–60 minutes after the final dose.
-- Have adrenaline drawn up and labelled before commencing.
+- Have adrenaline available on standby before commencing.
 - **Medication List alternative:** The Spreadsheet 2 spreadsheet lists SPT as Neat (100 mg/mL) and IDT as 1:100 only. This page follows Spreadsheet 1 which specifies SPT 1:5 (20 mg/mL) and IDT 1:10 + 1:5.

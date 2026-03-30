@@ -38,7 +38,7 @@ Activate emergency response — call 2222 (RPAH internal emergency).
 
 - **Route:** IM, mid-outer thigh (through clothing if needed)
 - **Repeat:** every 5 min if no improvement
-- Pre-drawn adrenaline syringe must be available before commencing any IDT or challenge
+- Adrenaline must be available on standby before commencing any IDT or challenge
 
 ### 4. Position
 - Lay patient flat with legs elevated (unless respiratory distress — sit upright)

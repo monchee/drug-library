@@ -3,9 +3,7 @@ hide:
   - navigation
 ---
 
-Welcome to **SCRATCH** — **Skin & Challenge Reference for Allergy Testing Clinical Handbook**. 
-
-This handbook provides clinical protocols for the **Department of Clinical Immunology and Allergy at Royal Prince Alfred Hospital**.
+Welcome to **SCRATCH**. This handbook provides clinical protocols for the **Department of Clinical Immunology and Allergy at Royal Prince Alfred Hospital**.
 
 !!! warning "Some protocols are under clinical review"
     Verify data before use. [View flagged protocols](reference/protocols-for-review.md)
@@ -36,7 +34,7 @@ This handbook provides clinical protocols for the **Department of Clinical Immun
 
 - Written consent must be obtained and documented
 - Baseline vital signs must be recorded
-- Adrenaline 0.5 mg/mL (1:1000) must be drawn and labelled before commencing any IDT or challenge
+- Adrenaline 0.5 mg/mL (1:1000) must be available on standby before commencing any IDT or challenge
 - Positive control (histamine 10 mg/mL) and negative control (normal saline) must be included for all SPT
 - IDT volume: **0.05 mL** unless otherwise specified
 

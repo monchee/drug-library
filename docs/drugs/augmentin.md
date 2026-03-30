@@ -97,5 +97,5 @@ Prepare in this order, using a fresh syringe for each step.
 ## Notes
 - Augmentin contains amoxicillin plus clavulanate — both components should be noted in documentation.
 - Observe a minimum of 30–60 minutes after the final dose.
-- Have adrenaline drawn up and labelled before commencing.
+- Have adrenaline available on standby before commencing.
 - **Alternative formulation:** A 1.2 g vial (1,000 mg amoxicillin + 200 mg clavulanate, reconstituted with 20 mL WFI to 60 mg/mL amoxicillin) may be available. This page follows Spreadsheet 1 which specifies the 500 mg formulation.

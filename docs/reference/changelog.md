@@ -4,6 +4,16 @@ All significant updates to SCRATCH are recorded here in plain language. Entries 
 
 ---
 
+## 31 March 2026 — Version 0.6
+
+**Author:** RPAH Allergy Nurses
+**Change:** DREAM integration page and adrenaline wording correction.
+
+- **DREAM Page:** Added a new Testing tab linking to the DREAM app (Drug Reaction Evaluation and Anaesthetic Management), the nurse-led platform for real-time documentation of allergy testing encounters. The page explains the REDCap → DREAM → eMR workflow and the complementary relationship between SCRATCH and DREAM.
+- **Adrenaline Wording:** Corrected adrenaline safety language across 5 pages (home, anaphylaxis reference, mixing guide, amoxicillin, augmentin) to reflect that adrenaline is available on standby — not pre-drawn into a syringe before procedures.
+
+---
+
 ## 29 March 2026 — Version 0.5
 
 **Author:** RPAH Allergy Nurses

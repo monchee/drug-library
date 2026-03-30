@@ -82,7 +82,7 @@ To make a **1:1,000 dilution:** 1 mL of 1:100 + 9 mL diluent (and so on).
 
 - [ ] Written consent obtained and documented
 - [ ] Baseline vitals recorded (BP, HR, SpO₂)
-- [ ] Adrenaline 0.5 mg/mL (1:1000) drawn, labelled, and within reach
+- [ ] Adrenaline 0.5 mg/mL (1:1000) available on standby
 - [ ] IV access established (for IDT and all challenges)
 - [ ] Antihistamines withheld ≥ 72 h (check with AMO if unclear)
 - [ ] Beta-blockers noted (may blunt anaphylaxis treatment response — inform AMO)
