@@ -37,6 +37,7 @@ Welcome to **SCRATCH**. This handbook provides clinical protocols for the **Depa
 - Adrenaline 0.5 mg/mL (1:1000) must be available on standby before commencing any IDT or challenge
 - Positive control (histamine 10 mg/mL) and negative control (normal saline) must be included for all SPT
 - IDT volume: **0.05 mL** unless otherwise specified
+- Spotted an error? [Suggest an edit](FORM_URL_PLACEHOLDER){ target="_blank" }
 
 ## Reference
 

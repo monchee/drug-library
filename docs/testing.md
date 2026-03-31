@@ -9,7 +9,7 @@ hide:
 
 DREAM is a nurse-led digital platform designed for real-time documentation of perioperative drug allergy testing encounters at RPAH. It works alongside SCRATCH as the clinical action tool — while SCRATCH is your reference, DREAM is where you record the encounter.
 
-[Launch DREAM :material-open-in-new:](https://dream.pages.dev){ .md-button .md-button--primary target="_blank" }
+[Launch DREAM :material-open-in-new:](https://dream.yuson.au){ .md-button .md-button--primary target="_blank" }
 
 ---
 
