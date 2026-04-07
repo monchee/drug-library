@@ -8,14 +8,15 @@
   {{ super() }}
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Print button — inject into breadcrumb bar, opposite the breadcrumbs
-      var path = document.querySelector('.md-path');
-      if (path) {
+      // Print button — inject into content actions area (top-right of article)
+      var article = document.querySelector('article.md-content__inner');
+      if (article) {
         var printBtn = document.createElement('button');
-        printBtn.className = 'scratch-print-btn';
+        printBtn.className = 'scratch-print-btn md-content__button';
+        printBtn.title = 'Print this page';
         printBtn.textContent = 'Print';
         printBtn.addEventListener('click', function () { window.print(); });
-        path.appendChild(printBtn);
+        article.insertBefore(printBtn, article.firstChild);
       }
 
       // Desktop header subtitle
