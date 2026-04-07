@@ -103,7 +103,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Challenge Protocol
-**Intervals:** Observe for **30–60 minutes** between each step.
+**Intervals:** Observe for **20 minutes** between each step.
 **Final Observation:** Monitor for **1–2 hours** after the final dose.
 
 ---

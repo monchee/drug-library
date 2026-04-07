@@ -85,10 +85,10 @@ Prepare in this order, using a fresh syringe for each step.
 
 | Step | Dose | Volume | Interval |
 |---|---|---|---|
-| 1 | 12.5 mg | 0.5 mL | 30 min |
-| 2 | 25 mg | 1 mL | 30 min |
-| 3 | 50 mg | 2 mL | 30 min |
-| 4 | 125 mg | 5 mL | 30 min |
+| 1 | 12.5 mg | 0.5 mL | 20 min |
+| 2 | 25 mg | 1 mL | 20 min |
+| 3 | 50 mg | 2 mL | 20 min |
+| 4 | 125 mg | 5 mL | 20 min |
 | 5 | 250 mg | 10 mL | 60 min observation |
 
 ---

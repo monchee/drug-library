@@ -36,7 +36,7 @@ version: 1.1
 | 1 | 2 mg | 1/10 Tablet (or liquid equiv) | 2 mg |
 | 2 | 20 mg | 1 Tablet | 22 mg |
 
-**Interval:** 60 minutes between steps.
+**Interval:** 20 minutes between steps.
 
 ---
 

@@ -171,9 +171,34 @@
   }
 }
 
-/* Hide inline tags on pages (tags index page still works) */
-.md-content__inner .md-tags {
-  display: none !important;
+
+/* ============================================================
+   Print button
+   ============================================================ */
+
+.scratch-print-btn {
+  float: right;
+  margin-top: -2.2rem;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  font-family: inherit;
+  color: #002664;
+  background: #ffffff;
+  border: 1px solid #002664;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.scratch-print-btn:hover {
+  background: #002664;
+  color: #ffffff;
+}
+
+@media print {
+  .scratch-print-btn {
+    display: none;
+  }
 }
 
 /* ============================================================

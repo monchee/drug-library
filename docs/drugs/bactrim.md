@@ -30,7 +30,7 @@ version: 1.1
 | 2 | 64 mg / 320 mg | 8.0 mL | 80 mg / 400 mg |
 | 3 | 80 mg / 400 mg | 10.0 mL | 160 mg / 800 mg |
 
-**Interval:** 30–60 minutes between steps as per clinical orders.
+**Interval:** 20 minutes between steps.
 
 ---
 

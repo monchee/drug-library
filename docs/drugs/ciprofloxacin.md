@@ -60,5 +60,5 @@ version: 1.1
 | 3 | 100 mg | 2.0 mL | 175 mg |
 | 4 | 250 mg | 5.0 mL | 425 mg |
 
-**Interval:** 30–60 minutes between steps.
+**Interval:** 20 minutes between steps.
 **Final Step:** Consider a full therapeutic dose (e.g., 500 mg tablet) if earlier steps are negative.

@@ -32,7 +32,7 @@ version: 1.1
 | 4 | 300 mg | 1 Tablet | 540 mg |
 | 5 | 600 mg | 2 Tablets | 1140 mg |
 
-**Interval:** 60–90 minutes between steps as per clinical orders.
+**Interval:** 20 minutes between steps.
 
 ---
 

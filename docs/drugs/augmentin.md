@@ -87,9 +87,9 @@ Prepare in this order, using a fresh syringe for each step.
 
 | Step | Dose | Volume | Interval |
 |---|---|---|---|
-| 1 | 25/3.6 mg | 0.3 mL | 30 min |
-| 2 | 100/14.3 mg | 1.25 mL | 30 min |
-| 3 | 275/39.4 mg | 3.44 mL | 30 min |
+| 1 | 25/3.6 mg | 0.3 mL | 20 min |
+| 2 | 100/14.3 mg | 1.25 mL | 20 min |
+| 3 | 275/39.4 mg | 3.44 mL | 20 min |
 | 4 | 875/125 mg | 10.9 mL | 60 min observation |
 
 ---

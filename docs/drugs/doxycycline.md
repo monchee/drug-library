@@ -93,4 +93,4 @@ Prepare in this order, using a fresh syringe for each step.
 | 2 | 50 mg | 1/2 Tablet | 75 mg |
 | 3 | 100 mg | 1 Tablet | 175 mg |
 
-**Interval:** 30–60 minutes between steps.
+**Interval:** 20 minutes between steps.
