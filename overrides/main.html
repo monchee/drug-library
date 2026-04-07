@@ -8,17 +8,6 @@
   {{ super() }}
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Print button — inject into content actions area (top-right of article)
-      var article = document.querySelector('article.md-content__inner');
-      if (article) {
-        var printBtn = document.createElement('button');
-        printBtn.className = 'scratch-print-btn md-content__button';
-        printBtn.title = 'Print this page';
-        printBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 3H6v4h12M17 12a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m-1 7H8v-4h8m3-6H5a3 3 0 0 0-3 3v6h4v4h12v-4h4v-6a3 3 0 0 0-3-3z"/></svg><span>Print</span>';
-        printBtn.addEventListener('click', function () { window.print(); });
-        article.insertBefore(printBtn, article.firstChild);
-      }
-
       // Desktop header subtitle
       var topic = document.querySelector('.md-header__title .md-header__topic:first-child');
       if (topic) {
