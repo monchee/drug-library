@@ -39,7 +39,7 @@ version: 1.1
 | 2 | 10 mg | 1 × Tablet | 20 mg |
 | 3 | 10 mg | 1 × Tablet | 30 mg |
 
-**Interval:** 30 minutes between doses.
+**Interval:** 20 minutes between doses.
 **Total Dose:** 30 mg.
 
 !!! tip "Post-Protocol"

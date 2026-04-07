@@ -1,7 +1,7 @@
 /* ============================================================
    SCRATCH — Custom Theme (MaterialX)
    SLHD / NSW Health Branding: Navy + Red
-   v2026-03-30
+   v2026-04-07
    ============================================================ */
 
 :root {
@@ -169,20 +169,20 @@
   .md-typeset h1:first-of-type {
     page-break-before: avoid;
   }
-}
 
-
-/* ============================================================
-   Print — hide non-content elements
-   ============================================================ */
-
-@media print {
+  /* Hide non-content elements in print */
   .md-path,
   .md-tags,
   .document-dates-plugin {
     display: none !important;
   }
+
+  /* Hide print button in print */
+  .scratch-print-btn {
+    display: none !important;
+  }
 }
+
 
 /* ============================================================
    Mobile drawer — SCRATCH title + subtitle
@@ -213,21 +213,14 @@
 
 /* ============================================================
    Dilution Series Tables — widen Preparation column
-   Targets 4-column tables only (Step | Dilution | Conc. | Preparation)
-   On mobile (<600px) falls back to browser auto-layout to avoid
-   squishing the Step/Dilution/Concentration headers.
    ============================================================ */
 
-/* word-wrap applies at all sizes */
 .md-typeset table:not([class]):has(th:nth-child(4)) td,
 .md-typeset table:not([class]):has(th:nth-child(4)) th {
   word-break: break-word;
   overflow-wrap: break-word;
 }
 
-/* Fixed column widths at all sizes; min-width ensures narrow screens
-   scroll horizontally rather than squish (MkDocs Material wraps tables
-   in overflow-x: auto automatically) */
 .md-typeset table:not([class]):has(th:nth-child(4)) {
   table-layout: fixed;
   width: 100%;
@@ -249,8 +242,6 @@
   width: 15%;
 }
 
-/* Column 4 (Preparation) gets the remaining ~70% automatically */
-
 /* ============================================================
    Header subtitle — full SCRATCH acronym on desktop only
    ============================================================ */
@@ -265,7 +256,6 @@
 }
 
 @media screen and (max-width: 76.1875em) {
-  /* Stack SCRATCH + subtitle vertically in mobile header */
   .md-header__title .md-header__topic:first-child {
     display: flex;
     flex-direction: column;
@@ -291,7 +281,6 @@
     margin-top: 0.1em;
   }
 
-  /* Keep header compact — just enough room for two lines */
   .md-header__inner {
     height: auto;
     min-height: 3rem;
@@ -303,5 +292,49 @@
   .md-header__title {
     display: flex;
     align-items: center;
+  }
+}
+
+/* ============================================================
+   Print Button — floating bottom-right
+   ============================================================ */
+
+.scratch-print-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  background-color: #002664;
+  color: #ffffff;
+  border: 2px solid #D7153A;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scratch-print-btn:hover {
+  background-color: #D7153A;
+  border-color: #002664;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.scratch-print-btn:active {
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 76.1875em) {
+  .scratch-print-btn {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
   }
 }
