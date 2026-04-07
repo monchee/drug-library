@@ -1,6 +1,6 @@
 ---
 title: Augmentin (Amoxicillin / Clavulanate)
-tags: [spt, idt, ogc]
+tags: [spt, idt, oral]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
 version: 1.2
