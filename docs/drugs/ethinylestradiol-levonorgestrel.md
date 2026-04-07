@@ -1,6 +1,6 @@
 ---
 title: Ethinylestradiol / Levonorgestrel (Microgynon 20 ED)
-tags: [hormonal-contraceptive, spt]
+tags: [spt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
 version: 1.0

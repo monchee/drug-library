@@ -1,6 +1,6 @@
 ---
 title: Propofol
-tags: [hypnotic, anaesthetic-agent, intravenous, spt, idt]
+tags: [intravenous, spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
 version: 1.1

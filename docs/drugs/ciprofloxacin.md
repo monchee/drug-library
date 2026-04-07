@@ -1,6 +1,6 @@
 ---
 title: Ciprofloxacin
-tags: [antibiotic, fluoroquinolone, spt, ogc, intravenous]
+tags: [spt, ogc, intravenous]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
 version: 1.1

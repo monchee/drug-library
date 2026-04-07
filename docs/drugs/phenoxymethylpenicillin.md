@@ -1,6 +1,6 @@
 ---
 title: Phenoxymethylpenicillin (Penicillin V)
-tags: [penicillin, oral, penicillin-v, ogc]
+tags: [oral, ogc]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
 version: 1.1

@@ -1,6 +1,6 @@
 ---
 title: Cephalexin
-tags: [cephalosporin, 1st-generation, oral, spt, idt, ogc]
+tags: [oral, spt, idt, ogc]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
 version: 1.2

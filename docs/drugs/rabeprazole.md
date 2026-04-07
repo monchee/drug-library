@@ -1,6 +1,6 @@
 ---
 title: Rabeprazole
-tags: [ppi, gastric, ogc, spt]
+tags: [ogc, spt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
 version: 1.1

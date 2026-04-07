@@ -1,6 +1,6 @@
 ---
 title: Amoxicillin
-tags: [beta-lactam, penicillin, antibiotic, spt, idt, ogc]
+tags: [spt, idt, ogc]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
 version: 1.2
