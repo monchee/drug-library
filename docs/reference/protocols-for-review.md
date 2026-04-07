@@ -1,6 +1,6 @@
 ---
 title: Protocols Requiring Clinical Review
-tags: [review, discrepancy, clinical]
+tags: []
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
 version: 1.0
