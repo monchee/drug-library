@@ -4,6 +4,20 @@ All significant updates to SCRATCH are recorded here in plain language. Entries 
 
 ---
 
+## 19 August 2026 — Version 0.7
+
+**Author:** RPAH Allergy Nurses
+**Change:** SCRATCH/DREAM companion UI polish — durable design contract, native tags rendering, print and accessibility polish, and persistent DREAM handoff.
+
+- **Companion Design Contract:** Added `DESIGN.md`, a durable presentation contract for SCRATCH covering positioning, typography (Public Sans with Inter fallbacks, JetBrains Mono for data), square-cornered surfaces with 1px borders and 8px spacing, light/dark colour tokens (navy masthead, pale NSW blue, restrained SLHD red), 2px focus rings, reduced-motion support, print-first output, and content integrity rules.
+- **Native Tags Rendering:** Replaced the custom tags loop with Material's native `<!-- material/tags -->` rendering for a consistent, searchable tag index.
+- **Print and Accessibility Polish:** Rebuilt the print control as a square, flat, keyboard-accessible button with inline SVG icon and ARIA label; added 2px focus rings on all focusable elements, token-based colours, and print styles that hide interactive chrome (including the DREAM link).
+- **Persistent DREAM Handoff:** Added a permanent DREAM link in the masthead (`https://dream.yuson.au`) as the record-side companion to SCRATCH's read-side reference.
+
+This release is presentation-only and does not change clinical content — no doses, dilutions, warnings, or protocols in `docs/` were altered.
+
+---
+
 ## 31 March 2026 — Version 0.6
 
 **Author:** RPAH Allergy Nurses

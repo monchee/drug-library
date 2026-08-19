@@ -1,81 +1,614 @@
 /* ============================================================
-   SCRATCH — Custom Theme (MaterialX)
-   SLHD / NSW Health Branding: Navy + Red
-   v2026-04-07
+   SCRATCH — Local Theme (MaterialX)
+   SLHD / NSW Health Branding: Navy + Pale Blue, restrained red
+   v2026-08-19
+   ============================================================ */
+
+/* ============================================================
+   Semantic tokens — light / dark
    ============================================================ */
 
 :root {
-  --md-primary-fg-color:        #002664;   /* SLHD Navy */
+  /* light scheme */
+  --md-sys-background:        #f8fafc;
+  --md-sys-foreground:        #020817;
+  --md-sys-card:              #ffffff;
+  --md-sys-muted:             #f1f5f9;
+  --md-sys-muted-foreground:  #5f6f82;
+  --md-sys-border:            #e2e8f0;
+  --md-sys-primary:           #002664;
+  --md-sys-interaction:       #0057D9;
+  --md-sys-pale:              #CBEDFD;
+  --md-sys-warning:           #D7153A;
+
+  /* MaterialX variable mapping */
+  --md-primary-fg-color:        var(--md-sys-primary);   /* masthead */
   --md-primary-bg-color:        #ffffff;
-  --md-accent-fg-color:         #D7153A;   /* SLHD Red */
-  --md-accent-fg-color--transparent: rgba(215, 21, 58, 0.1);
+  --md-accent-fg-color:         var(--md-sys-interaction);
+  --md-accent-fg-color--transparent: rgba(0, 87, 217, 0.1);
+  --md-default-fg-color:        var(--md-sys-foreground);
+  --md-default-fg-color--light: var(--md-sys-muted-foreground);
+  --md-default-fg-color--lighter: color-mix(in srgb, var(--md-sys-muted-foreground) 60%, var(--md-sys-background));
+  --md-default-fg-color--lightest: color-mix(in srgb, var(--md-sys-muted-foreground) 40%, var(--md-sys-background));
+  --md-default-bg-color:        var(--md-sys-background);
+  --md-default-bg-color--light: var(--md-sys-card);
+  --md-default-bg-color--lighter: var(--md-sys-muted);
+  --md-default-bg-color--lightest: color-mix(in srgb, var(--md-sys-muted) 60%, var(--md-sys-card));
+  --md-typeset-color:           var(--md-sys-foreground);
+  --md-typeset-a-color:         var(--md-sys-interaction);
+  --md-code-fg-color:           var(--md-sys-foreground);
+  --md-code-bg-color:           var(--md-sys-muted);
+  --md-code-hl-color:           var(--md-sys-pale);
+  --md-footer-fg-color:         var(--md-sys-foreground);
+  --md-footer-fg-color--light:  var(--md-sys-muted-foreground);
+  --md-footer-fg-color--lighter: var(--md-sys-muted-foreground);
+  --md-footer-bg-color:         var(--md-sys-card);
+  --md-footer-bg-color--dark:   var(--md-sys-muted);
+
+  /* Fonts */
+  --md-text-font-family: "Public Sans", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --md-code-font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
-/* Force header and tabs to absolute SLHD Navy */
-.md-header, .md-tabs {
-  background-color: #002664 !important;
+[data-md-color-scheme="slate"] {
+  /* dark scheme */
+  --md-sys-background:        #1a1a1a;
+  --md-sys-foreground:        #f2f2f2;
+  --md-sys-card:              #242424;
+  --md-sys-muted:             #2e2e2e;
+  --md-sys-muted-foreground:  #a6a6a6;
+  --md-sys-border:            #383838;
+  --md-sys-primary:           #7aa7f7;
+  --md-sys-interaction:       #8bb8ff;
+  --md-sys-pale:              #8bb8ff;
+  --md-sys-warning:           #ff5277;
+
+  --md-primary-fg-color:        var(--md-sys-primary);
+  --md-primary-bg-color:        #ffffff;
+  --md-accent-fg-color:         var(--md-sys-interaction);
+  --md-accent-fg-color--transparent: rgba(139, 184, 255, 0.12);
+  --md-default-fg-color:        var(--md-sys-foreground);
+  --md-default-fg-color--light: var(--md-sys-muted-foreground);
+  --md-default-fg-color--lighter: color-mix(in srgb, var(--md-sys-muted-foreground) 60%, var(--md-sys-background));
+  --md-default-fg-color--lightest: color-mix(in srgb, var(--md-sys-muted-foreground) 40%, var(--md-sys-background));
+  --md-default-bg-color:        var(--md-sys-background);
+  --md-default-bg-color--light: var(--md-sys-card);
+  --md-default-bg-color--lighter: var(--md-sys-muted);
+  --md-default-bg-color--lightest: color-mix(in srgb, var(--md-sys-muted) 60%, var(--md-sys-card));
+  --md-typeset-color:           var(--md-sys-foreground);
+  --md-typeset-a-color:         var(--md-sys-interaction);
+  --md-code-fg-color:           var(--md-sys-foreground);
+  --md-code-bg-color:           var(--md-sys-muted);
+  --md-code-hl-color:           var(--md-sys-pale);
+  --md-footer-fg-color:         var(--md-sys-foreground);
+  --md-footer-fg-color--light:  var(--md-sys-muted-foreground);
+  --md-footer-fg-color--lighter: var(--md-sys-muted-foreground);
+  --md-footer-bg-color:         var(--md-sys-card);
+  --md-footer-bg-color--dark:   var(--md-sys-muted);
 }
 
-/* SLHD Red accent border — on mobile (no tabs), header gets the border */
+/* ============================================================
+   Masthead — navy header and tabs, restrained red identity edge
+   ============================================================ */
+
+.md-header,
+.md-tabs {
+  background-color: var(--md-sys-primary) !important;
+}
+
+/* Red identity edge — on mobile (no tabs), the header gets it */
 @media screen and (max-width: 76.1875em) {
   .md-header {
-    border-bottom: 3px solid #D7153A !important;
+    border-bottom: 3px solid var(--md-sys-warning) !important;
   }
 }
 
 /* On desktop, tabs is the bottom-most nav element — only it gets the border */
 .md-tabs {
-  border-bottom: 3px solid #D7153A;
+  border-bottom: 3px solid var(--md-sys-warning);
 }
 
-.md-header__button.md-logo img, .md-header__button.md-logo svg {
+.md-header__inner,
+.md-header__button,
+.md-header__title,
+.md-tabs__item,
+.md-tabs__link,
+.md-header__topic {
   color: #ffffff;
 }
 
-/* Dark mode adjustments — ensures readability while maintaining brand tone */
-[data-md-color-scheme="slate"] {
-  --md-primary-fg-color:        #2B80FF;   /* Accessible lighter navy for links */
-  --md-accent-fg-color:         #FF5277;   /* Accessible soft red for alerts */
-  
-  /* Remove primary-bg-color override to allow the theme's dark background to work */
+.md-header__button:hover,
+.md-header__button:focus {
+  color: var(--md-sys-pale);
 }
 
-/* Ensure the top header stays dark navy in both modes for branding consistency */
-[data-md-color-scheme="default"] .md-header, 
-[data-md-color-scheme="default"] .md-tabs {
-  background-color: #002664 !important;
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  color: #ffffff;
 }
 
-[data-md-color-scheme="slate"] .md-header, 
+/* Dark mode masthead — deeper navy */
+[data-md-color-scheme="slate"] .md-header,
 [data-md-color-scheme="slate"] .md-tabs {
-  background-color: #001A45 !important; /* Slightly deeper navy for dark mode bar */
+  background-color: #001a45 !important;
 }
 
-/* Hide default "Made with Material for MkDocs" */
-.md-footer-meta__inner > :last-child {
-  display: none;
+[data-md-color-scheme="slate"] .md-tabs__item--active .md-tabs__link,
+[data-md-color-scheme="slate"] .md-tabs__link:hover {
+  color: var(--md-sys-interaction);
 }
 
-/* Admonitions — red accent for warnings */
+/* ============================================================
+   Header — SCRATCH brand + subtitle
+   ============================================================ */
+
+.md-header__topic.scratch-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.md-header__topic.scratch-brand .scratch-subtitle {
+  font-size: 0.62em;
+  font-weight: 400;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 76.1875em) {
+  .md-header__title .md-header__topic.scratch-brand .md-ellipsis {
+    font-size: 0.85em;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .md-header__topic.scratch-brand .scratch-subtitle {
+    font-size: 0.58em;
+    font-weight: inherit;
+    opacity: 0.85;
+    white-space: normal;
+    line-height: 1.2;
+    margin-top: 0.1em;
+  }
+
+  .md-header__inner {
+    height: auto;
+    min-height: 3rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    align-items: center;
+  }
+
+  .md-header__title {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* ============================================================
+   DREAM link — header button
+   ============================================================ */
+
+.scratch-dream-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.scratch-dream-link__label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Mobile label hidden below the desktop breakpoint */
+@media screen and (max-width: 76.1875em) {
+  .scratch-dream-link__label {
+    display: none;
+  }
+}
+
+/* ============================================================
+   Typography — Public Sans body, JetBrains Mono data/code
+   ============================================================ */
+
+body {
+  --md-text-font-family: "Public Sans", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --md-code-font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+body,
+.md-typeset {
+  font-family: var(--md-text-font-family);
+}
+
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: var(--md-text-font-family);
+  color: var(--md-sys-foreground);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.md-typeset h1 {
+  font-size: 1.75rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.4rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.15rem;
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--md-sys-interaction);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.md-typeset a:hover {
+  color: var(--md-sys-interaction);
+  text-decoration-thickness: 2px;
+}
+
+/* ============================================================
+   Focus rings — 2px on every focusable element
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--md-sys-interaction);
+  outline-offset: 2px;
+  border-radius: 0;
+}
+
+/* ============================================================
+   Surfaces — square corners everywhere
+   ============================================================ */
+
+.md-typeset .admonition,
+.md-typeset details,
+.md-typeset table,
+.md-typeset .md-button,
+.md-typeset .md-badge,
+.md-typeset .md-tag,
+.md-tag,
+.md-badge,
+.md-search__form,
+.md-search__input,
+.md-search__result,
+.md-search__result__more,
+.md-sidebar,
+.md-nav__link,
+.md-nav__item,
+.md-typeset code,
+.md-typeset pre,
+.md-typeset pre > code,
+.scratch-print-btn {
+  border-radius: 0 !important;
+}
+
+/* Sidebar and nav */
+.md-sidebar .md-nav__title,
+.md-sidebar .md-nav__link {
+  color: var(--md-sys-foreground);
+}
+
+.md-sidebar .md-nav__link:hover {
+  background-color: var(--md-sys-pale);
+  color: var(--md-sys-primary);
+}
+
+.md-sidebar .md-nav__link--active {
+  color: var(--md-sys-interaction);
+}
+
+[data-md-color-scheme="slate"] .md-sidebar .md-nav__link:hover {
+  color: var(--md-sys-background);
+}
+
+/* Search */
+.md-search__form {
+  background-color: var(--md-sys-muted);
+  border: 1px solid var(--md-sys-border);
+}
+
+.md-search__form:hover {
+  background-color: var(--md-sys-pale);
+}
+
+.md-search__input {
+  color: var(--md-sys-foreground);
+}
+
+.md-search__input::placeholder {
+  color: var(--md-sys-muted-foreground);
+}
+
+.md-search__result,
+.md-search__result__more {
+  background-color: var(--md-sys-card);
+  color: var(--md-sys-foreground);
+}
+
+.md-search__result mark {
+  background-color: var(--md-sys-pale);
+  color: var(--md-sys-foreground);
+}
+
+/* ============================================================
+   Tables — rectangular, 1px borders
+   ============================================================ */
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--md-sys-border);
+  background-color: var(--md-sys-card);
+  border-radius: 0;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-sys-muted);
+  color: var(--md-sys-foreground);
+  border-bottom: 1px solid var(--md-sys-border);
+}
+
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--md-sys-border);
+}
+
+.md-typeset table:not([class]) tr {
+  background-color: var(--md-sys-card);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: var(--md-sys-muted);
+}
+
+/* Dilution Series Tables — fixed layout, wrap, overflow */
+.md-typeset__scrollwrap {
+  overflow-x: auto;
+}
+
+.md-typeset table:not([class]):has(th:nth-child(4)) td,
+.md-typeset table:not([class]):has(th:nth-child(4)) th {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.md-typeset table:not([class]):has(th:nth-child(4)) {
+  table-layout: fixed;
+  width: 100%;
+  min-width: 600px;
+}
+
+.md-typeset table:not([class]):has(th:nth-child(4)) th:nth-child(1),
+.md-typeset table:not([class]):has(th:nth-child(4)) td:nth-child(1) {
+  width: 5%;
+}
+
+.md-typeset table:not([class]):has(th:nth-child(4)) th:nth-child(2),
+.md-typeset table:not([class]):has(th:nth-child(4)) td:nth-child(2) {
+  width: 10%;
+}
+
+.md-typeset table:not([class]):has(th:nth-child(4)) th:nth-child(3),
+.md-typeset table:not([class]):has(th:nth-child(4)) td:nth-child(3) {
+  width: 15%;
+}
+
+/* ============================================================
+   Admonitions — red reserved for clinical warnings
+   ============================================================ */
+
+.md-typeset .admonition,
+.md-typeset details {
+  border: 1px solid var(--md-sys-border);
+  box-shadow: none;
+}
+
+.md-typeset .admonition > .admonition-title,
+.md-typeset details > summary {
+  background-color: var(--md-sys-muted);
+  color: var(--md-sys-foreground);
+}
+
 .md-typeset .admonition.warning,
 .md-typeset details.warning {
-  border-left-color: #D7153A;
+  border-color: var(--md-sys-warning);
 }
 
 .md-typeset .admonition.warning > .admonition-title,
 .md-typeset details.warning > summary {
-  background-color: rgba(215, 21, 58, 0.08);
-  color: #D7153A;
-}
-
-/* Code blocks */
-.md-typeset code {
-  background-color: rgba(0, 38, 100, 0.08);
-  color: #D7153A;
+  background-color: color-mix(in srgb, var(--md-sys-warning) 10%, var(--md-sys-card));
+  color: var(--md-sys-warning);
 }
 
 /* ============================================================
-   Print Stylesheet — Optimised for bedside clinical use
+   Code — JetBrains Mono, rectangular
+   ============================================================ */
+
+.md-typeset code,
+.md-typeset pre,
+.md-typeset pre > code,
+.md-typeset kbd {
+  font-family: var(--md-code-font-family);
+}
+
+.md-typeset code {
+  background-color: var(--md-sys-muted);
+  color: var(--md-sys-primary);
+  border: 1px solid var(--md-sys-border);
+}
+
+.md-typeset pre {
+  background-color: var(--md-sys-muted);
+  border: 1px solid var(--md-sys-border);
+}
+
+.md-typeset pre > code {
+  background-color: transparent;
+  border: none;
+  color: var(--md-sys-foreground);
+}
+
+/* ============================================================
+   Buttons and badges
+   ============================================================ */
+
+.md-typeset .md-button {
+  border: 1px solid var(--md-sys-border);
+  border-radius: 0;
+  background-color: var(--md-sys-card);
+  color: var(--md-sys-foreground);
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--md-sys-primary);
+  border-color: var(--md-sys-primary);
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-button--primary,
+[data-md-color-scheme="slate"] .scratch-print-btn {
+  color: #020817;
+}
+
+.md-typeset .md-tag,
+.md-badge {
+  background-color: var(--md-sys-muted);
+  color: var(--md-sys-muted-foreground);
+  border: 1px solid var(--md-sys-border);
+}
+
+/* ============================================================
+   Footer — hidden credit
+   ============================================================ */
+
+.md-footer-meta__inner > :last-child {
+  display: none;
+}
+
+/* ============================================================
+   Selection / caret / scrollbars
+   ============================================================ */
+
+::selection {
+  background-color: var(--md-sys-pale);
+  color: var(--md-sys-foreground);
+}
+
+input,
+textarea,
+select,
+.md-search__input {
+  caret-color: var(--md-sys-interaction);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-sys-border) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--md-sys-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--md-sys-border);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-sys-muted-foreground);
+}
+
+/* ============================================================
+   Print Button — fixed bottom-right, square, flat
+   ============================================================ */
+
+.scratch-print-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  background-color: var(--md-sys-primary);
+  color: #ffffff;
+  border: 1px solid var(--md-sys-warning);
+  border-radius: 0;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--md-text-font-family);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.15s ease;
+}
+
+.scratch-print-btn svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.scratch-print-btn:hover {
+  background-color: var(--md-sys-warning);
+  border-color: var(--md-sys-primary);
+}
+
+.scratch-print-btn:active {
+  background-color: var(--md-sys-primary);
+}
+
+@media screen and (max-width: 76.1875em) {
+  .scratch-print-btn {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ============================================================
+   Reduced motion
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   Print Stylesheet — optimised for bedside clinical use
    ============================================================ */
 
 @media print {
@@ -177,12 +710,12 @@
     display: none !important;
   }
 
-  /* Hide print button in print */
-  .scratch-print-btn {
+  /* Hide print button and DREAM link in print */
+  .scratch-print-btn,
+  .scratch-dream-link {
     display: none !important;
   }
 }
-
 
 /* ============================================================
    Mobile drawer — SCRATCH title + subtitle
@@ -209,132 +742,4 @@
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   align-items: center;
-}
-
-/* ============================================================
-   Dilution Series Tables — widen Preparation column
-   ============================================================ */
-
-.md-typeset table:not([class]):has(th:nth-child(4)) td,
-.md-typeset table:not([class]):has(th:nth-child(4)) th {
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
-.md-typeset table:not([class]):has(th:nth-child(4)) {
-  table-layout: fixed;
-  width: 100%;
-  min-width: 600px;
-}
-
-.md-typeset table:not([class]):has(th:nth-child(4)) th:nth-child(1),
-.md-typeset table:not([class]):has(th:nth-child(4)) td:nth-child(1) {
-  width: 5%;
-}
-
-.md-typeset table:not([class]):has(th:nth-child(4)) th:nth-child(2),
-.md-typeset table:not([class]):has(th:nth-child(4)) td:nth-child(2) {
-  width: 10%;
-}
-
-.md-typeset table:not([class]):has(th:nth-child(4)) th:nth-child(3),
-.md-typeset table:not([class]):has(th:nth-child(4)) td:nth-child(3) {
-  width: 15%;
-}
-
-/* ============================================================
-   Header subtitle — full SCRATCH acronym on desktop only
-   ============================================================ */
-
-.md-header__topic .scratch-subtitle {
-  font-size: 0.7em;
-  font-weight: 400;
-  opacity: 0.7;
-  margin-left: 0.6rem;
-  white-space: nowrap;
-  vertical-align: middle;
-}
-
-@media screen and (max-width: 76.1875em) {
-  .md-header__title .md-header__topic:first-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .md-header__title .md-header__topic:first-child .md-ellipsis {
-    font-size: 0.85em;
-    line-height: 1.1;
-    white-space: nowrap;
-    overflow: visible;
-    text-overflow: clip;
-  }
-
-  .md-header__topic .scratch-subtitle {
-    display: block;
-    margin-left: 0;
-    font-size: 0.58em;
-    font-weight: inherit;
-    opacity: 0.85;
-    white-space: normal;
-    line-height: 1.2;
-    margin-top: 0.1em;
-  }
-
-  .md-header__inner {
-    height: auto;
-    min-height: 3rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    align-items: center;
-  }
-
-  .md-header__title {
-    display: flex;
-    align-items: center;
-  }
-}
-
-/* ============================================================
-   Print Button — floating bottom-right
-   ============================================================ */
-
-.scratch-print-btn {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 1000;
-  background-color: #002664;
-  color: #ffffff;
-  border: 2px solid #D7153A;
-  border-radius: 8px;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.scratch-print-btn:hover {
-  background-color: #D7153A;
-  border-color: #002664;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-}
-
-.scratch-print-btn:active {
-  transform: translateY(0);
-}
-
-@media screen and (max-width: 76.1875em) {
-  .scratch-print-btn {
-    bottom: 1rem;
-    right: 1rem;
-    padding: 0.5rem 0.9rem;
-    font-size: 0.8rem;
-  }
 }

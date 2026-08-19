@@ -21,7 +21,7 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   font:
-    text: Inter
+    text: Public Sans
     code: JetBrains Mono
   features:
     - navigation.instant
@@ -63,8 +63,7 @@ plugins:
       exclude:
         - index.md
         - '*/index.md'
-  - tags:
-      tags_file: reference/tags.md
+  - tags
   - meta
   - privacy
   - glightbox
@@ -110,6 +109,9 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra:
+  dream_url: https://dream.yuson.au
 
 nav:
   - Home: index.md
