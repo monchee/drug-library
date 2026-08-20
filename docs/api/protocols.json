@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-20T04:01:46Z",
-  "source_commit": "46c039e",
+  "generated_at": "2026-08-20T05:13:12Z",
+  "source_commit": "6b90010",
   "drugs": [
     {
       "slug": "cefazolin",
       "title": "Cefazolin",
-      "version": "1.1",
+      "version": "1.2",
       "last_reviewed": "2026-03-28",
       "dream": {
         "category": "Cephalosporins"
