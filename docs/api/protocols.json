@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-20T05:13:12Z",
+  "source_commit": "6b90010",
+  "drugs": [
+    {
+      "slug": "cefazolin",
+      "title": "Cefazolin",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Cephalosporins"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "1 g powder for injection",
+          "diluent": "0.9% sodium chloride (reconstitute with 10 mL WFI)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "1 mg/mL",
+              "preparation": "0.1 mL of 10 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "10 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            }
+          ],
+          "challenge": {
+            "interval": "15 min",
+            "steps": [
+              {
+                "dose": "100 mg"
+              },
+              {
+                "dose": "200 mg"
+              },
+              {
+                "dose": "300 mg"
+              },
+              {
+                "dose": "400 mg",
+                "interval": "60 min observation"
+              }
+            ]
+          },
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    }
+  ]
+}

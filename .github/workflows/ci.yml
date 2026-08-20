@@ -1,0 +1,392 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    name: Build and Verify Protocols
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Verify protocols export is up to date
+        run: |
+          python scripts/export_protocols.py --check
+
+      - name: Build MkDocs site
+        run: |
+          mkdocs build --strict
+
+      - name: Clinical sign-off gate (version and date bump on protocol change)
+        if: github.event_name == 'pull_request'
+        env:
+          # Passed via env, never interpolated into the script body: a literal
+          # ${{ }} inside a run block is parsed by GitHub as an expression and
+          # breaks the whole workflow file.
+          BASE_REF: origin/${{ github.base_ref }}
+        run: |
+          python3 - << 'EOF'
+          import json
+          import os
+          import subprocess
+          import sys
+          import yaml
+          from pathlib import Path
+
+          # NON_CLINICAL_FIELDS: Deny-list of fields explicitly excluded from clinical comparison.
+          # WARNING: Adding fields to this list weakens clinical controls and allows changes
+          # to those fields to pass without requiring a 'last_reviewed' date bump.
+          # Any field NOT in this list is treated as clinical by default (fail-closed).
+          # Today only 'label' (display name) and drug-level 'version' / 'last_reviewed' are excluded.
+          NON_CLINICAL_FIELDS = {
+              "label",          # Protocol display name
+              "version",        # Drug-level schema/document version
+              "last_reviewed",  # Drug-level clinical sign-off date
+          }
+
+          base_ref = os.environ.get("BASE_REF") or "origin/main"
+          print(f"Checking drug page changes against base ref: {base_ref}")
+
+          # Get changed drug files and metadata between base branch and PR HEAD
+          try:
+              res = subprocess.run(
+                  ["git", "diff", f"{base_ref}...HEAD", "--name-only", "--", "docs/drugs/"],
+                  capture_output=True,
+                  text=True,
+                  check=True,
+                  env=dict(os.environ, GIT_CONFIG_GLOBAL="/dev/null", GIT_CONFIG_SYSTEM="/dev/null"),
+              )
+              raw_changed = [f.strip() for f in res.stdout.splitlines() if f.strip()]
+          except Exception as e:
+              print(f"Error checking git diff: {e}", file=sys.stderr)
+              sys.exit(1)
+
+          meta_file = "docs/drugs/.meta.yml"
+          meta_changed = meta_file in raw_changed
+          changed_drug_files = [
+              f for f in raw_changed
+              if f.endswith(".md") and f != "docs/drugs/index.md"
+          ]
+
+          if not meta_changed and not changed_drug_files:
+              print("No drug protocol pages or metadata modified in this PR. Sign-off gate passed.")
+              sys.exit(0)
+
+          # Load base protocols.json if present
+          base_protocols_json = {}
+          try:
+              base_show = subprocess.run(
+                  ["git", "show", f"{base_ref}:docs/api/protocols.json"],
+                  capture_output=True,
+                  text=True,
+                  env=dict(os.environ, GIT_CONFIG_GLOBAL="/dev/null", GIT_CONFIG_SYSTEM="/dev/null"),
+              )
+              if base_show.returncode == 0:
+                  base_data = json.loads(base_show.stdout)
+                  base_protocols_json = {d["slug"]: d for d in base_data.get("drugs", []) if "slug" in d}
+          except Exception:
+              base_protocols_json = {}
+
+          # Load head protocols.json from disk
+          head_protocols_json = {}
+          head_json_path = Path("docs/api/protocols.json")
+          if head_json_path.exists():
+              try:
+                  head_data = json.loads(head_json_path.read_text(encoding="utf-8"))
+                  head_protocols_json = {d["slug"]: d for d in head_data.get("drugs", []) if "slug" in d}
+              except Exception as e:
+                  print(f"Warning: Could not parse {head_json_path}: {e}", file=sys.stderr)
+
+          def extract_frontmatter(text):
+              if not text or not text.startswith("---"):
+                  return {}
+              parts = text.split("---", 2)
+              if len(parts) < 3:
+                  return {}
+              try:
+                  return yaml.safe_load(parts[1]) or {}
+              except Exception:
+                  return {}
+
+          def normalize_clinical_data(val, exclude_keys=NON_CLINICAL_FIELDS):
+              """
+              Recursively normalize data structure for clinical comparison:
+              - Exclude keys present in exclude_keys (deny-list)
+              - Treat missing keys, explicit None/null, and empty strings "" as equal (pruned)
+              - Treat empty dicts resulting from pruned fields as empty/absent
+              - Recurse through dicts and lists
+              - Preserve exact values (strings, numbers, booleans) without fuzzy matching
+              """
+              if isinstance(val, dict):
+                  normalized = {}
+                  for k, v in val.items():
+                      if k in exclude_keys:
+                          continue
+                      norm_v = normalize_clinical_data(v, exclude_keys)
+                      if norm_v is not None and norm_v != "" and norm_v != {}:
+                          normalized[k] = norm_v
+                  return normalized
+              elif isinstance(val, list):
+                  normalized_list = []
+                  for item in val:
+                      norm_item = normalize_clinical_data(item, exclude_keys)
+                      if norm_item is not None and norm_item != "" and norm_item != {}:
+                          normalized_list.append(norm_item)
+                      elif isinstance(norm_item, (int, float, bool)):
+                          normalized_list.append(norm_item)
+                  return normalized_list
+              elif isinstance(val, str):
+                  if val == "":
+                      return None
+                  return val
+              elif val is None:
+                  return None
+              else:
+                  return val
+
+          def get_drug_clinical_data(drug_dict):
+              """Extract and normalize clinical protocol data for a drug entry from protocols.json."""
+              if not drug_dict or not isinstance(drug_dict, dict):
+                  return []
+              protocols = drug_dict.get("protocols", [])
+              if not isinstance(protocols, list):
+                  return []
+              return [normalize_clinical_data(p, exclude_keys=NON_CLINICAL_FIELDS) for p in protocols]
+
+          def find_dict_diffs(d1, d2, prefix=""):
+              diffs = []
+              all_keys = set(d1.keys()) | set(d2.keys())
+              for k in sorted(all_keys):
+                  v1 = d1.get(k)
+                  v2 = d2.get(k)
+                  path = f"{prefix}.{k}" if prefix else k
+                  if isinstance(v1, dict) and isinstance(v2, dict):
+                      diffs.extend(find_dict_diffs(v1, v2, path))
+                  elif v1 != v2:
+                      diffs.append((path, v1, v2))
+              return diffs
+
+          def check_acknowledgement_marker(base_ref):
+              marker = "CLINICAL-DEFAULT-CHANGE-ACKNOWLEDGED"
+
+              # 1. Check GITHUB_EVENT_PATH (PR body from GitHub Actions event payload)
+              event_path = os.environ.get("GITHUB_EVENT_PATH")
+              if event_path and Path(event_path).exists():
+                  try:
+                      with open(event_path, "r", encoding="utf-8") as f:
+                          event_data = json.load(f)
+                      pr_body = event_data.get("pull_request", {}).get("body") or ""
+                      if marker in pr_body:
+                          return True
+                  except Exception:
+                      pass
+
+              # 2. Check PR_BODY or COMMIT_MESSAGE env vars if set
+              if marker in os.environ.get("PR_BODY", ""):
+                  return True
+              if marker in os.environ.get("COMMIT_MESSAGE", ""):
+                  return True
+
+              # 3. Check most recent commit message
+              # On a pull_request event with actions/checkout, HEAD may be a merge commit (refs/pull/X/merge)
+              # where HEAD^1 is the target branch (base) and HEAD^2 is the PR head commit.
+              refs_to_check = ["HEAD"]
+              try:
+                  merge_check = subprocess.run(
+                      ["git", "rev-parse", "--verify", "HEAD^2"],
+                      capture_output=True,
+                      text=True,
+                      env=dict(os.environ, GIT_CONFIG_GLOBAL="/dev/null", GIT_CONFIG_SYSTEM="/dev/null"),
+                  )
+                  if merge_check.returncode == 0:
+                      refs_to_check.append("HEAD^2")
+              except Exception:
+                  pass
+
+              for ref in refs_to_check:
+                  try:
+                      msg_res = subprocess.run(
+                          ["git", "log", "-1", "--format=%B", ref],
+                          capture_output=True,
+                          text=True,
+                          env=dict(os.environ, GIT_CONFIG_GLOBAL="/dev/null", GIT_CONFIG_SYSTEM="/dev/null"),
+                      )
+                      if msg_res.returncode == 0 and marker in msg_res.stdout:
+                          return True
+                  except Exception:
+                      pass
+
+              return False
+
+          # Check docs/drugs/.meta.yml changes if present
+          meta_error = None
+          if meta_changed:
+              base_meta_show = subprocess.run(
+                  ["git", "show", f"{base_ref}:{meta_file}"],
+                  capture_output=True,
+                  text=True,
+                  env=dict(os.environ, GIT_CONFIG_GLOBAL="/dev/null", GIT_CONFIG_SYSTEM="/dev/null"),
+              )
+              try:
+                  base_meta_raw = yaml.safe_load(base_meta_show.stdout) if base_meta_show.returncode == 0 else {}
+              except Exception:
+                  base_meta_raw = {}
+
+              head_meta_path = Path(meta_file)
+              head_meta_raw = {}
+              if head_meta_path.exists():
+                  try:
+                      head_meta_raw = yaml.safe_load(head_meta_path.read_text(encoding="utf-8")) or {}
+                  except Exception as e:
+                      print(f"Warning: Could not parse {meta_file}: {e}", file=sys.stderr)
+
+              # Non-clinical metadata fields in .meta.yml (e.g. description, reviewed_by)
+              non_clinical_meta = {"description", "reviewed_by"}
+              base_meta_clinical = normalize_clinical_data(base_meta_raw, exclude_keys=non_clinical_meta) if isinstance(base_meta_raw, dict) else {}
+              head_meta_clinical = normalize_clinical_data(head_meta_raw, exclude_keys=non_clinical_meta) if isinstance(head_meta_raw, dict) else {}
+
+              if base_meta_clinical and base_meta_clinical != head_meta_clinical:
+                  if not check_acknowledgement_marker(base_ref):
+                      diffs = find_dict_diffs(base_meta_clinical, head_meta_clinical)
+                      num_pages = len([p for p in Path("docs/drugs").glob("*.md") if p.name != "index.md"])
+                      meta_error = {
+                          "diffs": diffs,
+                          "num_pages": num_pages,
+                      }
+
+          failed = []
+          for fpath in changed_drug_files:
+              file_path = Path(fpath)
+              slug = file_path.stem
+
+              # Check for deleted drug page
+              if not file_path.exists():
+                  print(f"Drug page deleted: {fpath} (skipping sign-off check)")
+                  continue
+
+              # Get base version if file existed in base branch
+              base_show = subprocess.run(
+                  ["git", "show", f"{base_ref}:{fpath}"],
+                  capture_output=True,
+                  text=True,
+                  env=dict(os.environ, GIT_CONFIG_GLOBAL="/dev/null", GIT_CONFIG_SYSTEM="/dev/null"),
+              )
+              base_fm = extract_frontmatter(base_show.stdout) if base_show.returncode == 0 else {}
+
+              # Get current version from disk
+              try:
+                  curr_text = file_path.read_text(encoding="utf-8")
+                  curr_fm = extract_frontmatter(curr_text)
+              except Exception as e:
+                  print(f"Warning: Could not read {fpath}: {e}", file=sys.stderr)
+                  continue
+
+              in_base = slug in base_protocols_json
+              in_head = slug in head_protocols_json
+
+              # If neither base nor head has protocols, it's an unmigrated page; no protocols-specific gate
+              if not in_base and not in_head:
+                  continue
+
+              # Determine rule and required bumps
+              if not in_base and in_head:
+                  # Rule 1: Structural migration
+                  rule_name = "Rule 1 (Structural migration: drug newly exported to protocols.json)"
+                  require_version_bump = True
+                  require_date_bump = False
+              elif in_base and not in_head:
+                  # Protocols removed or structural change
+                  rule_name = "Rule 1 (Structural change: drug removed from protocols.json)"
+                  require_version_bump = True
+                  require_date_bump = False
+              else:
+                  # Present in both base and head: compare clinical protocol values
+                  base_clinical = get_drug_clinical_data(base_protocols_json[slug])
+                  head_clinical = get_drug_clinical_data(head_protocols_json[slug])
+
+                  if base_clinical != head_clinical:
+                      # Rule 2: Clinical change
+                      rule_name = "Rule 2 (Clinical change: protocol data differs in clinical values)"
+                      require_version_bump = True
+                      require_date_bump = True
+                  else:
+                      # Rule 3: Identical clinical data
+                      rule_name = "Rule 3 (Non-clinical edit: protocol values unchanged)"
+                      require_version_bump = True
+                      require_date_bump = False
+
+              base_ver = str(base_fm.get("version", "")).strip() if base_fm.get("version") is not None else ""
+              curr_ver = str(curr_fm.get("version", "")).strip() if curr_fm.get("version") is not None else ""
+              base_date = str(base_fm.get("last_reviewed", "")).strip() if base_fm.get("last_reviewed") is not None else ""
+              curr_date = str(curr_fm.get("last_reviewed", "")).strip() if curr_fm.get("last_reviewed") is not None else ""
+
+              errors = []
+              if require_version_bump:
+                  if not curr_ver:
+                      errors.append("version is missing")
+                  elif base_ver and curr_ver == base_ver:
+                      errors.append(f"version must be bumped (currently '{curr_ver}')")
+
+              if require_date_bump:
+                  if not curr_date:
+                      errors.append("last_reviewed is missing")
+                  elif base_date and curr_date == base_date:
+                      errors.append(f"last_reviewed must be bumped (currently '{curr_date}')")
+
+              if errors:
+                  failed.append((fpath, rule_name, errors))
+
+          if meta_error or failed:
+              print("\n" + "=" * 70, file=sys.stderr)
+              print("CLINICAL SIGN-OFF GATE FAILED", file=sys.stderr)
+
+              if meta_error:
+                  print("\nSite-wide Clinical Default Change:", file=sys.stderr)
+                  print(f"  docs/drugs/.meta.yml modifies clinical defaults affecting {meta_error['num_pages']} drug pages that inherit them:", file=sys.stderr)
+                  for path, old_v, new_v in meta_error["diffs"]:
+                      old_str = f"'{old_v}'" if old_v is not None else "(not set)"
+                      new_str = f"'{new_v}'" if new_v is not None else "(not set)"
+                      print(f"    - {path}: {old_str} -> {new_str}", file=sys.stderr)
+                  print("\n  Requirement:", file=sys.stderr)
+                  print("    To proceed with a site-wide clinical default change, you must include the exact marker:", file=sys.stderr)
+                  print("      CLINICAL-DEFAULT-CHANGE-ACKNOWLEDGED", file=sys.stderr)
+                  print("    in either the PR description/body or the most recent commit message.", file=sys.stderr)
+
+              if failed:
+                  print("\nDrug Page Sign-off Requirements:", file=sys.stderr)
+                  print("The following drug page(s) did not meet sign-off requirements:", file=sys.stderr)
+                  for fpath, rule, errs in failed:
+                      print(f"  - {fpath}:", file=sys.stderr)
+                      print(f"      Triggered: {rule}", file=sys.stderr)
+                      print(f"      Issues: {', '.join(errs)}", file=sys.stderr)
+                  print("\nClinical Policy for Drug Pages:", file=sys.stderr)
+                  print("  - Structural migrations and non-clinical edits require bumping 'version' only.", file=sys.stderr)
+                  print("  - Changes to clinical protocol values require bumping BOTH 'version' and 'last_reviewed'.", file=sys.stderr)
+
+              print("=" * 70 + "\n", file=sys.stderr)
+              sys.exit(1)
+
+          if meta_changed and not changed_drug_files:
+              print("Clinical sign-off gate passed: site-wide metadata change meets sign-off requirements.")
+          else:
+              print(f"Clinical sign-off gate passed: all {len(changed_drug_files)} changed drug page(s) meet sign-off requirements.")
+          EOF
