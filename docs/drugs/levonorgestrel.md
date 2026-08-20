@@ -3,10 +3,25 @@ title: Levonorgestrel
 tags: [spt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.0
+version: 1.1
+dream:
+  category: Others
+protocols:
+  - id: oral
+    label: Oral
+    test_type: skin
+    presentation: Levonorgestrel 750 µg tablet
+    diluent: 0.9% sodium chloride
+    spt:
+      dilution: Neat
+      concentration: crushed tablet solution
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: true
 ---
 
 # Levonorgestrel
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -45,10 +60,6 @@ version: 1.0
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (crushed tablet solution) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.

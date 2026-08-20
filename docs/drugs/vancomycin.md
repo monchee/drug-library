@@ -3,10 +3,29 @@ title: Vancomycin
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Others
+protocols:
+  - id: iv
+    label: IV
+    test_type: skin
+    presentation: 500 mg or 1 g powder for injection
+    diluent: 0.9% sodium chloride (add 5 mL NS to 500 mg or 10 mL NS to 1 g)
+    spt:
+      dilution: Neat
+      concentration: 100 mg/mL
+    idt:
+      - dilution: '1:1,000,000'
+        concentration: 0.0001 mg/mL
+        preparation: 0.1 mL of 0.001 mg/mL + 0.9 mL NS
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Vancomycin
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -54,11 +73,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (100 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -67,9 +82,7 @@ Prepare in this order, using a fresh syringe for each step.
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:1,000,000 | 0.0001 mg/mL | 0.1 mL of 0.001 mg/mL + 0.9 mL NS |
+<!-- scratch:idt -->
 
 !!! warning "Histamine Release"
     Vancomycin is a potent direct histamine releaser. Results must be interpreted with extreme caution. IDT should be performed at **1:1,000,000** as per the institutional protocol.

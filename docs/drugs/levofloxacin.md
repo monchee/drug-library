@@ -3,10 +3,29 @@ title: Levofloxacin
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Others
+protocols:
+  - id: tablet
+    label: Tablet
+    test_type: skin
+    presentation: 500 mg tablets or IV formulation
+    diluent: Normal saline for IDT dilutions (consult the Manufacturing Pharmacist for the exact diluent and method if using tablets)
+    spt:
+      dilution: Neat
+      concentration: 5 mg/mL
+    idt:
+      - dilution: '1:100'
+        concentration: 0.05 mg/mL
+        preparation: 0.1 mL of 0.5 mg/mL + 0.9 mL NS
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: true
 ---
 
 # Levofloxacin
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -44,11 +63,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (5 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -57,8 +72,6 @@ Prepare in this order, using a fresh syringe for each step.
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:100 | 0.05 mg/mL | 0.1 mL of 0.5 mg/mL + 0.9 mL NS |
+<!-- scratch:idt -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.

@@ -3,10 +3,32 @@ title: Cefuroxime
 tags: [oral, spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.2
+version: 1.3
+dream:
+  category: Cephalosporins
+protocols:
+  - id: iv
+    label: IV
+    test_type: skin
+    presentation: 750 mg powder for injection or 125 mg/5 mL suspension
+    diluent: 0.9% sodium chloride (750 mg + 30 mL NS) or use 125 mg/5 mL (25 mg/mL) suspension
+    spt:
+      dilution: Neat
+      concentration: 25 mg/mL
+    idt:
+      - dilution: '1:100'
+        concentration: 0.25 mg/mL
+        preparation: 0.1 mL of 2.5 mg/mL + 0.9 mL NS
+      - dilution: '1:10'
+        concentration: 2.5 mg/mL
+        preparation: 0.1 mL of 25 mg/mL + 0.9 mL NS
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Cefuroxime
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -61,11 +83,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (25 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -74,10 +92,7 @@ Prepare in this order, using a fresh syringe for each step.
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:100 | 0.25 mg/mL | 0.1 mL of 2.5 mg/mL + 0.9 mL NS |
-| 2 | 1:10 | 2.5 mg/mL | 0.1 mL of 25 mg/mL + 0.9 mL NS |
+<!-- scratch:idt -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 

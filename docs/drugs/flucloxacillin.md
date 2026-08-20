@@ -3,10 +3,31 @@ title: Flucloxacillin
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Penicillins
+protocols:
+  - id: iv
+    label: IV
+    test_type: skin
+    presentation: 500 mg powder for injection
+    diluent: '0.9% sodium chloride (Initial Reconstitution: Add 4.6 mL NS to 500 mg vial to obtain 100 mg/mL; Intermediate Dilution: Draw 1.0 mL of 100 mg/mL solution, add 4.0 mL NS to result in 20 mg/mL)'
+    spt:
+      concentration: 0.2 mg/mL
+    idt:
+      - dilution: '1:100'
+        concentration: 0.2 mg/mL
+        preparation: 0.1 mL of 2 mg/mL + 0.9 mL NS
+      - dilution: '1:10'
+        concentration: 2 mg/mL
+        preparation: 0.1 mL neat (20mg/ml) + 0.9 mL NS
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Flucloxacillin
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -58,11 +79,7 @@ version: 1.1
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | 0.2 mg/mL |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -71,10 +88,7 @@ version: 1.1
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:100 | 0.2 mg/mL | 0.1 mL of 2 mg/mL + 0.9 mL NS |
-| 2 | 1:10 | 2 mg/mL | 0.1 mL neat (20mg/ml) + 0.9 mL NS |
+<!-- scratch:idt -->
 
 *Note: The dilution ratios are relative to the 2 mg/mL IDT starting concentration.*
 

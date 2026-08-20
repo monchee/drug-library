@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-08-20T22:50:54Z",
-  "source_commit": "4a4edd5",
+  "generated_at": "2026-08-20T23:24:09Z",
+  "source_commit": "2f820d8",
   "drugs": [
     {
       "slug": "actrapid",
@@ -418,6 +418,45 @@
       ]
     },
     {
+      "slug": "cefuroxime",
+      "title": "Cefuroxime",
+      "version": "1.3",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Cephalosporins"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "750 mg powder for injection or 125 mg/5 mL suspension",
+          "diluent": "0.9% sodium chloride (750 mg + 30 mL NS) or use 125 mg/5 mL (25 mg/mL) suspension",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "25 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.25 mg/mL",
+              "preparation": "0.1 mL of 2.5 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "2.5 mg/mL",
+              "preparation": "0.1 mL of 25 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "chlorhexidine",
       "title": "Chlorhexidine",
       "version": "1.2",
@@ -737,6 +776,44 @@
       ]
     },
     {
+      "slug": "flucloxacillin",
+      "title": "Flucloxacillin",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Penicillins"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "500 mg powder for injection",
+          "diluent": "0.9% sodium chloride (Initial Reconstitution: Add 4.6 mL NS to 500 mg vial to obtain 100 mg/mL; Intermediate Dilution: Draw 1.0 mL of 100 mg/mL solution, add 4.0 mL NS to result in 20 mg/mL)",
+          "spt": {
+            "concentration": "0.2 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.2 mg/mL",
+              "preparation": "0.1 mL of 2 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "2 mg/mL",
+              "preparation": "0.1 mL neat (20mg/ml) + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "fluconazole",
       "title": "Fluconazole",
       "version": "1.2",
@@ -1027,6 +1104,106 @@
             "positive_control": "Histamine 10 mg/mL",
             "negative_control": "Normal saline"
           },
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "levofloxacin",
+      "title": "Levofloxacin",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "tablet",
+          "label": "Tablet",
+          "test_type": "skin",
+          "presentation": "500 mg tablets or IV formulation",
+          "diluent": "Normal saline for IDT dilutions (consult the Manufacturing Pharmacist for the exact diluent and method if using tablets)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "5 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.05 mg/mL",
+              "preparation": "0.1 mL of 0.5 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": true
+        }
+      ]
+    },
+    {
+      "slug": "levonorgestrel",
+      "title": "Levonorgestrel",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "oral",
+          "label": "Oral",
+          "test_type": "skin",
+          "presentation": "Levonorgestrel 750 µg tablet",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "crushed tablet solution",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": true
+        }
+      ]
+    },
+    {
+      "slug": "medroxyprogesterone",
+      "title": "Medroxyprogesterone",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "inj",
+          "label": "Inj",
+          "test_type": "skin",
+          "presentation": "150 mg/1 mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "1:3",
+            "concentration": "50 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.05 mg/mL",
+              "preparation": "0.1 mL of 1.5 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "5 mg/mL",
+              "preparation": "0.1 mL of 15 mg/mL + 0.9 mL NS"
+            }
+          ],
           "under_review": false,
           "review_note": "",
           "needs_pharmacy_verification": false
@@ -1521,6 +1698,50 @@
       ]
     },
     {
+      "slug": "pantoprazole",
+      "title": "Pantoprazole",
+      "version": "1.3",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Proton Pump Inhibitors"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "40 mg powder for injection",
+          "diluent": "0.9% sodium chloride (reconstitute with 10 mL NS)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "4 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.004 mg/mL",
+              "preparation": "0.1 mL of 0.04 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.04 mg/mL",
+              "preparation": "0.1 mL of 0.4 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "0.4 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            }
+          ],
+          "under_review": true,
+          "review_note": "The Spreadsheet 2 spreadsheet labels the SPT concentration as \"Neat (40 mg/mL)\". This is a spreadsheet labelling error — the correct reconstituted concentration is 4 mg/mL (40 mg powder + 10 mL NS).",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "paracetamol",
       "title": "Paracetamol",
       "version": "1.2",
@@ -1812,6 +2033,46 @@
       ]
     },
     {
+      "slug": "sugammadex",
+      "title": "Sugammadex",
+      "version": "1.3",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Reversal Agents",
+        "drug_name": "Sugammadex (Alone)"
+      },
+      "protocols": [
+        {
+          "id": "alone",
+          "label": "Alone",
+          "test_type": "skin",
+          "presentation": "200 mg/2 mL (100 mg/mL) or 500 mg/5 mL (100 mg/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.1 mg/mL",
+              "preparation": "0.1 mL of 1 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "1 mg/mL",
+              "preparation": "0.1 mL of 10 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "suxamethonium",
       "title": "Suxamethonium",
       "version": "1.4",
@@ -1851,6 +2112,39 @@
           ],
           "under_review": false,
           "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "tazocin",
+      "title": "Tazocin",
+      "version": "1.3",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Penicillins"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "4 g / 500 mg powder for injection",
+          "diluent": "0.9% sodium chloride (reconstitute with 20 mL NS)",
+          "spt": {
+            "dilution": "1:10 — ⚠️ concentration under review (Medication List: 2 mg/mL; calculation: 20 mg/mL)",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "2/0.2 mg/mL",
+              "preparation": "0.1 mL of 20/2 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": true,
+          "review_note": "Concentration discrepancy: Medication List specifies SPT at 1:10 (2 mg/mL Piperacillin), whereas calculation of 1:10 of 200 mg/mL gives 20 mg/mL. Concentration under clinical review.",
           "needs_pharmacy_verification": false
         }
       ]
@@ -1959,6 +2253,83 @@
               "dilution": "1:10",
               "concentration": "4 mg/mL",
               "preparation": "0.1 mL of 40 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "urografin",
+      "title": "Urografin",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv-contrast",
+          "label": "IV Contrast",
+          "test_type": "skin",
+          "presentation": "Urografin 150 (150 mg I/mL) or Urografin 370 (370 mg I/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "—",
+              "preparation": "0.1 mL of 1:10 + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "—",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            },
+            {
+              "dilution": "Neat",
+              "concentration": "500 U/mL",
+              "preparation": "Undiluted stock"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "vancomycin",
+      "title": "Vancomycin",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "500 mg or 1 g powder for injection",
+          "diluent": "0.9% sodium chloride (add 5 mL NS to 500 mg or 10 mL NS to 1 g)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000,000",
+              "concentration": "0.0001 mg/mL",
+              "preparation": "0.1 mL of 0.001 mg/mL + 0.9 mL NS"
             }
           ],
           "under_review": false,
