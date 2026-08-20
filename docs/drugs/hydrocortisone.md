@@ -3,10 +3,32 @@ title: Hydrocortisone
 tags: [spt, idt, iv]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Others
+protocols:
+  - id: iv
+    label: IV
+    test_type: experimental
+    presentation: 100 mg powder for injection
+    diluent: 0.9% sodium chloride (reconstitute with 2 mL WFI/NS)
+    spt:
+      dilution: Neat
+      concentration: 50 mg/mL
+    idt:
+      - dilution: '1:100'
+        concentration: 0.5 mg/mL
+        preparation: 0.1 mL of 5 mg/mL + 0.9 mL NS
+      - dilution: '1:10'
+        concentration: 5 mg/mL
+        preparation: 0.1 mL neat + 0.9 mL NS
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Hydrocortisone (Solu-Cortef)
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -49,11 +71,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (50 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -62,10 +80,7 @@ Prepare in this order, using a fresh syringe for each step.
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:100 | 0.5 mg/mL | 0.1 mL of 5 mg/mL + 0.9 mL NS |
-| 2 | 1:10 | 5 mg/mL | 0.1 mL neat + 0.9 mL NS |
+<!-- scratch:idt -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 **Delayed Reading:** If history is suggestive of a delayed reaction, re-read at 24 and 48 hours.

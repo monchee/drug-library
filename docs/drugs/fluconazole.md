@@ -3,10 +3,29 @@ title: Fluconazole
 tags: [spt, idt, iv]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Others
+protocols:
+  - id: iv
+    label: IV
+    test_type: skin
+    presentation: 200 mg/100 mL IV (2 mg/mL)
+    diluent: 0.9% sodium chloride
+    spt:
+      dilution: '1:10'
+      concentration: 0.2 mg/mL
+    idt:
+      - dilution: '1:1,000'
+        concentration: 0.002 mg/mL
+        preparation: 0.1 mL of 0.02 mg/mL + 0.9 mL NS
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Fluconazole (Diflucan)
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -46,11 +65,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | 1:10 (0.2 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -59,9 +74,7 @@ Prepare in this order, using a fresh syringe for each step.
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:1,000 | 0.002 mg/mL | 0.1 mL of 0.02 mg/mL + 0.9 mL NS |
+<!-- scratch:idt -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 **Delayed Reading:** If history is suggestive of a delayed reaction, re-read at 24 and 48 hours.
