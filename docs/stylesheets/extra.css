@@ -743,3 +743,13 @@ select,
   padding-bottom: 0.5rem;
   align-items: center;
 }
+
+/* ============================================================
+   Clinical review metadata
+   ============================================================ */
+
+.scratch-review-metadata {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: var(--md-sys-muted-foreground);
+}

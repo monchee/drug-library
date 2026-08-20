@@ -84,7 +84,7 @@ jobs:
         run: |
           mkdocs build --strict
 
-      - name: Clinical sign-off gate (version and date bump on protocol change)
+      - name: Clinical sign-off gate (version bump on protocol change, date bump on dose change)
         if: github.event_name == 'pull_request'
         env:
           # Passed via env, never interpolated into the script body: a literal
@@ -100,15 +100,30 @@ jobs:
           import yaml
           from pathlib import Path
 
-          # NON_CLINICAL_FIELDS: Deny-list of fields explicitly excluded from clinical comparison.
-          # WARNING: Adding fields to this list weakens clinical controls and allows changes
-          # to those fields to pass without requiring a 'last_reviewed' date bump.
-          # Any field NOT in this list is treated as clinical by default (fail-closed).
-          # Today only 'label' (display name) and drug-level 'version' / 'last_reviewed' are excluded.
-          NON_CLINICAL_FIELDS = {
+          # NON_PROTOCOL_FIELDS: Excluded when comparing protocol definitions for version bump.
+          # Excludes protocol display name and drug-level version/date metadata.
+          NON_PROTOCOL_FIELDS = {
               "label",          # Protocol display name
               "version",        # Drug-level schema/document version
               "last_reviewed",  # Drug-level clinical sign-off date
+          }
+
+          # NON_DOSE_FIELDS: Explicit deny-list of fields excluded from dose-sensitive comparison.
+          # WARNING: Adding fields to this list weakens clinical controls and allows changes
+          # to those fields to pass without requiring a 'last_reviewed' date bump.
+          # Any field NOT in this list is treated as dose-sensitive by default (fail-closed),
+          # including presentation, spt, idt (including preparation strings), challenge,
+          # and any unknown future fields.
+          NON_DOSE_FIELDS = {
+              "id",                           # Protocol identifier slug
+              "label",                        # Protocol display name
+              "test_type",                    # Test category (skin, challenge, control, experimental)
+              "diluent",                      # Diluent solution name
+              "under_review",                 # Review status flag
+              "review_note",                  # Review note text
+              "needs_pharmacy_verification",  # Pharmacy verification flag
+              "version",                      # Drug-level schema/document version
+              "last_reviewed",                # Drug-level clinical sign-off date
           }
 
           base_ref = os.environ.get("BASE_REF") or "origin/main"
@@ -175,9 +190,9 @@ jobs:
               except Exception:
                   return {}
 
-          def normalize_clinical_data(val, exclude_keys=NON_CLINICAL_FIELDS):
+          def normalize_clinical_data(val, exclude_keys):
               """
-              Recursively normalize data structure for clinical comparison:
+              Recursively normalize data structure for comparison:
               - Exclude keys present in exclude_keys (deny-list)
               - Treat missing keys, explicit None/null, and empty strings "" as equal (pruned)
               - Treat empty dicts resulting from pruned fields as empty/absent
@@ -211,14 +226,23 @@ jobs:
               else:
                   return val
 
-          def get_drug_clinical_data(drug_dict):
-              """Extract and normalize clinical protocol data for a drug entry from protocols.json."""
+          def get_drug_protocol_data(drug_dict):
+              """Extract and normalize protocol data for version-bump comparison."""
               if not drug_dict or not isinstance(drug_dict, dict):
                   return []
               protocols = drug_dict.get("protocols", [])
               if not isinstance(protocols, list):
                   return []
-              return [normalize_clinical_data(p, exclude_keys=NON_CLINICAL_FIELDS) for p in protocols]
+              return [normalize_clinical_data(p, exclude_keys=NON_PROTOCOL_FIELDS) for p in protocols]
+
+          def get_drug_dose_data(drug_dict):
+              """Extract and normalize dose-sensitive protocol data for date-bump comparison."""
+              if not drug_dict or not isinstance(drug_dict, dict):
+                  return []
+              protocols = drug_dict.get("protocols", [])
+              if not isinstance(protocols, list):
+                  return []
+              return [normalize_clinical_data(p, exclude_keys=NON_DOSE_FIELDS) for p in protocols]
 
           def find_dict_diffs(d1, d2, prefix=""):
               diffs = []
@@ -367,18 +391,25 @@ jobs:
                   require_version_bump = True
                   require_date_bump = False
               else:
-                  # Present in both base and head: compare clinical protocol values
-                  base_clinical = get_drug_clinical_data(base_protocols_json[slug])
-                  head_clinical = get_drug_clinical_data(head_protocols_json[slug])
+                  # Present in both base and head: compare protocol and dose data
+                  base_protocol = get_drug_protocol_data(base_protocols_json[slug])
+                  head_protocol = get_drug_protocol_data(head_protocols_json[slug])
+                  base_dose = get_drug_dose_data(base_protocols_json[slug])
+                  head_dose = get_drug_dose_data(head_protocols_json[slug])
 
-                  if base_clinical != head_clinical:
-                      # Rule 2: Clinical change
-                      rule_name = "Rule 2 (Clinical change: protocol data differs in clinical values)"
+                  if base_dose != head_dose:
+                      # Rule 2: Dose-bearing clinical change
+                      rule_name = "Rule 2 (Dose-bearing change: protocol data differs in dose/preparation values)"
                       require_version_bump = True
                       require_date_bump = True
+                  elif base_protocol != head_protocol:
+                      # Rule 3: Non-dose protocol change (e.g. diluent, test_type, under_review, review_note)
+                      rule_name = "Rule 3 (Non-dose protocol change: protocol metadata/diluent changed without dose changes)"
+                      require_version_bump = True
+                      require_date_bump = False
                   else:
-                      # Rule 3: Identical clinical data
-                      rule_name = "Rule 3 (Non-clinical edit: protocol values unchanged)"
+                      # Rule 4: Protocol data unchanged (documentation or non-protocol frontmatter edit)
+                      rule_name = "Rule 4 (Documentation edit: exported protocol data unchanged)"
                       require_version_bump = True
                       require_date_bump = False
 
@@ -427,8 +458,8 @@ jobs:
                       print(f"      Triggered: {rule}", file=sys.stderr)
                       print(f"      Issues: {', '.join(errs)}", file=sys.stderr)
                   print("\nClinical Policy for Drug Pages:", file=sys.stderr)
-                  print("  - Structural migrations and non-clinical edits require bumping 'version' only.", file=sys.stderr)
-                  print("  - Changes to clinical protocol values require bumping BOTH 'version' and 'last_reviewed'.", file=sys.stderr)
+                  print("  - Structural migrations, documentation edits, and non-dose protocol changes require bumping 'version' only.", file=sys.stderr)
+                  print("  - Changes to dose-bearing protocol values require bumping BOTH 'version' and 'last_reviewed'.", file=sys.stderr)
 
               print("=" * 70 + "\n", file=sys.stderr)
               sys.exit(1)
