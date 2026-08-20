@@ -17,10 +17,41 @@ import sys
 from datetime import date, datetime, timezone
 from enum import Enum
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import yaml
 from pydantic import BaseModel, Field, ValidationError, field_validator, model_validator
+
+
+class CrossReactivityItem(BaseModel):
+    category: str
+    info: str
+    alternatives: str
+
+    model_config = {"extra": "forbid"}
+
+
+class CrossReactivityFrontmatter(BaseModel):
+    title: Optional[str] = None
+    version: Union[float, str]
+    last_reviewed: Optional[Union[date, str]]
+    reviewed_by: Optional[str]
+    under_review: bool
+    provenance: str
+    items: List[CrossReactivityItem]
+
+    model_config = {"extra": "forbid"}
+
+    @model_validator(mode="after")
+    def validate_governance(self) -> "CrossReactivityFrontmatter":
+        if not self.under_review:
+            reviewed_by = str(self.reviewed_by or "").strip()
+            last_reviewed = str(self.last_reviewed or "").strip()
+            if not reviewed_by or not last_reviewed:
+                raise ValueError(
+                    "When under_review is false, both reviewed_by and last_reviewed must be non-empty."
+                )
+        return self
 
 
 class TestType(str, Enum):
@@ -277,6 +308,45 @@ def serialize_drug(slug: str, fm: DrugFrontmatter) -> Dict[str, Any]:
     return drug_data
 
 
+def serialize_cross_reactivity(cr: CrossReactivityFrontmatter) -> Dict[str, Any]:
+    """Serialize a validated CrossReactivityFrontmatter into a dictionary with stable keys."""
+    return {
+        "version": str(cr.version) if cr.version is not None else "1.0",
+        "last_reviewed": str(cr.last_reviewed) if cr.last_reviewed is not None else "",
+        "reviewed_by": str(cr.reviewed_by) if cr.reviewed_by is not None else "",
+        "under_review": cr.under_review,
+        "provenance": cr.provenance,
+        "items": [
+            {
+                "category": item.category,
+                "info": item.info,
+                "alternatives": item.alternatives,
+            }
+            for item in cr.items
+        ],
+    }
+
+
+def load_cross_reactivity(repo_root: Path) -> Tuple[Optional[Dict[str, Any]], List[str]]:
+    """Load and validate docs/reference/cross-reactivity.md frontmatter."""
+    cr_file = repo_root / "docs" / "reference" / "cross-reactivity.md"
+    if not cr_file.exists():
+        return None, [f"ERROR: {cr_file.relative_to(repo_root)} does not exist."]
+
+    raw_meta = parse_frontmatter(cr_file)
+    if not raw_meta:
+        return None, [f"ERROR in {cr_file.relative_to(repo_root)}: Missing or invalid YAML frontmatter."]
+
+    try:
+        cr_fm = CrossReactivityFrontmatter.model_validate(raw_meta)
+        return serialize_cross_reactivity(cr_fm), []
+    except ValidationError as val_err:
+        errors = format_validation_error(cr_file.relative_to(repo_root), val_err)
+        return None, errors
+    except Exception as e:
+        return None, [f"ERROR in {cr_file.relative_to(repo_root)}: {str(e)}"]
+
+
 def export_protocols(repo_root: Path, check_mode: bool = False) -> int:
     drugs_dir = repo_root / "docs" / "drugs"
     output_file = repo_root / "docs" / "api" / "protocols.json"
@@ -321,6 +391,10 @@ def export_protocols(repo_root: Path, check_mode: bool = False) -> int:
         except Exception as e:
             validation_errors.append(f"ERROR in {md_file.relative_to(repo_root)}: {str(e)}")
 
+    cr_data, cr_errors = load_cross_reactivity(repo_root)
+    if cr_errors:
+        validation_errors.extend(cr_errors)
+
     if validation_errors:
         print("\n".join(validation_errors), file=sys.stderr)
         return 1
@@ -338,10 +412,14 @@ def export_protocols(repo_root: Path, check_mode: bool = False) -> int:
         except Exception:
             pass
 
-    # Check if drugs data matches existing
+    # Check if data matches existing
     data_changed = True
     if existing_content and existing_json:
-        if existing_json.get("drugs") == drugs_data and existing_json.get("schema_version") == "1.0":
+        if (
+            existing_json.get("schema_version") == "1.1"
+            and existing_json.get("drugs") == drugs_data
+            and existing_json.get("cross_reactivity") == cr_data
+        ):
             data_changed = False
 
     if data_changed or not existing_generated_at:
@@ -352,10 +430,11 @@ def export_protocols(repo_root: Path, check_mode: bool = False) -> int:
         source_commit = existing_commit or get_source_commit(repo_root)
 
     payload = {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "generated_at": generated_at,
         "source_commit": source_commit,
         "drugs": drugs_data,
+        "cross_reactivity": cr_data,
     }
 
     new_json_str = json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
@@ -366,7 +445,7 @@ def export_protocols(repo_root: Path, check_mode: bool = False) -> int:
             return 1
 
         if existing_content != new_json_str:
-            print(f"ERROR: {output_file.relative_to(repo_root)} is out of date vs docs/drugs/*.md frontmatter.", file=sys.stderr)
+            print(f"ERROR: {output_file.relative_to(repo_root)} is out of date vs frontmatter sources.", file=sys.stderr)
             diff = difflib.unified_diff(
                 existing_content.splitlines(keepends=True),
                 new_json_str.splitlines(keepends=True),
@@ -375,13 +454,13 @@ def export_protocols(repo_root: Path, check_mode: bool = False) -> int:
             )
             sys.stderr.writelines(diff)
             return 1
-        print(f"OK: {output_file.relative_to(repo_root)} is up to date ({len(drugs_data)} drugs).")
+        print(f"OK: {output_file.relative_to(repo_root)} is up to date ({len(drugs_data)} drugs, cross_reactivity included).")
         return 0
 
     # Ensure output directory exists and write file
     output_file.parent.mkdir(parents=True, exist_ok=True)
     output_file.write_text(new_json_str, encoding="utf-8")
-    print(f"Successfully exported {len(drugs_data)} drug protocol(s) to {output_file.relative_to(repo_root)}")
+    print(f"Successfully exported {len(drugs_data)} drug protocol(s) and cross-reactivity reference to {output_file.relative_to(repo_root)}")
     return 0
 
 

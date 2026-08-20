@@ -6,6 +6,7 @@ Replaces HTML-comment markers with tables generated from the frontmatter:
   <!-- scratch:idt -->             -> IDT dilution-series table
   <!-- scratch:challenge -->       -> Challenge protocol table
   <!-- scratch:review-banner -->   -> Warning admonition when under_review is true
+  <!-- scratch:cross-reactivity -->-> Cross-reactivity guidance table & review warning
 
 Precedence Rules:
 1. Challenge Intervals: Per-step `interval` takes precedence over challenge-level `interval`
@@ -174,6 +175,39 @@ def render_challenge_table(protocol: Dict[str, Any]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def render_cross_reactivity(meta: Dict[str, Any]) -> str:
+    """Render cross-reactivity warning and reference table from frontmatter."""
+    items = meta.get("items", [])
+    if not items:
+        return ""
+
+    blocks = []
+
+    if meta.get("under_review"):
+        provenance = str(meta.get("provenance", "") or "").strip()
+        warning_text = provenance or "This reference is currently under review and awaits formal clinical sign-off."
+        blocks.append(
+            '!!! warning "Clinical review pending"\n'
+            f"    {warning_text}\n"
+        )
+
+    lines = [
+        "| Category | Clinical considerations | Alternatives |",
+        "|---|---|---|",
+    ]
+    for item in items:
+        cat = str(item.get("category", "")).replace("|", "\\|")
+        info = str(item.get("info", "")).replace("|", "\\|")
+        alts = str(item.get("alternatives", "")).replace("|", "\\|")
+        # Format safely so `<1%` renders as text, not HTML
+        info = info.replace("<", "&lt;")
+        alts = alts.replace("<", "&lt;")
+        lines.append(f"| **{cat}** | {info} | {alts} |")
+
+    blocks.append("\n".join(lines))
+    return "\n\n".join(blocks) + "\n"
+
+
 def on_page_markdown(markdown: str, page: Any, config: Any, files: Any) -> str:
     """MkDocs hook event for page markdown processing."""
     # Fast path: if no scratch markers in markdown, return markdown untouched
@@ -197,6 +231,9 @@ def on_page_markdown(markdown: str, page: Any, config: Any, files: Any) -> str:
         marker = match.group(1).strip()
         proto_id = match.group(2) if match.group(2) else None
 
+        if marker == "cross-reactivity":
+            return render_cross_reactivity(meta)
+
         if marker == "review-banner":
             return render_review_banner(protocols)
 
@@ -217,4 +254,3 @@ def on_page_markdown(markdown: str, page: Any, config: Any, files: Any) -> str:
 
     pattern = re.compile(r"<!--\s*scratch:([a-z-]+)(?::([a-z0-9_-]+))?\s*-->")
     return pattern.sub(replace_marker, markdown)
-

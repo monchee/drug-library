@@ -4,6 +4,17 @@ All significant updates to SCRATCH are recorded here in plain language. Entries 
 
 ---
 
+## 21 August 2026 — Version 0.8
+
+**Author:** RPAH Allergy Nurses
+**Change:** Centralised cross-reactivity source-of-truth migration and governance baseline.
+
+- **Cross-Reactivity Reference Source:** Migrated the six cross-reactivity records (Muscle Relaxants, Penicillins, Cephalosporins, Local Anaesthetics, Opioids, Hypnotics) to SCRATCH as the single authored source of truth (`reference/cross-reactivity.md`).
+- **Clinical Governance Baseline:** All six clinical records were transcribed unchanged from DREAM without interpretation or editorial modification, and remain explicitly marked as pending formal clinical review and sign-off (`under_review: true`). No doses or clinical content were corrected or updated in this migration.
+- **Data Pipeline & Schema Update:** Extended `docs/api/protocols.json` (schema version 1.1) and MkDocs rendering hooks to validate and render cross-reactivity guidance directly from frontmatter.
+
+---
+
 ## 19 August 2026 — Version 0.7
 
 **Author:** RPAH Allergy Nurses
