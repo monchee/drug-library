@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-08-20T21:17:38Z",
-  "source_commit": "c4722c4",
+  "generated_at": "2026-08-20T21:58:55Z",
+  "source_commit": "54bb336",
   "drugs": [
     {
       "slug": "alfentanil",
@@ -305,6 +305,40 @@
       ]
     },
     {
+      "slug": "chlorhexidine",
+      "title": "Chlorhexidine",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Antiseptics"
+      },
+      "protocols": [
+        {
+          "id": "0-02",
+          "label": "0.02%",
+          "test_type": "skin",
+          "presentation": "0.02% solution (0.2 mg/mL) or 0.1% solution (1 mg/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "0.2 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.002 mg/mL",
+              "preparation": "0.1 mL of 0.02 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "cis-atracurium",
       "title": "Cis-atracurium",
       "version": "1.4",
@@ -332,6 +366,150 @@
               "preparation": "0.1 mL of 0.02 mg/mL + 0.9 mL NS"
             }
           ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "dalteparin",
+      "title": "Dalteparin",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "sc",
+          "label": "SC",
+          "test_type": "skin",
+          "presentation": "10,000 U/mL pre-filled syringe or vial",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "10,000 U/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "10 U/mL",
+              "preparation": "0.1 mL of 100 U/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "100 U/mL",
+              "preparation": "0.1 mL of 1,000 U/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "1,000 U/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "droperidol",
+      "title": "Droperidol",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "10 mg/2 mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "5 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.005 mg/mL",
+              "preparation": "0.1 mL of 0.5 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.05 mg/mL",
+              "preparation": "0.1 mL of 5 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "enoxaparin",
+      "title": "Enoxaparin",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "sc",
+          "label": "SC",
+          "test_type": "skin",
+          "presentation": "100 mg/mL pre-filled syringe or vial",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.1 mg/mL",
+              "preparation": "0.1 mL of 1 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "esomeprazole",
+      "title": "Esomeprazole",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Proton Pump Inhibitors"
+      },
+      "protocols": [
+        {
+          "id": "standard",
+          "label": "",
+          "test_type": "skin",
+          "presentation": "20 mg tablets / capsules",
+          "diluent": "0.9% sodium chloride (dissolve in 1 mL)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "20 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
           "under_review": false,
           "review_note": "",
           "needs_pharmacy_verification": false
@@ -371,6 +549,101 @@
               "preparation": "0.1 mL neat + 0.9 mL NS"
             }
           ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "granisetron",
+      "title": "Granisetron",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "3 mg/3 mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "1 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.01 mg/mL",
+              "preparation": "0.1 mL of 0.1 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "heparin",
+      "title": "Heparin",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "sc",
+          "label": "SC",
+          "test_type": "skin",
+          "presentation": "5000 U/mL (Common) or 25,000 U/5 mL (5000 U/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "5000 U/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "5 U/mL",
+              "preparation": "0.1 mL of 50 U/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "lansoprazole",
+      "title": "Lansoprazole",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Proton Pump Inhibitors"
+      },
+      "protocols": [
+        {
+          "id": "standard",
+          "label": "",
+          "test_type": "skin",
+          "presentation": "30 mg capsules / orodispersible tablets",
+          "diluent": "0.9% sodium chloride (dissolve in 1 mL)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "30 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
           "under_review": false,
           "review_note": "",
           "needs_pharmacy_verification": false
@@ -461,6 +734,33 @@
       ]
     },
     {
+      "slug": "omeprazole",
+      "title": "Omeprazole",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Proton Pump Inhibitors"
+      },
+      "protocols": [
+        {
+          "id": "standard",
+          "label": "",
+          "test_type": "skin",
+          "presentation": "20 mg tablets / capsules",
+          "diluent": "0.9% sodium chloride (dissolve in 1 mL)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "20 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "pancuronium",
       "title": "Pancuronium",
       "version": "1.4",
@@ -537,6 +837,33 @@
               "preparation": "0.1 mL neat + 0.9 mL NS"
             }
           ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "rabeprazole",
+      "title": "Rabeprazole",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Proton Pump Inhibitors"
+      },
+      "protocols": [
+        {
+          "id": "standard",
+          "label": "",
+          "test_type": "skin",
+          "presentation": "20 mg tablets",
+          "diluent": "0.9% sodium chloride (dissolve in 1 mL)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "40 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
           "under_review": false,
           "review_note": "",
           "needs_pharmacy_verification": false

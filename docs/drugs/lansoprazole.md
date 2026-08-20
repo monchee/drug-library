@@ -3,10 +3,25 @@ title: Lansoprazole
 tags: [oral, spt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Proton Pump Inhibitors
+protocols:
+  - id: standard
+    label: ''
+    test_type: skin
+    presentation: 30 mg capsules / orodispersible tablets
+    diluent: 0.9% sodium chloride (dissolve in 1 mL)
+    spt:
+      dilution: Neat
+      concentration: 30 mg/mL
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Lansoprazole (Zoton)
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -41,11 +56,7 @@ version: 1.1
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (30 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Preparation:** Dissolve 30 mg in 1 mL NS. Use the supernatant for SPT.
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
