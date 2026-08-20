@@ -3,10 +3,29 @@ title: Midazolam
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Hypnotics
+protocols:
+  - id: iv
+    label: IV
+    test_type: skin
+    presentation: 1 mg/mL or 5 mg/5 mL (1 mg/mL)
+    diluent: 0.9% sodium chloride
+    spt:
+      dilution: Neat
+      concentration: 1 mg/mL
+    idt:
+      - dilution: '1:100'
+        concentration: 0.01 mg/mL
+        preparation: 0.1 mL of 0.1 mg/mL + 0.9 mL NS
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Midazolam
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -44,11 +63,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (1 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -57,9 +72,7 @@ Prepare in this order, using a fresh syringe for each step.
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:100 | 0.01 mg/mL | 0.1 mL of 0.1 mg/mL + 0.9 mL NS |
+<!-- scratch:idt -->
 
 !!! tip "Protocol Note"
     Midazolam IDT at **1:10 (0.1 mg/mL)** should only be performed if the history is highly suspicious and earlier steps are negative, due to the risk of irritant responses.

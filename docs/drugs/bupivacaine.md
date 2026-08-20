@@ -3,10 +3,38 @@ title: Bupivacaine
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Local Anaesthetics
+protocols:
+  - id: epidural
+    label: Epidural
+    test_type: skin
+    presentation: 50 mg/20 mL (2.5 mg/mL) or 0.25% solution
+    diluent: 0.9% sodium chloride
+    spt:
+      dilution: Neat
+      concentration: 2.5 mg/mL
+    idt:
+      - dilution: '1:1,000'
+        concentration: 0.0025 mg/mL
+        preparation: 0.1 mL of 0.025 mg/mL + 0.9 mL NS
+      - dilution: '1:100'
+        concentration: 0.025 mg/mL
+        preparation: 0.1 mL of 0.25 mg/mL + 0.9 mL NS
+      - dilution: '1:10'
+        concentration: 0.25 mg/mL
+        preparation: 0.1 mL neat + 0.9 mL NS
+      - dilution: Neat
+        concentration: 2.5 mg/mL
+        preparation: Undiluted stock
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Bupivacaine (Marcain)
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -57,11 +85,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (2.5 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -70,11 +94,6 @@ Prepare in this order, using a fresh syringe for each step.
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:1,000 | 0.0025 mg/mL | 0.1 mL of 0.025 mg/mL + 0.9 mL NS |
-| 2 | 1:100 | 0.025 mg/mL | 0.1 mL of 0.25 mg/mL + 0.9 mL NS |
-| 3 | 1:10 | 0.25 mg/mL | 0.1 mL neat + 0.9 mL NS |
-| 4 | Neat | 2.5 mg/mL | Undiluted stock |
+<!-- scratch:idt -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.

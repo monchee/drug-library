@@ -1,8 +1,96 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-08-20T20:20:12Z",
-  "source_commit": "d9bc1e3",
+  "generated_at": "2026-08-20T21:17:38Z",
+  "source_commit": "c4722c4",
   "drugs": [
+    {
+      "slug": "alfentanil",
+      "title": "Alfentanil",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Opioids"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "1 mg/2 mL (0.5 mg/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "0.5 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.005 mg/mL",
+              "preparation": "0.1 mL of 0.05 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "0.05 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "bupivacaine",
+      "title": "Bupivacaine",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Local Anaesthetics"
+      },
+      "protocols": [
+        {
+          "id": "epidural",
+          "label": "Epidural",
+          "test_type": "skin",
+          "presentation": "50 mg/20 mL (2.5 mg/mL) or 0.25% solution",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "2.5 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.0025 mg/mL",
+              "preparation": "0.1 mL of 0.025 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.025 mg/mL",
+              "preparation": "0.1 mL of 0.25 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "0.25 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            },
+            {
+              "dilution": "Neat",
+              "concentration": "2.5 mg/mL",
+              "preparation": "Undiluted stock"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
     {
       "slug": "cefazolin",
       "title": "Cefazolin",
@@ -61,6 +149,162 @@
       ]
     },
     {
+      "slug": "cefepime",
+      "title": "Cefepime",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Cephalosporins"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "1 g powder for injection",
+          "diluent": "0.9% sodium chloride (reconstitute with 10 mL WFI)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "1 mg/mL",
+              "preparation": "0.1 mL of 10 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "10 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "cefotaxime",
+      "title": "Cefotaxime",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Cephalosporins"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "1 g powder for injection",
+          "diluent": "0.9% sodium chloride (reconstitute with 10 mL WFI)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "1 mg/mL",
+              "preparation": "0.1 mL of 10 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "10 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "ceftazidime",
+      "title": "Ceftazidime",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Cephalosporins"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "2 g powder for injection",
+          "diluent": "0.9% sodium chloride (reconstitute with 20 mL WFI)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "1 mg/mL",
+              "preparation": "0.1 mL of 10 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "10 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "ceftriaxone",
+      "title": "Ceftriaxone",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Cephalosporins"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "1 g powder for injection",
+          "diluent": "0.9% sodium chloride (reconstitute with 10 mL WFI)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "1 mg/mL",
+              "preparation": "0.1 mL of 10 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "10 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "cis-atracurium",
       "title": "Cis-atracurium",
       "version": "1.4",
@@ -86,6 +330,128 @@
               "dilution": "1:1,000",
               "concentration": "0.002 mg/mL",
               "preparation": "0.1 mL of 0.02 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "fentanyl",
+      "title": "Fentanyl",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Opioids"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "100 mcg/2 mL (0.05 mg/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "0.05 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.0005 mg/mL",
+              "preparation": "0.1 mL of 0.005 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "0.005 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "mepivacaine",
+      "title": "Mepivacaine",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Local Anaesthetics"
+      },
+      "protocols": [
+        {
+          "id": "epidural",
+          "label": "Epidural",
+          "test_type": "skin",
+          "presentation": "66 mg/2.2 mL (30 mg/mL) or 3% solution",
+          "diluent": "0.9% sodium chloride (reconstitute with 4.4 mL WFI to 2.2 mL stock)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "10 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.01 mg/mL",
+              "preparation": "0.1 mL of 0.1 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.1 mg/mL",
+              "preparation": "0.1 mL of 1 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "1 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            },
+            {
+              "dilution": "Neat",
+              "concentration": "10 mg/mL",
+              "preparation": "10 mg/mL solution prepared above"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "midazolam",
+      "title": "Midazolam",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Hypnotics"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "1 mg/mL or 5 mg/5 mL (1 mg/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "1 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.01 mg/mL",
+              "preparation": "0.1 mL of 0.1 mg/mL + 0.9 mL NS"
             }
           ],
           "under_review": false,
@@ -125,6 +491,50 @@
               "dilution": "1:100",
               "concentration": "0.02 mg/mL",
               "preparation": "0.1 mL of 0.2 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "propofol",
+      "title": "Propofol",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Hypnotics"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "200 mg/20 mL (10 mg/mL) or 500 mg/50 mL (10 mg/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "10 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.01 mg/mL",
+              "preparation": "0.1 mL of 0.1 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.1 mg/mL",
+              "preparation": "0.1 mL of 1 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "1 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
             }
           ],
           "under_review": false,
