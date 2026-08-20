@@ -2,8 +2,8 @@
 title: Cis-atracurium
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
-last_reviewed: 2026-03-28
-version: 1.2
+last_reviewed: 2026-08-20
+version: 1.3
 dream:
   category: Muscle Relaxants
 protocols:
@@ -11,7 +11,7 @@ protocols:
     label: IV
     test_type: skin
     presentation: 5 mg/2.5 mL (2 mg/mL)
-    diluent: Normal saline (NS)
+    diluent: 0.9% sodium chloride
     spt:
       dilution: Neat
       concentration: 2 mg/mL
