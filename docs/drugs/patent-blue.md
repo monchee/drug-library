@@ -3,10 +3,29 @@ title: Patent Blue
 tags: [spt, idt, subcut]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Others
+protocols:
+  - id: sc
+    label: SC
+    test_type: skin
+    presentation: 2.5% (25 mg/mL) or 10% (100 mg/mL)
+    diluent: 0.9% sodium chloride
+    spt:
+      dilution: Neat
+      concentration: 25 mg/mL
+    idt:
+      - dilution: '1:1,000'
+        concentration: 0.025 mg/mL
+        preparation: 0.1 mL of 0.25 mg/mL + 0.9 mL NS
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Patent Blue (Isosulfan Blue)
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -45,11 +64,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (25 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -58,8 +73,6 @@ Prepare in this order, using a fresh syringe for each step.
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:1,000 | 0.025 mg/mL | 0.1 mL of 0.25 mg/mL + 0.9 mL NS |
+<!-- scratch:idt -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
