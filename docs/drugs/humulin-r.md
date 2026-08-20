@@ -3,10 +3,30 @@ title: Humulin R
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.0
+version: 1.1
+dream:
+  category: Others
+  drug_name: Humulin R (Insulin)
+protocols:
+  - id: sc
+    label: S/C
+    test_type: skin
+    presentation: 100 units/mL (10 mL vial)
+    diluent: 19 mL N/S 0.9% for SPT dilution
+    spt:
+      dilution: Neat
+      concentration: 100 U/mL
+    idt:
+      - dilution: '1:20'
+        concentration: 5 U/mL
+        preparation: 0.1 mL stock (100 U/mL) + 1.9 mL NS
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Humulin R
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -48,11 +68,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (100 U/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -61,8 +77,6 @@ Prepare in this order, using a fresh syringe for each step.
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:20 | 5 U/mL | 0.1 mL stock (100 U/mL) + 1.9 mL NS |
+<!-- scratch:idt -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.

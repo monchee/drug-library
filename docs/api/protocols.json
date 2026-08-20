@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-08-20T22:36:48Z",
-  "source_commit": "39e2f5e",
+  "generated_at": "2026-08-20T22:50:54Z",
+  "source_commit": "4a4edd5",
   "drugs": [
     {
       "slug": "actrapid",
@@ -873,6 +873,76 @@
       ]
     },
     {
+      "slug": "humulin-nph",
+      "title": "Humulin NPH",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others",
+        "drug_name": "Humulin NPH (Insulin)"
+      },
+      "protocols": [
+        {
+          "id": "sc",
+          "label": "S/C",
+          "test_type": "skin",
+          "presentation": "100 units/mL (10 mL vial)",
+          "diluent": "19 mL N/S 0.9% for SPT dilution",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 U/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:20",
+              "concentration": "5 U/mL",
+              "preparation": "0.1 mL stock (100 U/mL) + 1.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "humulin-r",
+      "title": "Humulin R",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others",
+        "drug_name": "Humulin R (Insulin)"
+      },
+      "protocols": [
+        {
+          "id": "sc",
+          "label": "S/C",
+          "test_type": "skin",
+          "presentation": "100 units/mL (10 mL vial)",
+          "diluent": "19 mL N/S 0.9% for SPT dilution",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 U/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:20",
+              "concentration": "5 U/mL",
+              "preparation": "0.1 mL stock (100 U/mL) + 1.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "hydrocortisone",
       "title": "Hydrocortisone",
       "version": "1.2",
@@ -1260,6 +1330,45 @@
       ]
     },
     {
+      "slug": "omnipaque",
+      "title": "Omnipaque",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv-contrast",
+          "label": "IV Contrast",
+          "test_type": "skin",
+          "presentation": "350 mg I/mL (Common) or 300 mg I/mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "350 mg I/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "3.5 mg I/mL",
+              "preparation": "0.1 mL of 1:10 + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "35 mg I/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "ondansetron",
       "title": "Ondansetron",
       "version": "1.1",
@@ -1325,6 +1434,45 @@
               "dilution": "1:20",
               "concentration": "5 U/mL",
               "preparation": "0.1 mL stock (100 U/mL) + 1.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "oxycodone",
+      "title": "Oxycodone",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Opioids"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "10 mg/mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "10 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.01 mg/mL",
+              "preparation": "0.1 mL of 0.1 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.1 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
             }
           ],
           "under_review": false,
@@ -1412,6 +1560,74 @@
       ]
     },
     {
+      "slug": "parecoxib",
+      "title": "Parecoxib",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "40 mg powder for injection",
+          "diluent": "0.9% sodium chloride (reconstitute with 5 mL NS)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "8 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.08 mg/mL",
+              "preparation": "0.1 mL of 0.8 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "patent-blue",
+      "title": "Patent Blue",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "sc",
+          "label": "SC",
+          "test_type": "skin",
+          "presentation": "2.5% (25 mg/mL) or 10% (100 mg/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "25 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.025 mg/mL",
+              "preparation": "0.1 mL of 0.25 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "propofol",
       "title": "Propofol",
       "version": "1.2",
@@ -1447,6 +1663,45 @@
               "dilution": "1:10",
               "concentration": "1 mg/mL",
               "preparation": "0.1 mL neat + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "protamine",
+      "title": "Protamine",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "50 mg/5 mL (10 mg/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "10 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.01 mg/mL",
+              "preparation": "0.1 mL of 1 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "0.1:20",
+              "concentration": "0.05 mg/mL",
+              "preparation": "0.1 mL of 10 mg/mL + 1.9 mL NS"
             }
           ],
           "under_review": false,
@@ -1635,6 +1890,40 @@
       ]
     },
     {
+      "slug": "tranexamic-acid",
+      "title": "Tranexamic Acid",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "500 mg/5 mL (100 mg/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "1 mg/mL",
+              "preparation": "0.1 mL of 10 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "triamcinolone",
       "title": "Triamcinolone",
       "version": "1.1",
@@ -1709,6 +1998,94 @@
               "dilution": "1:100",
               "concentration": "0.04 mg/mL",
               "preparation": "0.1 mL of 0.4 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "visipaque",
+      "title": "Visipaque",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv-contrast",
+          "label": "IV Contrast",
+          "test_type": "skin",
+          "presentation": "320 mg I/mL (Common) or 270 mg I/mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "320 mg I/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "3.2 mg I/mL",
+              "preparation": "0.1 mL of 1:10 + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "32 mg I/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "xylocaine",
+      "title": "Xylocaine",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "50 mg/5 mL (10 mg/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "10 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.01 mg/mL",
+              "preparation": "0.1 mL of 0.1 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.1 mg/mL",
+              "preparation": "0.1 mL of 1 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "1 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
+            },
+            {
+              "dilution": "Neat",
+              "concentration": "10 mg/mL",
+              "preparation": "Undiluted stock"
             }
           ],
           "under_review": false,
