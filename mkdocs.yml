@@ -50,6 +50,8 @@ theme:
   icon:
     logo: material/test-tube
   favicon: assets/test-tube.svg
+hooks:
+  - hooks/render_protocols.py
 
 plugins:
   - search:

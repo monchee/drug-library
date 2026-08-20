@@ -1,2 +1,6 @@
 reviewed_by: RPAH Clinical Immunology & Allergy
 description: SCRATCH — Skin & Challenge Reference for Allergy Testing Clinical Handbook. Department of Clinical Immunology and Allergy, Royal Prince Alfred Hospital.
+spt:
+  positive_control: Histamine 10 mg/mL
+  negative_control: Normal saline
+

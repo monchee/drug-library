@@ -5,3 +5,4 @@ mkdocs-glightbox
 mkdocs-minify-plugin
 mkdocs-table-reader-plugin
 openpyxl
+pydantic
