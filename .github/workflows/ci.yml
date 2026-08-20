@@ -38,6 +38,11 @@ jobs:
 
       - name: Clinical sign-off gate (version and date bump on protocol change)
         if: github.event_name == 'pull_request'
+        env:
+          # Passed via env, never interpolated into the script body: a literal
+          # ${{ }} inside a run block is parsed by GitHub as an expression and
+          # breaks the whole workflow file.
+          BASE_REF: origin/${{ github.base_ref }}
         run: |
           python3 - << 'EOF'
           import json
@@ -58,9 +63,7 @@ jobs:
               "last_reviewed",  # Drug-level clinical sign-off date
           }
 
-          base_ref = os.environ.get("BASE_REF", "origin/${{ github.base_ref }}")
-          if "${{" in base_ref:
-              base_ref = "origin/main"
+          base_ref = os.environ.get("BASE_REF") or "origin/main"
           print(f"Checking drug page changes against base ref: {base_ref}")
 
           # Get changed drug files and metadata between base branch and PR HEAD
