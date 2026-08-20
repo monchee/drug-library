@@ -20,21 +20,25 @@ jobs:
       - name: Check Cloudflare credentials
         id: check_token
         run: |
-          if [ -n "$CLOUDFLARE_API_TOKEN" ]; then
-            echo "has_token=true" >> "$GITHUB_OUTPUT"
-            echo "Cloudflare credentials present. Proceeding with deployment."
-          else
-            echo "has_token=false" >> "$GITHUB_OUTPUT"
-            echo "Cloudflare credentials not configured. Skipping deploy."
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+              echo "Error: CLOUDFLARE_API_TOKEN is missing or empty." >&2
+            fi
+            if [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+              echo "Error: CLOUDFLARE_ACCOUNT_ID is missing or empty." >&2
+            fi
+            exit 1
           fi
+          echo "has_token=true" >> "$GITHUB_OUTPUT"
+          echo "Cloudflare credentials present. Proceeding with deployment."
 
       - name: Checkout repository
         if: steps.check_token.outputs.has_token == 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
         if: steps.check_token.outputs.has_token == 'true'
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.11"
           cache: "pip"
@@ -61,12 +65,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.11"
           cache: "pip"
