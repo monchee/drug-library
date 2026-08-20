@@ -54,8 +54,9 @@ hooks:
   - hooks/render_protocols.py
 
 plugins:
-  - search:
-      separator: '[\s\-,:!=\[\]()"/]+'
+  # Search is provided by pagefind (materialx default). The old lunr-only
+  # `separator` option was silently inert here and failed `mkdocs build --strict`.
+  - search
   - document-dates:
       type: timeago
       locale: en
