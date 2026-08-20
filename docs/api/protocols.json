@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-08-20T22:16:38Z",
-  "source_commit": "5448c39",
+  "generated_at": "2026-08-20T22:36:48Z",
+  "source_commit": "39e2f5e",
   "drugs": [
     {
       "slug": "actrapid",
@@ -108,6 +108,45 @@
               "dilution": "1:1,000",
               "concentration": "0.1 mg/mL",
               "preparation": "0.1 mL of 10 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "betamethasone",
+      "title": "Betamethasone",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "experimental",
+          "presentation": "Betamethasone sodium phosphate 5.7 mg/mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "5.7 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.057 mg/mL",
+              "preparation": "0.1 mL of 0.57 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:15",
+              "concentration": "0.38 mg/mL",
+              "preparation": "0.2 mL of 5.7 mg/mL + 2.8 mL NS"
             }
           ],
           "under_review": false,
@@ -732,6 +771,40 @@
       ]
     },
     {
+      "slug": "glycopyrronium",
+      "title": "Glycopyrronium",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "standard",
+          "label": "",
+          "test_type": "experimental",
+          "presentation": "200 µg/1 mL (0.2 mg/mL)",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "0.2 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.0002 mg/mL",
+              "preparation": "0.1 mL of 0.02 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "granisetron",
       "title": "Granisetron",
       "version": "1.1",
@@ -866,6 +939,31 @@
       ]
     },
     {
+      "slug": "latex",
+      "title": "Latex",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "standard",
+          "label": "",
+          "test_type": "skin",
+          "presentation": "Natural rubber latex extract",
+          "spt": {
+            "dilution": "Neat extract",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "mepivacaine",
       "title": "Mepivacaine",
       "version": "1.2",
@@ -906,6 +1004,45 @@
               "dilution": "Neat",
               "concentration": "10 mg/mL",
               "preparation": "10 mg/mL solution prepared above"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "methylprednisolone",
+      "title": "Methylprednisolone",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "experimental",
+          "presentation": "1 g powder for injection",
+          "diluent": "0.9% sodium chloride (reconstitute with 5 mL NS)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "20 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.2 mg/mL",
+              "preparation": "0.1 mL of 2 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "2 mg/mL",
+              "preparation": "0.1 mL neat + 0.9 mL NS"
             }
           ],
           "under_review": false,
@@ -1022,6 +1159,80 @@
       ]
     },
     {
+      "slug": "neostigmine",
+      "title": "Neostigmine",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "inj",
+          "label": "Inj",
+          "test_type": "experimental",
+          "presentation": "2.5 mg/1 mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "2.5 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.0025 mg/mL",
+              "preparation": "0.1 mL of 0.25 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.025 mg/mL",
+              "preparation": "0.1 mL of 2.5 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "novorapid",
+      "title": "Novorapid",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others",
+        "drug_name": "Novorapid (Insulin)"
+      },
+      "protocols": [
+        {
+          "id": "sc",
+          "label": "S/C",
+          "test_type": "skin",
+          "presentation": "100 units/mL (10 mL vial / penfill)",
+          "diluent": "19 mL N/S 0.9% for SPT dilution",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 U/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:20",
+              "concentration": "5 U/mL",
+              "preparation": "0.1 mL stock (100 U/mL) + 1.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "omeprazole",
       "title": "Omeprazole",
       "version": "1.2",
@@ -1079,6 +1290,41 @@
               "dilution": "1:100",
               "concentration": "0.02 mg/mL",
               "preparation": "0.1 mL of 2 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "optisulin",
+      "title": "Optisulin",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others",
+        "drug_name": "Optisulin (Insulin)"
+      },
+      "protocols": [
+        {
+          "id": "sc",
+          "label": "S/C",
+          "test_type": "skin",
+          "presentation": "100 units/mL (10 mL vial)",
+          "diluent": "19 mL N/S 0.9% for SPT dilution",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 U/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:20",
+              "concentration": "5 U/mL",
+              "preparation": "0.1 mL stock (100 U/mL) + 1.9 mL NS"
             }
           ],
           "under_review": false,
@@ -1210,6 +1456,41 @@
       ]
     },
     {
+      "slug": "protaphane",
+      "title": "Protaphane",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others",
+        "drug_name": "Protaphane (Insulin)"
+      },
+      "protocols": [
+        {
+          "id": "sc",
+          "label": "S/C",
+          "test_type": "skin",
+          "presentation": "100 units/mL (10 mL vial)",
+          "diluent": "19 mL N/S 0.9% for SPT dilution",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100 U/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:20",
+              "concentration": "5 U/mL",
+              "preparation": "0.1 mL stock (100 U/mL) + 1.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "rabeprazole",
       "title": "Rabeprazole",
       "version": "1.2",
@@ -1311,6 +1592,84 @@
               "dilution": "1:500",
               "concentration": "0.1 mg/mL",
               "preparation": "0.1 mL of 1 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "tramadol",
+      "title": "Tramadol",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "experimental",
+          "presentation": "100 mg/2 mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "50 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.5 mg/mL",
+              "preparation": "0.1 mL of 5 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "triamcinolone",
+      "title": "Triamcinolone",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "inj",
+          "label": "Inj",
+          "test_type": "experimental",
+          "presentation": "40 mg/mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "1:10",
+            "concentration": "4 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.04 mg/mL",
+              "preparation": "0.1 mL of 4 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.4 mg/mL",
+              "preparation": "0.1 mL of 40 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "4 mg/mL",
+              "preparation": "0.1 mL of 40 mg/mL + 0.9 mL NS"
             }
           ],
           "under_review": false,
