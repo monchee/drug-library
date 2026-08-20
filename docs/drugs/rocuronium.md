@@ -2,8 +2,8 @@
 title: Rocuronium
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
-last_reviewed: 2026-08-20
-version: 1.3
+last_reviewed: 2026-03-28
+version: 1.4
 dream:
   category: Muscle Relaxants
 protocols:

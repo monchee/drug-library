@@ -33,6 +33,9 @@
 
 {% block content %}
   {{ super() }}
+  {% if page.meta and page.meta.reviewed_by and page.meta.last_reviewed %}
+    <div class="scratch-review-metadata">Reviewed by {{ page.meta.reviewed_by }} — {{ page.meta.last_reviewed }}</div>
+  {% endif %}
   <button type="button" class="scratch-print-btn" onclick="window.print()" aria-label="Print this page" title="Print this page">
     {% include ".icons/material/printer.svg" %}
     <span>Print</span>

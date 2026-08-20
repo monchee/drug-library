@@ -57,15 +57,6 @@ plugins:
   # Search is provided by pagefind (materialx default). The old lunr-only
   # `separator` option was silently inert here and failed `mkdocs build --strict`.
   - search
-  - document-dates:
-      type: timeago
-      locale: en
-      show_created: true
-      show_updated: true
-      show_author: false
-      exclude:
-        - index.md
-        - '*/index.md'
   - tags
   - meta
   - privacy
