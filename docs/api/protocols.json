@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-20T05:13:12Z",
-  "source_commit": "6b90010",
+  "generated_at": "2026-08-20T06:31:48Z",
+  "source_commit": "c6e0b8d",
   "drugs": [
     {
       "slug": "cefazolin",
@@ -54,6 +54,201 @@
               }
             ]
           },
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "cis-atracurium",
+      "title": "Cis-atracurium",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Muscle Relaxants"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "5 mg/2.5 mL (2 mg/mL)",
+          "diluent": "Normal saline (NS)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "2 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.002 mg/mL",
+              "preparation": "0.1 mL of 0.02 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "pancuronium",
+      "title": "Pancuronium",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Muscle Relaxants"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "4 mg/2 mL (2 mg/mL)",
+          "diluent": "Normal saline (NS)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "2 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.002 mg/mL",
+              "preparation": "0.1 mL of 0.02 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.02 mg/mL",
+              "preparation": "0.1 mL of 0.2 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "rocuronium",
+      "title": "Rocuronium",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Muscle Relaxants"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "50 mg/5 mL (10 mg/mL)",
+          "diluent": "Normal saline (NS)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "10 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.01 mg/mL",
+              "preparation": "0.1 mL of 0.1 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.1 mg/mL",
+              "preparation": "0.1 mL of 1 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "suxamethonium",
+      "title": "Suxamethonium",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Muscle Relaxants"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "100 mg/2 mL (50 mg/mL)",
+          "diluent": "Normal saline (NS)",
+          "spt": {
+            "dilution": "1:5",
+            "concentration": "10 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:50,000",
+              "concentration": "0.001 mg/mL",
+              "preparation": "0.1 mL of 0.01 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:5,000",
+              "concentration": "0.01 mg/mL",
+              "preparation": "0.1 mL of 0.1 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:500",
+              "concentration": "0.1 mg/mL",
+              "preparation": "0.1 mL of 1 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "vecuronium",
+      "title": "Vecuronium",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Muscle Relaxants"
+      },
+      "protocols": [
+        {
+          "id": "iv",
+          "label": "IV",
+          "test_type": "skin",
+          "presentation": "10 mg powder for injection",
+          "diluent": "Normal saline (reconstitute with 2.5 mL WFI)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "4 mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.004 mg/mL",
+              "preparation": "0.1 mL of 0.04 mg/mL + 0.9 mL NS"
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.04 mg/mL",
+              "preparation": "0.1 mL of 0.4 mg/mL + 0.9 mL NS"
+            }
+          ],
           "under_review": false,
           "review_note": "",
           "needs_pharmacy_verification": false
