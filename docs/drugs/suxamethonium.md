@@ -3,10 +3,35 @@ title: Suxamethonium
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Muscle Relaxants
+protocols:
+  - id: iv
+    label: IV
+    test_type: skin
+    presentation: 100 mg/2 mL (50 mg/mL)
+    diluent: Normal saline (NS)
+    spt:
+      dilution: '1:5'
+      concentration: 10 mg/mL
+    idt:
+      - dilution: '1:50,000'
+        concentration: 0.001 mg/mL
+        preparation: 0.1 mL of 0.01 mg/mL + 0.9 mL NS
+      - dilution: '1:5,000'
+        concentration: 0.01 mg/mL
+        preparation: 0.1 mL of 0.1 mg/mL + 0.9 mL NS
+      - dilution: '1:500'
+        concentration: 0.1 mg/mL
+        preparation: 0.1 mL of 1 mg/mL + 0.9 mL NS
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Suxamethonium (Succinylcholine)
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -53,11 +78,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | 1:5 (10 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -66,10 +87,6 @@ Prepare in this order, using a fresh syringe for each step.
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:50,000 | 0.001 mg/mL | 0.1 mL of 0.01 mg/mL + 0.9 mL NS |
-| 2 | 1:5,000 | 0.01 mg/mL | 0.1 mL of 0.1 mg/mL + 0.9 mL NS |
-| 3 | 1:500 | 0.1 mg/mL | 0.1 mL of 1 mg/mL + 0.9 mL NS |
+<!-- scratch:idt -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
