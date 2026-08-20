@@ -3,10 +3,32 @@ title: Ceftriaxone
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Cephalosporins
+protocols:
+  - id: iv
+    label: IV
+    test_type: skin
+    presentation: 1 g powder for injection
+    diluent: 0.9% sodium chloride (reconstitute with 10 mL WFI)
+    spt:
+      dilution: Neat
+      concentration: 100 mg/mL
+    idt:
+      - dilution: '1:100'
+        concentration: 1 mg/mL
+        preparation: 0.1 mL of 10 mg/mL + 0.9 mL NS
+      - dilution: '1:10'
+        concentration: 10 mg/mL
+        preparation: 0.1 mL neat + 0.9 mL NS
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Ceftriaxone
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -48,11 +70,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (100 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -61,9 +79,6 @@ Prepare in this order, using a fresh syringe for each step.
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:100 | 1 mg/mL | 0.1 mL of 10 mg/mL + 0.9 mL NS |
-| 2 | 1:10 | 10 mg/mL | 0.1 mL neat + 0.9 mL NS |
+<!-- scratch:idt -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.

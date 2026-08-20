@@ -3,10 +3,38 @@ title: Mepivacaine
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Local Anaesthetics
+protocols:
+  - id: epidural
+    label: Epidural
+    test_type: skin
+    presentation: 66 mg/2.2 mL (30 mg/mL) or 3% solution
+    diluent: 0.9% sodium chloride (reconstitute with 4.4 mL WFI to 2.2 mL stock)
+    spt:
+      dilution: Neat
+      concentration: 10 mg/mL
+    idt:
+      - dilution: '1:1,000'
+        concentration: 0.01 mg/mL
+        preparation: 0.1 mL of 0.1 mg/mL + 0.9 mL NS
+      - dilution: '1:100'
+        concentration: 0.1 mg/mL
+        preparation: 0.1 mL of 1 mg/mL + 0.9 mL NS
+      - dilution: '1:10'
+        concentration: 1 mg/mL
+        preparation: 0.1 mL neat + 0.9 mL NS
+      - dilution: Neat
+        concentration: 10 mg/mL
+        preparation: 10 mg/mL solution prepared above
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
 ---
 
 # Mepivacaine
+<!-- scratch:review-banner -->
 
 ## Overview
 | Field | Detail |
@@ -64,11 +92,7 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (10 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -77,11 +101,6 @@ Prepare in this order, using a fresh syringe for each step.
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:1,000 | 0.01 mg/mL | 0.1 mL of 0.1 mg/mL + 0.9 mL NS |
-| 2 | 1:100 | 0.1 mg/mL | 0.1 mL of 1 mg/mL + 0.9 mL NS |
-| 3 | 1:10 | 1 mg/mL | 0.1 mL neat + 0.9 mL NS |
-| 4 | Neat | 10 mg/mL | 10 mg/mL solution prepared above |
+<!-- scratch:idt -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
