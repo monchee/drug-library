@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-20T06:31:48Z",
-  "source_commit": "c6e0b8d",
+  "generated_at": "2026-08-20T09:16:09Z",
+  "source_commit": "6d12cec",
   "drugs": [
     {
       "slug": "cefazolin",
@@ -63,8 +63,8 @@
     {
       "slug": "cis-atracurium",
       "title": "Cis-atracurium",
-      "version": "1.2",
-      "last_reviewed": "2026-03-28",
+      "version": "1.3",
+      "last_reviewed": "2026-08-20",
       "dream": {
         "category": "Muscle Relaxants"
       },
@@ -74,7 +74,7 @@
           "label": "IV",
           "test_type": "skin",
           "presentation": "5 mg/2.5 mL (2 mg/mL)",
-          "diluent": "Normal saline (NS)",
+          "diluent": "0.9% sodium chloride",
           "spt": {
             "dilution": "Neat",
             "concentration": "2 mg/mL",
@@ -97,8 +97,8 @@
     {
       "slug": "pancuronium",
       "title": "Pancuronium",
-      "version": "1.2",
-      "last_reviewed": "2026-03-28",
+      "version": "1.3",
+      "last_reviewed": "2026-08-20",
       "dream": {
         "category": "Muscle Relaxants"
       },
@@ -108,7 +108,7 @@
           "label": "IV",
           "test_type": "skin",
           "presentation": "4 mg/2 mL (2 mg/mL)",
-          "diluent": "Normal saline (NS)",
+          "diluent": "0.9% sodium chloride",
           "spt": {
             "dilution": "Neat",
             "concentration": "2 mg/mL",
@@ -136,8 +136,8 @@
     {
       "slug": "rocuronium",
       "title": "Rocuronium",
-      "version": "1.2",
-      "last_reviewed": "2026-03-28",
+      "version": "1.3",
+      "last_reviewed": "2026-08-20",
       "dream": {
         "category": "Muscle Relaxants"
       },
@@ -147,7 +147,7 @@
           "label": "IV",
           "test_type": "skin",
           "presentation": "50 mg/5 mL (10 mg/mL)",
-          "diluent": "Normal saline (NS)",
+          "diluent": "0.9% sodium chloride",
           "spt": {
             "dilution": "Neat",
             "concentration": "10 mg/mL",
@@ -175,8 +175,8 @@
     {
       "slug": "suxamethonium",
       "title": "Suxamethonium",
-      "version": "1.2",
-      "last_reviewed": "2026-03-28",
+      "version": "1.3",
+      "last_reviewed": "2026-08-20",
       "dream": {
         "category": "Muscle Relaxants"
       },
@@ -186,7 +186,7 @@
           "label": "IV",
           "test_type": "skin",
           "presentation": "100 mg/2 mL (50 mg/mL)",
-          "diluent": "Normal saline (NS)",
+          "diluent": "0.9% sodium chloride",
           "spt": {
             "dilution": "1:5",
             "concentration": "10 mg/mL",
@@ -219,8 +219,8 @@
     {
       "slug": "vecuronium",
       "title": "Vecuronium",
-      "version": "1.2",
-      "last_reviewed": "2026-03-28",
+      "version": "1.3",
+      "last_reviewed": "2026-08-20",
       "dream": {
         "category": "Muscle Relaxants"
       },
@@ -230,7 +230,7 @@
           "label": "IV",
           "test_type": "skin",
           "presentation": "10 mg powder for injection",
-          "diluent": "Normal saline (reconstitute with 2.5 mL WFI)",
+          "diluent": "0.9% sodium chloride (reconstitute with 2.5 mL WFI)",
           "spt": {
             "dilution": "Neat",
             "concentration": "4 mg/mL",

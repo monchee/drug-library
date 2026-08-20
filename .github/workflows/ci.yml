@@ -7,6 +7,54 @@ on:
     branches: [ main ]
 
 jobs:
+  deploy:
+    name: Deploy to Cloudflare Pages
+    needs: verify
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+    steps:
+      - name: Check Cloudflare credentials
+        id: check_token
+        run: |
+          if [ -n "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "has_token=true" >> "$GITHUB_OUTPUT"
+            echo "Cloudflare credentials present. Proceeding with deployment."
+          else
+            echo "has_token=false" >> "$GITHUB_OUTPUT"
+            echo "Cloudflare credentials not configured. Skipping deploy."
+          fi
+
+      - name: Checkout repository
+        if: steps.check_token.outputs.has_token == 'true'
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        if: steps.check_token.outputs.has_token == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        if: steps.check_token.outputs.has_token == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build MkDocs site
+        if: steps.check_token.outputs.has_token == 'true'
+        run: |
+          mkdocs build
+
+      - name: Publish to Cloudflare Pages
+        if: steps.check_token.outputs.has_token == 'true'
+        run: |
+          npx wrangler pages deploy site --project-name scratch --branch main
+
   verify:
     name: Build and Verify Protocols
     runs-on: ubuntu-latest
