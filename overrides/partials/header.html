@@ -38,7 +38,7 @@
       {% else %}
         {% set search = config.plugins["material/search"] | attr("config") %}
       {% endif %}
-      {% if search.enabled %}
+      {% if search %}
         <label class="md-header__button md-icon" for="__search">
           {% set icon = config.theme.icon.search or "octicons/search-24" %}
           {% include ".icons/" ~ icon ~ ".svg" %}
