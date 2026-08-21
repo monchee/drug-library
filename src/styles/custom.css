@@ -1,0 +1,444 @@
+/* ============================================================
+   SCRATCH — Starlight Theme & Stylesheet
+   SLHD / NSW Health Branding: Navy + Pale Blue, restrained red
+   ============================================================ */
+
+/* ============================================================
+   Theme Variables & Color Tokens
+   ============================================================ */
+
+:root {
+  /* Brand palette */
+  --sl-color-brand-primary: #002664;       /* NSW Health Navy */
+  --sl-color-brand-interaction: #0057D9;   /* Interaction Blue */
+  --sl-color-brand-pale: #CBEDFD;          /* Pale Blue */
+  --sl-color-brand-warning: #D7153A;       /* Identity Red / Clinical Alert */
+
+  /* Starlight Light Theme */
+  --sl-font: "Public Sans", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --sl-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --sl-color-accent-low: #CBEDFD;
+  --sl-color-accent: #0057D9;
+  --sl-color-accent-high: #002664;
+
+  --sl-color-white: #020817;
+  --sl-color-gray-1: #1e293b;
+  --sl-color-gray-2: #334155;
+  --sl-color-gray-3: #5f6f82;
+  --sl-color-gray-4: #94a3b8;
+  --sl-color-gray-5: #cbd5e1;
+  --sl-color-gray-6: #f1f5f9;
+  --sl-color-gray-7: #f8fafc;
+  --sl-color-black: #ffffff;
+
+  --sl-color-bg: #f8fafc;
+  --sl-color-bg-nav: #002664;
+  --sl-color-bg-sidebar: #f8fafc;
+  --sl-color-bg-inline-code: #f1f5f9;
+  --sl-color-hairline: #e2e8f0;
+  --sl-color-hairline-light: #e2e8f0;
+
+  --sl-color-text: #020817;
+  --sl-color-text-accent: #0057D9;
+}
+
+:root[data-theme="dark"] {
+  /* Brand palette — dark adjustments */
+  --sl-color-brand-primary: #001a45;       /* Deep Navy */
+  --sl-color-brand-interaction: #8bb8ff;   /* Soft Blue */
+  --sl-color-brand-pale: #8bb8ff;
+  --sl-color-brand-warning: #ff5277;       /* Soft Red */
+
+  /* Starlight Dark Theme */
+  --sl-color-accent-low: #001a45;
+  --sl-color-accent: #7aa7f7;
+  --sl-color-accent-high: #CBEDFD;
+
+  --sl-color-white: #f2f2f2;
+  --sl-color-gray-1: #e2e8f0;
+  --sl-color-gray-2: #cbd5e1;
+  --sl-color-gray-3: #a6a6a6;
+  --sl-color-gray-4: #64748b;
+  --sl-color-gray-5: #383838;
+  --sl-color-gray-6: #2e2e2e;
+  --sl-color-gray-7: #242424;
+  --sl-color-black: #1a1a1a;
+
+  --sl-color-bg: #1a1a1a;
+  --sl-color-bg-nav: #001a45;
+  --sl-color-bg-sidebar: #1a1a1a;
+  --sl-color-bg-inline-code: #2e2e2e;
+  --sl-color-hairline: #383838;
+  --sl-color-hairline-light: #383838;
+
+  --sl-color-text: #f2f2f2;
+  --sl-color-text-accent: #7aa7f7;
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+
+body {
+  font-family: var(--sl-font);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sl-font);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+code, kbd, samp, pre {
+  font-family: var(--sl-font-mono) !important;
+}
+
+/* ============================================================
+   Masthead Header — Navy Background + Red Identity Edge
+   ============================================================ */
+
+header.header,
+.page > header {
+  background-color: var(--sl-color-bg-nav) !important;
+  border-bottom: 3px solid var(--sl-color-brand-warning) !important;
+  color: #ffffff !important;
+}
+
+header.header a,
+header.header button,
+header.header span,
+header.header svg {
+  color: #ffffff;
+}
+
+header.header button:hover,
+header.header a:hover {
+  color: var(--sl-color-brand-pale);
+}
+
+/* ============================================================
+   Surfaces & Square Corners
+   ============================================================ */
+
+table,
+th,
+td,
+.starlight-aside,
+aside,
+details,
+input,
+select,
+button,
+dialog,
+site-search,
+.sl-badge,
+.sl-markdown-content code,
+.sl-markdown-content pre,
+.expressive-code,
+.expressive-code .frame,
+.scratch-print-btn,
+.scratch-dream-link {
+  border-radius: 0 !important;
+}
+
+/* ============================================================
+   Focus Rings
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--sl-color-brand-interaction) !important;
+  outline-offset: 2px !important;
+  border-radius: 0 !important;
+}
+
+/* ============================================================
+   Tables — Rectangular, Clean 1px Borders
+   ============================================================ */
+
+.sl-markdown-content table {
+  border: 1px solid var(--sl-color-hairline) !important;
+  border-collapse: collapse !important;
+  background-color: var(--sl-color-bg) !important;
+  width: 100%;
+}
+
+.sl-markdown-content table th {
+  background-color: var(--sl-color-gray-6) !important;
+  color: var(--sl-color-text) !important;
+  border: 1px solid var(--sl-color-hairline) !important;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+}
+
+.sl-markdown-content table td {
+  border: 1px solid var(--sl-color-hairline) !important;
+  padding: 0.5rem 0.75rem;
+}
+
+.sl-markdown-content table tr:hover td {
+  background-color: var(--sl-color-gray-6) !important;
+}
+
+/* Dilution table fixed column widths */
+.sl-markdown-content table:has(th:nth-child(4)) {
+  table-layout: fixed;
+  width: 100%;
+  min-width: 550px;
+}
+
+.sl-markdown-content table:has(th:nth-child(4)) th:nth-child(1),
+.sl-markdown-content table:has(th:nth-child(4)) td:nth-child(1) {
+  width: 5%;
+}
+
+.sl-markdown-content table:has(th:nth-child(4)) th:nth-child(2),
+.sl-markdown-content table:has(th:nth-child(4)) td:nth-child(2) {
+  width: 10%;
+}
+
+.sl-markdown-content table:has(th:nth-child(4)) th:nth-child(3),
+.sl-markdown-content table:has(th:nth-child(4)) td:nth-child(3) {
+  width: 15%;
+}
+
+/* ============================================================
+   Clinical Review Metadata
+   ============================================================ */
+
+.scratch-review-metadata {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--sl-color-hairline);
+  font-size: 0.75rem;
+  color: var(--sl-color-gray-3);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   Print Button — Floating Bottom-Right
+   ============================================================ */
+
+.scratch-print-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  background-color: var(--sl-color-brand-primary);
+  color: #ffffff;
+  border: 1px solid var(--sl-color-brand-warning);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--sl-font);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+:root[data-theme="dark"] .scratch-print-btn {
+  background-color: var(--sl-color-accent);
+  color: #020817;
+  border-color: var(--sl-color-brand-warning);
+}
+
+.scratch-print-btn:hover {
+  background-color: var(--sl-color-brand-warning);
+  border-color: var(--sl-color-brand-primary);
+  color: #ffffff;
+}
+
+:root[data-theme="dark"] .scratch-print-btn:hover {
+  background-color: var(--sl-color-brand-warning);
+  border-color: var(--sl-color-accent);
+  color: #020817;
+}
+
+.scratch-print-btn svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+@media (max-width: 50rem) {
+  .scratch-print-btn {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ============================================================
+   DREAM Link in Header
+   ============================================================ */
+
+.scratch-dream-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.65rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.scratch-dream-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff !important;
+}
+
+.scratch-dream-link svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  fill: currentColor;
+}
+
+/* ============================================================
+   Print Stylesheet — Optimised for Bedside Clinical Use
+   ============================================================ */
+
+@media print {
+  /* 1. Hide navigation chrome, headers, footers, search, sidebars, buttons */
+  header.header,
+  .page > header,
+  nav.sidebar,
+  #starlight__sidebar,
+  .sidebar-pane,
+  starlight-menu-button,
+  aside.right-sidebar-container,
+  .right-sidebar,
+  footer.footer,
+  footer.sl-flex,
+  .pagination-links,
+  .scratch-print-btn,
+  .scratch-dream-link,
+  .sl-banner,
+  a[href="#_top"],
+  site-search,
+  starlight-toc,
+  mobile-starlight-toc,
+  starlight-theme-select,
+  .social-icons,
+  starlight-lang-select {
+    display: none !important;
+  }
+
+  /* 2. Reset content margins and layout for full-width printing */
+  .page,
+  .main-frame,
+  .main-pane,
+  main,
+  .content-panel,
+  .sl-container,
+  .sl-markdown-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* 3. Force white background and black text */
+  html,
+  body,
+  .page,
+  .main-frame,
+  .main-pane,
+  main,
+  .content-panel,
+  .sl-container,
+  .sl-markdown-content {
+    background-color: #fff !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  /* 4. Table borders and styling for print */
+  .sl-markdown-content table {
+    border: 1px solid #000 !important;
+    border-collapse: collapse !important;
+    box-shadow: none !important;
+    width: 100% !important;
+  }
+
+  .sl-markdown-content table th,
+  .sl-markdown-content table td {
+    border: 1px solid #ccc !important;
+    padding: 4pt 8pt !important;
+    color: #000 !important;
+    background-color: #fff !important;
+  }
+
+  .sl-markdown-content table th {
+    background-color: #f0f0f0 !important;
+    font-weight: bold !important;
+  }
+
+  /* Dilution table column widths for print */
+  .sl-markdown-content table:has(th:nth-child(4)) {
+    table-layout: fixed !important;
+    width: 100% !important;
+  }
+
+  .sl-markdown-content table:has(th:nth-child(4)) th:nth-child(1),
+  .sl-markdown-content table:has(th:nth-child(4)) td:nth-child(1) {
+    width: 5% !important;
+  }
+
+  .sl-markdown-content table:has(th:nth-child(4)) th:nth-child(2),
+  .sl-markdown-content table:has(th:nth-child(4)) td:nth-child(2) {
+    width: 10% !important;
+  }
+
+  .sl-markdown-content table:has(th:nth-child(4)) th:nth-child(3),
+  .sl-markdown-content table:has(th:nth-child(4)) td:nth-child(3) {
+    width: 15% !important;
+  }
+
+  /* 5. Avoid page breaks inside important elements */
+  .sl-markdown-content table,
+  .starlight-aside,
+  aside,
+  details {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* 6. Page breaks before major sections */
+  .sl-markdown-content h1 {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .sl-markdown-content h1:first-of-type,
+  .content-panel:first-of-type h1 {
+    break-before: avoid !important;
+    page-break-before: avoid !important;
+  }
+
+  /* 7. Show external link URLs in print */
+  .sl-markdown-content a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #555;
+  }
+
+  /* 8. Review metadata in print */
+  .scratch-review-metadata {
+    display: block !important;
+    color: #333 !important;
+    margin-top: 1.5rem !important;
+    font-size: 0.75rem !important;
+  }
+}

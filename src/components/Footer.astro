@@ -1,0 +1,95 @@
+---
+import EditLink from 'virtual:starlight/components/EditLink';
+import LastUpdated from 'virtual:starlight/components/LastUpdated';
+import Pagination from 'virtual:starlight/components/Pagination';
+import config from 'virtual:starlight/user-config';
+import { Icon } from '@astrojs/starlight/components';
+
+const { entry } = Astro.locals.starlightRoute;
+const data = (entry?.data as any) || {};
+
+const reviewedBy = data.reviewed_by && String(data.reviewed_by).trim();
+const lastReviewedRaw = data.last_reviewed;
+let lastReviewedStr = '';
+if (lastReviewedRaw) {
+  if (lastReviewedRaw instanceof Date) {
+    lastReviewedStr = lastReviewedRaw.toISOString().split('T')[0];
+  } else {
+    lastReviewedStr = String(lastReviewedRaw).trim();
+  }
+}
+
+const showReviewMetadata = Boolean(reviewedBy && lastReviewedStr);
+---
+
+<footer class="sl-flex">
+  {showReviewMetadata && (
+    <div class="scratch-review-metadata">Reviewed by {reviewedBy} — {lastReviewedStr}</div>
+  )}
+
+  <button
+    type="button"
+    class="scratch-print-btn"
+    onclick="window.print()"
+    aria-label="Print this page"
+    title="Print this page"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+      <path d="M18 3H6v4h12m1 5a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m-3 7H8v-5h8m3-6H5a3 3 0 0 0-3 3v6h4v4h12v-4h4v-6a3 3 0 0 0-3-3Z" />
+    </svg>
+    <span>Print</span>
+  </button>
+
+  <div class="meta sl-flex">
+    <EditLink />
+    <LastUpdated />
+  </div>
+  <Pagination />
+
+  {
+    config.credits && (
+      <a class="kudos sl-flex" href="https://starlight.astro.build">
+        <Icon name={'starlight'} /> {Astro.locals.t('builtWithStarlight.label')}
+      </a>
+    )
+  }
+</footer>
+
+<style>
+  footer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .scratch-review-metadata {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--sl-color-hairline);
+    font-size: 0.75rem;
+    color: var(--sl-color-gray-3);
+  }
+  .meta {
+    gap: 0.75rem 3rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+  }
+  .meta > :global(p:only-child) {
+    margin-inline-start: auto;
+  }
+  .kudos {
+    align-items: center;
+    gap: 0.5em;
+    margin: 1.5rem auto;
+    font-size: var(--sl-text-xs);
+    text-decoration: none;
+    color: var(--sl-color-gray-3);
+  }
+  .kudos :global(svg) {
+    color: var(--sl-color-orange);
+  }
+  .kudos:hover {
+    color: var(--sl-color-white);
+  }
+</style>
