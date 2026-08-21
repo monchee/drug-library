@@ -4,7 +4,7 @@ import { docsSchema } from '@astrojs/starlight/schema';
 
 export const collections = {
   docs: defineCollection({
-    loader: glob({ pattern: 'drugs/cefazolin.md', base: './docs' }),
+    loader: glob({ pattern: 'drugs/*.md', base: './docs' }),
     schema: docsSchema({
       extend: z.object({
         tags: z.array(z.string()).optional(),

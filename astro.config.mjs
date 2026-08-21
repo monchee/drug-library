@@ -1,6 +1,26 @@
 // @ts-check
+process.env.ASTRO_TELEMETRY_DISABLED = '1';
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { remarkRenderProtocols } from './src/plugins/remark-render-protocols';
+
+function scratchProtocolsIntegration() {
+  return {
+    name: 'scratch-protocols-integration',
+    hooks: {
+      'astro:config:setup': ({ config, updateConfig }) => {
+        updateConfig({
+          markdown: {
+            remarkPlugins: [
+              ...(config.markdown.remarkPlugins || []),
+              remarkRenderProtocols,
+            ],
+          },
+        });
+      },
+    },
+  };
+}
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,5 +40,6 @@ export default defineConfig({
         },
       ],
     }),
+    scratchProtocolsIntegration(),
   ],
 });
