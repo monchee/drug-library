@@ -5,6 +5,7 @@ import { visit } from 'unist-util-visit';
 import { fromMarkdown } from 'mdast-util-from-markdown';
 import { gfmFromMarkdown } from 'mdast-util-gfm';
 import { gfm } from 'micromark-extension-gfm';
+import { transformTreeAdmonitions } from './remark-mkdocs-admonitions';
 
 export interface Protocol {
   id?: string;
@@ -334,6 +335,7 @@ export function remarkRenderProtocols() {
               extensions: [gfm()],
               mdastExtensions: [gfmFromMarkdown()],
             });
+            transformTreeAdmonitions(parsed, replacementMd);
             parent.children.splice(index, 1, ...parsed.children);
             return index + parsed.children.length;
           }
