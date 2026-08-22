@@ -25,7 +25,7 @@ SCRATCH is the department's own reference for its drug allergy testing protocols
 ## Operating Context
 
 - Used at RPAH by the clinical immunology and allergy team before and during drug allergy testing: SPT, IDT, and oral challenges.
-- Static web handbook (MkDocs / Material for MkDocs) deployed to Cloudflare Pages at https://scratch.pages.dev. DREAM is accessible from any modern browser on any ward device and is a progressive web app (PWA) at https://dream.yuson.au.
+- Static web handbook (MkDocs / Material for MkDocs) deployed to Cloudflare Pages at https://scratch.yuson.au. DREAM is accessible from any modern browser on any ward device and is a progressive web app (PWA) at https://dream.yuson.au.
 - Companion workflow (per docs/testing.md): REDCap (patient background) → DREAM (real-time encounter documentation) → eMR (clinical note). Neither SCRATCH nor DREAM stores patient-identifiable data independently; patient data is managed in REDCap under SLHD privacy and governance frameworks.
 - Mandatory before any testing, per the handbook: written consent documented, baseline vital signs recorded, adrenaline 0.5 mg/mL (1:1000) on standby, positive (histamine 10 mg/mL) and negative (normal saline) controls for SPT; IDT volume 0.05 mL unless otherwise specified; oral challenge intervals are 20 minutes.
 - Changelog entries are authored by "RPAH Allergy Nurses".

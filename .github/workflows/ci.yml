@@ -56,8 +56,101 @@ jobs:
 
       - name: Publish to Cloudflare Pages
         if: steps.check_token.outputs.has_token == 'true'
+        run: npx wrangler pages deploy site --project-name scratch --branch main
+
+  deploy-astro:
+    name: Deploy Astro to Cloudflare Pages
+    needs: verify
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+    steps:
+      - name: Check Cloudflare credentials
+        id: check_token
         run: |
-          npx wrangler pages deploy site --project-name scratch --branch main
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+              echo "Error: CLOUDFLARE_API_TOKEN is missing or empty." >&2
+            fi
+            if [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+              echo "Error: CLOUDFLARE_ACCOUNT_ID is missing or empty." >&2
+            fi
+            exit 1
+          fi
+          echo "has_token=true" >> "$GITHUB_OUTPUT"
+          echo "Cloudflare credentials present. Proceeding with deployment."
+
+      - name: Checkout repository
+        if: steps.check_token.outputs.has_token == 'true'
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        if: steps.check_token.outputs.has_token == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        if: steps.check_token.outputs.has_token == 'true'
+        run: |
+          npm ci
+
+      - name: Build Astro site
+        if: steps.check_token.outputs.has_token == 'true'
+        run: |
+          npx astro build
+
+      - name: Ensure Cloudflare Pages project exists
+        if: steps.check_token.outputs.has_token == 'true'
+        run: |
+          PROJECT_NAME="scratch-astro"
+          PROD_BRANCH="main"
+          echo "Checking whether Cloudflare Pages project '$PROJECT_NAME' exists..."
+          PROJECT_LIST=$(npx wrangler pages project list) || {
+            echo "Error: Failed to list Cloudflare Pages projects." >&2
+            exit 1
+          }
+          if echo "$PROJECT_LIST" | grep -qw "$PROJECT_NAME"; then
+            echo "Cloudflare Pages project '$PROJECT_NAME' exists."
+          else
+            echo "Project '$PROJECT_NAME' not found. Creating project with production branch '$PROD_BRANCH'..."
+            if ! npx wrangler pages project create "$PROJECT_NAME" --production-branch "$PROD_BRANCH"; then
+              echo "================================================================================" >&2
+              echo "Error: Failed to create Cloudflare Pages project '$PROJECT_NAME'." >&2
+              echo "Please create the project manually in the Cloudflare dashboard:" >&2
+              echo "  1. Open Cloudflare Dashboard -> Workers & Pages" >&2
+              echo "  2. Click 'Create application' -> 'Pages' -> 'Upload assets'" >&2
+              echo "  3. Name the project '$PROJECT_NAME' and set production branch to '$PROD_BRANCH'" >&2
+              echo "================================================================================" >&2
+              exit 1
+            fi
+            echo "Cloudflare Pages project '$PROJECT_NAME' created successfully."
+          fi
+
+      - name: Publish to Cloudflare Pages
+        if: steps.check_token.outputs.has_token == 'true'
+        run: |
+          DEPLOY_OUTPUT=$(npx wrangler pages deploy dist --project-name scratch-astro --branch main 2>&1)
+          DEPLOY_EXIT=$?
+          echo "$DEPLOY_OUTPUT"
+          if [ $DEPLOY_EXIT -ne 0 ]; then
+            echo "Error: Deployment to Cloudflare Pages project 'scratch-astro' failed with exit code $DEPLOY_EXIT." >&2
+            exit $DEPLOY_EXIT
+          fi
+          DEPLOY_URL=$(echo "$DEPLOY_OUTPUT" | sed -E 's/\x1b\[[0-9;]*m//g' | grep -oE 'https://[a-zA-Z0-9.-]+\.pages\.dev' | head -n 1)
+          echo ""
+          echo "================================================================================"
+          echo "  ASTRO PARALLEL SITE DEPLOYMENT COMPLETE"
+          echo "  Project: scratch-astro"
+          if [ -n "$DEPLOY_URL" ]; then
+            echo "  URL:     $DEPLOY_URL"
+          fi
+          echo "================================================================================"
+          echo ""
 
   verify:
     name: Build and Verify Protocols
@@ -75,10 +168,20 @@ jobs:
           python-version: "3.11"
           cache: "pip"
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Node dependencies
+        run: |
+          npm ci
 
       - name: Verify protocols export is up to date
         run: |
@@ -87,6 +190,14 @@ jobs:
       - name: Build MkDocs site
         run: |
           mkdocs build --strict
+
+      - name: Build Astro site
+        run: |
+          npx astro build
+
+      - name: Compare MkDocs and Astro rendered outputs
+        run: |
+          python scripts/compare_builds.py
 
       - name: Clinical sign-off gate (version bump on protocol change, date bump on dose change)
         if: github.event_name == 'pull_request'
