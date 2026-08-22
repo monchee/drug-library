@@ -11,6 +11,8 @@ Verifies:
 4. PROSE CONTENT: extract main article content, excluding site chrome (nav, sidebar, toc,
    header, footer, search, pagination, permalinks, print buttons), normalize entities and
    typographic punctuation/quotes, and compare body text across all pages.
+5. PUBLISHED ASSETS: sweep non-HTML published assets (api/protocols.json, _headers, robots.txt)
+   ensuring they are present in Astro output and byte-identical to MkDocs output.
 """
 
 import argparse
@@ -276,6 +278,80 @@ def format_prose_diff(site_text: str, dist_text: str) -> str:
     return "\n".join(diff_lines) if diff_lines else "      Text differs (lengths: MkDocs=%d, Astro=%d)" % (len(site_text), len(dist_text))
 
 
+# Excluded directory prefixes and file patterns for MkDocs-specific framework/theme build artefacts
+EXCLUDE_ASSET_PREFIXES = (
+    "search/",
+    "assets/",
+    "stylesheets/",
+)
+EXCLUDE_ASSET_NAMES = {
+    "sitemap.xml",
+    "sitemap.xml.gz",
+    "tags.json",
+    "authors.yml",
+    ".DS_Store",
+}
+
+# Assets that MUST be present and verified
+MANDATORY_ASSETS = (
+    "api/protocols.json",
+    "_headers",
+    "robots.txt",
+)
+
+
+def check_published_assets(
+    site_dir: Path,
+    dist_dir: Path,
+) -> Tuple[List[str], List[Tuple[str, str]]]:
+    """
+    Compares non-HTML published assets between MkDocs (site/) and Astro (dist/).
+    Excludes MkDocs-specific search indices, theme bundles, and extra CSS.
+    Verifies presence in dist/ and asserts byte-identity for all matching assets.
+    """
+    asset_errors: List[Tuple[str, str]] = []
+    discovered_assets: set[str] = set()
+
+    if site_dir.exists():
+        for p in site_dir.rglob("*"):
+            if not p.is_file():
+                continue
+            if p.name.endswith(".html"):
+                continue
+            rel = p.relative_to(site_dir).as_posix()
+            if any(rel.startswith(prefix) for prefix in EXCLUDE_ASSET_PREFIXES):
+                continue
+            if rel in EXCLUDE_ASSET_NAMES or p.name in EXCLUDE_ASSET_NAMES or p.name.startswith("."):
+                continue
+            discovered_assets.add(rel)
+
+    all_assets = sorted(discovered_assets.union(MANDATORY_ASSETS))
+
+    for asset_rel in all_assets:
+        site_path = site_dir / asset_rel
+        dist_path = dist_dir / asset_rel
+
+        if not site_path.exists():
+            asset_errors.append((asset_rel, f"Missing in MkDocs output: {site_path}"))
+            continue
+
+        if not dist_path.exists():
+            asset_errors.append((asset_rel, f"Missing in Astro output: {dist_path}"))
+            continue
+
+        site_bytes = site_path.read_bytes()
+        dist_bytes = dist_path.read_bytes()
+        if site_bytes != dist_bytes:
+            asset_errors.append(
+                (
+                    asset_rel,
+                    f"Byte mismatch: Astro {dist_path} ({len(dist_bytes)} bytes) differs from MkDocs {site_path} ({len(site_bytes)} bytes)",
+                )
+            )
+
+    return all_assets, asset_errors
+
+
 def compare_builds(
     site_dir: Path,
     dist_dir: Path,
@@ -405,12 +481,16 @@ def compare_builds(
             diff_detail = format_prose_diff(site_prose, dist_prose)
             prose_errors.append((slug, f"Prose content differs:\n{diff_detail}"))
 
-    # Hard failures for tables, admonitions, review metadata, missing files, or strict prose
+    # 5. Published Assets Comparison
+    published_assets, asset_errors = check_published_assets(site_dir, dist_dir)
+
+    # Hard failures for tables, admonitions, review metadata, assets, missing files, or strict prose
     hard_failure = bool(
         missing_files
         or table_errors
         or admonition_errors
         or review_errors
+        or asset_errors
         or (site_reviewed_count != dist_reviewed_count)
         or (strict_prose and prose_errors)
     )
@@ -424,6 +504,11 @@ def compare_builds(
         if missing_files:
             print("\n[!] Missing HTML Files:", file=sys.stderr)
             for slug, msg in missing_files:
+                print(f"  - {slug}: {msg}", file=sys.stderr)
+
+        if asset_errors:
+            print(f"\n[!] Published Asset Differences ({len(asset_errors)}):", file=sys.stderr)
+            for slug, msg in asset_errors:
                 print(f"  - {slug}: {msg}", file=sys.stderr)
 
         if table_errors:
@@ -464,6 +549,7 @@ def compare_builds(
         print(f"✓ Dose tables compared:   {total_dist_tables} tables (0 differences)")
         print(f"✓ Admonitions compared:   {total_dist_admonitions} admonitions (0 differences)")
         print(f"✓ Review metadata:        {dist_reviewed_count}/{len(drug_files)} pages contain 'Reviewed by' (0 differences)")
+        print(f"✓ Published assets:       {len(published_assets)} assets verified (0 differences)")
         diff_slugs = ", ".join(slug for slug, _ in prose_errors)
         print(f"⚠ Prose text compared:    {prose_matched_count}/{len(drug_files)} pages identical ({len(prose_errors)} warning: {diff_slugs})")
         print("=" * 75)
@@ -479,6 +565,7 @@ def compare_builds(
         print(f"✓ Dose tables compared:   {total_dist_tables} tables (0 differences)")
         print(f"✓ Admonitions compared:   {total_dist_admonitions} admonitions (0 differences)")
         print(f"✓ Review metadata:        {dist_reviewed_count}/{len(drug_files)} pages contain 'Reviewed by' (0 differences)")
+        print(f"✓ Published assets:       {len(published_assets)} assets verified (0 differences)")
         print(f"✓ Prose text compared:    {len(drug_files)}/{len(drug_files)} drug pages identical (0 differences)")
         print("=" * 75)
 
