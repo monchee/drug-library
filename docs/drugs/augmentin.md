@@ -3,7 +3,46 @@ title: Augmentin (Amoxicillin / Clavulanate)
 tags: [spt, idt, oral]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.2
+version: 1.3
+
+dream:
+  category: Penicillins
+  drug_name: 'Augmentin'
+protocols:
+  - id: 1-1000-start
+    label: '1:1,000 start'
+    test_type: skin
+    presentation: '2000mg/200mg'
+    diluent: '0.9% sodium chloride (reconstitute with 50 mL WFI)'
+    spt:
+      dilution: '1:5'
+      concentration: '20mg/2mg/mL'
+    idt:
+      - dilution: '1:50'
+        concentration: '2mg/0.2mg/mL'
+      - dilution: '1:5'
+        concentration: '20mg/2mg/mL'
+      - dilution: '1:100'
+        concentration: '0.06mg/mL'
+    under_review: false
+    review_note: ''
+  - id: 1-100-start
+    label: '1:100 start'
+    test_type: skin
+    presentation: '2000mg/200mg'
+    diluent: '0.9% sodium chloride (reconstitute with 50 mL WFI)'
+    spt:
+      dilution: '1:5'
+      concentration: '20mg/2mg/mL'
+    idt:
+      - dilution: '1:50'
+        concentration: '2mg/0.2mg/mL'
+      - dilution: '1:5'
+        concentration: '20mg/2mg/mL'
+      - dilution: '1:100'
+        concentration: '0.2mg/mL'
+    under_review: false
+    review_note: ''
 ---
 
 # Augmentin (Amoxicillin / Clavulanate)
@@ -58,11 +97,16 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | 1:5 (2 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+
+### Variant 1: 1:1,000 start
+
+<!-- scratch:spt:1-1000-start -->
+
+**Interpretation:** Wheal ≥3 mm vs negative control = positive.
+
+### Variant 2: 1:100 start
+
+<!-- scratch:spt:1-100-start -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -70,29 +114,17 @@ Prepare in this order, using a fresh syringe for each step.
 
 ## Intradermal test (IDT)
 
-### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:100 | 0.1 mg/mL | 0.1 mL of 1 mg/mL + 0.9 mL NS |
-| 2 | 1:50 | 0.2 mg/mL | 0.2 mL of 1 mg/mL + 0.8 mL NS |
+### Variant 1: 1:1,000 start
+
+<!-- scratch:idt:1-1000-start -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 
----
+### Variant 2: 1:100 start
 
-## Challenge (oral)
+<!-- scratch:idt:1-100-start -->
 
-### Oral graded dose protocol
-**Preparation:** Augmentin Duo 400/57 suspension — shake well before each dose.
-
-| Step | Dose | Volume | Interval |
-|---|---|---|---|
-| 1 | 25/3.6 mg | 0.3 mL | 20 min |
-| 2 | 100/14.3 mg | 1.25 mL | 20 min |
-| 3 | 275/39.4 mg | 3.44 mL | 20 min |
-| 4 | 875/125 mg | 10.9 mL | 60 min observation |
-
----
+**Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 
 ## Notes
 - Augmentin contains amoxicillin plus clavulanate — both components should be noted in documentation.

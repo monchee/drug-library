@@ -3,7 +3,62 @@ title: Ampicillin
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.2
+version: 1.3
+
+dream:
+  category: Penicillins
+protocols:
+  - id: neat-spt
+    label: 'Neat SPT'
+    test_type: skin
+    presentation: '1g'
+    diluent: '0.9% sodium chloride (reconstitute with 5 mL WFI)'
+    spt:
+      dilution: 'Neat'
+      concentration: '100mg/mL'
+    idt:
+      - dilution: '1:100'
+        concentration: '1mg/mL'
+      - dilution: '1:10'
+        concentration: '10mg/mL'
+      - dilution: '1:50'
+        concentration: '2mg/0.2mg/mL'
+    under_review: false
+    review_note: ''
+  - id: 1-5-spt
+    label: '1:5 SPT'
+    test_type: skin
+    presentation: '1g'
+    diluent: '0.9% sodium chloride (reconstitute with 5 mL WFI)'
+    spt:
+      dilution: '1:5'
+      concentration: '20mg/mL'
+    idt:
+      - dilution: '1:10'
+        concentration: '10mg/mL'
+      - dilution: '1:5'
+        concentration: '20mg/mL'
+      - dilution: '1:100'
+        concentration: '0.06mg/mL'
+    under_review: false
+    review_note: ''
+  - id: control
+    label: 'Control'
+    test_type: control
+    presentation: '1g'
+    diluent: '0.9% sodium chloride (reconstitute with 5 mL WFI)'
+    spt:
+      dilution: '1:5'
+      concentration: '20mg/mL'
+    idt:
+      - dilution: '1:10'
+        concentration: '10mg/mL'
+      - dilution: '1:5'
+        concentration: '20mg/mL'
+      - dilution: '1:100'
+        concentration: '0.02mg/mL'
+    under_review: false
+    review_note: ''
 ---
 
 # Ampicillin
@@ -56,11 +111,22 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | 1:5 (20 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+
+### Variant 1: Neat SPT
+
+<!-- scratch:spt:neat-spt -->
+
+**Interpretation:** Wheal ≥3 mm vs negative control = positive.
+
+### Variant 2: 1:5 SPT
+
+<!-- scratch:spt:1-5-spt -->
+
+**Interpretation:** Wheal ≥3 mm vs negative control = positive.
+
+### Variant 3: Control (control)
+
+<!-- scratch:spt:control -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -68,15 +134,23 @@ Prepare in this order, using a fresh syringe for each step.
 
 ## Intradermal test (IDT)
 
-### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:10 | 10 mg/mL | 0.1 mL of stock (100 mg/mL) + 0.9 mL NS |
-| 2 | 1:5 | 20 mg/mL | 0.2 mL of stock (100 mg/mL) + 0.8 mL NS |
+### Variant 1: Neat SPT
+
+<!-- scratch:idt:neat-spt -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 
----
+### Variant 2: 1:5 SPT
+
+<!-- scratch:idt:1-5-spt -->
+
+**Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
+
+### Variant 3: Control (control)
+
+<!-- scratch:idt:control -->
+
+**Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 
 ## Notes
 - Cross-reactivity with amoxicillin is high — if positive, both are likely affected.

@@ -3,7 +3,45 @@ title: Ropivacaine
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.2
+version: 1.3
+
+dream:
+  category: Local Anaesthetics
+protocols:
+  - id: epidural-1
+    label: 'Epidural Protocol 1'
+    test_type: skin
+    presentation: '40mg/20mL'
+    diluent: '0.9% sodium chloride'
+    spt:
+      dilution: 'Neat'
+      concentration: '2mg/mL'
+    idt:
+      - dilution: '1:1,000'
+        concentration: '0.002mg/mL'
+      - dilution: '1:100'
+        concentration: '0.02mg/mL'
+      - dilution: '1:10'
+        concentration: '0.2mg/mL'
+      - dilution: 'Neat'
+        concentration: '2mg/mL'
+    under_review: false
+    review_note: ''
+  - id: epidural-2
+    label: 'Epidural Protocol 2'
+    test_type: skin
+    presentation: '40mg/20mL'
+    diluent: '0.9% sodium chloride'
+    spt:
+      dilution: 'Neat'
+      concentration: '2mg/mL'
+    idt:
+      - dilution: '1:10'
+        concentration: '0.2mg/mL'
+      - dilution: 'Neat'
+        concentration: '2mg/mL'
+    under_review: false
+    review_note: ''
 ---
 
 # Ropivacaine (Naropin)
@@ -43,11 +81,16 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (2 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+
+### Variant 1: Epidural Protocol 1
+
+<!-- scratch:spt:epidural-1 -->
+
+**Interpretation:** Wheal ≥3 mm vs negative control = positive.
+
+### Variant 2: Epidural Protocol 2
+
+<!-- scratch:spt:epidural-2 -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -55,14 +98,17 @@ Prepare in this order, using a fresh syringe for each step.
 
 ## Intradermal test (IDT)
 
-### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:10 | 0.2 mg/mL | 0.1 mL neat + 0.9 mL NS |
+### Variant 1: Epidural Protocol 1
+
+<!-- scratch:idt:epidural-1 -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 
----
+### Variant 2: Epidural Protocol 2
+
+<!-- scratch:idt:epidural-2 -->
+
+**Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 
 ## Notes
 - **Spreadsheet 1 (authoritative, GA Test):** IDT at 1:10 only.
