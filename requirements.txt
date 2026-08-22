@@ -1,8 +1,10 @@
-mkdocs-materialx>=10.0
-pymdown-extensions>=10.0
-mkdocs-document-dates
-mkdocs-glightbox
-mkdocs-minify-plugin
-mkdocs-table-reader-plugin
-openpyxl
+# Python dependencies for the protocol data layer and audit scripts.
+# The site is built with Astro/Starlight (npm); Python is no longer part of
+# the site pipeline.
+#
+# export_protocols.py — frontmatter validation and JSON export (pyyaml was
+# previously a transitive MkDocs dependency, so it must now be explicit).
+pyyaml
 pydantic
+# verify_drug_pages.py / extract_missing_drugs.py — spreadsheet audits
+openpyxl
