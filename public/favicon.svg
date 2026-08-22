@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Wide cap at top -->
+  <rect x="8" y="2" width="8" height="2" fill="#002664" rx="0.5"/>
+  <!-- Tube body with semicircular bottom -->
+  <path fill="#002664" d="M9 4h6v13a3 3 0 0 1-6 0V4z"/>
+</svg>
