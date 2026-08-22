@@ -4,6 +4,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { remarkRenderProtocols } from './src/plugins/remark-render-protocols';
 import { remarkMkdocsAdmonitions } from './src/plugins/remark-mkdocs-admonitions';
+import { remarkMkdocsLinks } from './src/plugins/remark-mkdocs-links';
 
 function scratchProtocolsIntegration() {
   return {
@@ -16,6 +17,7 @@ function scratchProtocolsIntegration() {
               ...(config.markdown.remarkPlugins || []),
               remarkRenderProtocols,
               remarkMkdocsAdmonitions,
+              remarkMkdocsLinks,
             ],
           },
         });
