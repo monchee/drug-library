@@ -3,7 +3,30 @@ title: Bactrim
 tags: [oral]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+
+dream:
+  category: Others
+  drug_name: 'Trimethoprim/Sulfamethoxazole'
+protocols:
+  - id: oral-graded-challenge
+    label: 'Oral Graded Challenge'
+    test_type: challenge
+    presentation: '40mg/200mg per 5mL suspension'
+    challenge:
+      steps:
+        - dose: '16mg/80mg'
+          volume: '2.0 mL'
+          cumulative: '16mg/80mg'
+        - dose: '64mg/320mg'
+          volume: '8.0 mL'
+          cumulative: '80mg/400mg'
+        - dose: '80mg/400mg'
+          volume: '10.0 mL'
+          cumulative: '160mg/800mg'
+    under_review: false
+    review_note: ''
+
 ---
 
 # Bactrim (Trimethoprim / Sulfamethoxazole)
@@ -24,12 +47,7 @@ version: 1.1
     Use **Bactrim Suspension (40 mg / 200 mg per 5 mL)** which provides **8 mg / 40 mg per 1 mL**.
 
 ### Protocol
-| Step | Dose (TMP/SMX) | Volume (Suspension) | Cumulative Dose |
-|---|---|---|---|
-| 1 | 16 mg / 80 mg | 2.0 mL | 16 mg / 80 mg |
-| 2 | 64 mg / 320 mg | 8.0 mL | 80 mg / 400 mg |
-| 3 | 80 mg / 400 mg | 10.0 mL | 160 mg / 800 mg |
-
+<!-- scratch:challenge:oral-graded-challenge -->
 **Interval:** 20 minutes between steps.
 
 ---

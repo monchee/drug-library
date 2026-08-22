@@ -83,6 +83,8 @@ export default defineConfig({
             {
               label: 'Penicillins',
               items: [
+                  { label: 'Amoxycillin Suspension', slug: 'drugs/amoxycillin-suspension' },
+                  { label: 'Amoxycillin/Clavulanic Acid', slug: 'drugs/amoxycillin-clavulanic-acid' },
                 { label: 'Amoxicillin', slug: 'drugs/amoxicillin' },
                 { label: 'Ampicillin', slug: 'drugs/ampicillin' },
                 { label: 'Augmentin (Amoxicillin/Clavulanate)', slug: 'drugs/augmentin' },
@@ -97,6 +99,7 @@ export default defineConfig({
             {
               label: 'Cephalosporins',
               items: [
+                  { label: 'Cefuroxime Suspension', slug: 'drugs/cefuroxime-suspension' },
                 { label: 'Cefazolin', slug: 'drugs/cefazolin' },
                 { label: 'Cefepime', slug: 'drugs/cefepime' },
                 { label: 'Cefotaxime', slug: 'drugs/cefotaxime' },
@@ -109,6 +112,7 @@ export default defineConfig({
             {
               label: 'Antibiotics — Other',
               items: [
+                  { label: 'Trimethoprim', slug: 'drugs/trimethoprim' },
                 { label: 'Azithromycin', slug: 'drugs/azithromycin' },
                 { label: 'Bactrim (Trimethoprim/Sulfa)', slug: 'drugs/bactrim' },
                 { label: 'Ciprofloxacin', slug: 'drugs/ciprofloxacin' },
@@ -203,6 +207,7 @@ export default defineConfig({
             {
               label: 'Neuromuscular Reversal Agents',
               items: [
+                  { label: 'Sugammadex (+ Rocuronium)', slug: 'drugs/sugammadex-rocuronium' },
                 { label: 'Glycopyrronium', slug: 'drugs/glycopyrronium' },
                 { label: 'Neostigmine', slug: 'drugs/neostigmine' },
                 { label: 'Protamine', slug: 'drugs/protamine' },
@@ -212,6 +217,8 @@ export default defineConfig({
             {
               label: 'NSAIDs & Analgesics',
               items: [
+                  { label: 'Meloxicam', slug: 'drugs/meloxicam' },
+                  { label: 'Voltaren (Diclofenac)', slug: 'drugs/voltaren-diclofenac' },
                 { label: 'Aspirin', slug: 'drugs/aspirin' },
                 { label: 'Paracetamol', slug: 'drugs/paracetamol' },
                 { label: 'Parecoxib', slug: 'drugs/parecoxib' },

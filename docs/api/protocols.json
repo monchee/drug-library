@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-08-22T10:11:07Z",
-  "source_commit": "211e9f2",
+  "generated_at": "2026-08-22T10:28:55Z",
+  "source_commit": "0f545ad",
   "drugs": [
     {
       "slug": "actrapid",
@@ -139,6 +139,94 @@
               "preparation": ""
             }
           ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "amoxycillin-clavulanic-acid",
+      "title": "Amoxycillin/Clavulanic Acid",
+      "version": "1.0",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "oral-graded-challenge",
+          "label": "Oral Graded Challenge",
+          "test_type": "challenge",
+          "presentation": "125mg/31.25mg per 5mL",
+          "challenge": {
+            "steps": [
+              {
+                "dose": "25mg/6.25mg",
+                "volume": "1 mL",
+                "cumulative": "25mg/6.25mg"
+              },
+              {
+                "dose": "125mg/31.25mg",
+                "volume": "5 mL",
+                "cumulative": "150mg/37.5mg"
+              },
+              {
+                "dose": "250mg/62.5mg",
+                "volume": "10 mL",
+                "cumulative": "400mg/100mg"
+              },
+              {
+                "dose": "500mg/125mg",
+                "volume": "20 mL",
+                "cumulative": "900mg/225mg"
+              }
+            ]
+          },
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "amoxycillin-suspension",
+      "title": "Amoxycillin Suspension",
+      "version": "1.0",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "oral-graded-challenge",
+          "label": "Oral Graded Challenge",
+          "test_type": "challenge",
+          "presentation": "125mg/5mL",
+          "challenge": {
+            "steps": [
+              {
+                "dose": "25mg",
+                "volume": "1.0 mL",
+                "cumulative": "25mg"
+              },
+              {
+                "dose": "50mg",
+                "volume": "2.0 mL",
+                "cumulative": "75mg"
+              },
+              {
+                "dose": "100mg",
+                "volume": "4.0 mL",
+                "cumulative": "175mg"
+              },
+              {
+                "dose": "250mg",
+                "volume": "10 mL",
+                "cumulative": "425mg"
+              }
+            ]
+          },
           "under_review": false,
           "review_note": "",
           "needs_pharmacy_verification": false
@@ -366,6 +454,46 @@
               "preparation": "0.1 mL of 10 mg/mL + 0.9 mL NS"
             }
           ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "bactrim",
+      "title": "Bactrim",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others",
+        "drug_name": "Trimethoprim/Sulfamethoxazole"
+      },
+      "protocols": [
+        {
+          "id": "oral-graded-challenge",
+          "label": "Oral Graded Challenge",
+          "test_type": "challenge",
+          "presentation": "40mg/200mg per 5mL suspension",
+          "challenge": {
+            "steps": [
+              {
+                "dose": "16mg/80mg",
+                "volume": "2.0 mL",
+                "cumulative": "16mg/80mg"
+              },
+              {
+                "dose": "64mg/320mg",
+                "volume": "8.0 mL",
+                "cumulative": "80mg/400mg"
+              },
+              {
+                "dose": "80mg/400mg",
+                "volume": "10.0 mL",
+                "cumulative": "160mg/800mg"
+              }
+            ]
+          },
           "under_review": false,
           "review_note": "",
           "needs_pharmacy_verification": false
@@ -770,6 +898,39 @@
           "under_review": false,
           "review_note": "",
           "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "cefuroxime-suspension",
+      "title": "Cefuroxime Suspension",
+      "version": "1.0",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "suspension",
+          "label": "Suspension",
+          "test_type": "skin",
+          "presentation": "125mg/5mL",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "25mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.29mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": true
         }
       ]
     },
@@ -1940,6 +2101,40 @@
               "preparation": "0.1 mL of 15 mg/mL + 0.9 mL NS"
             }
           ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "meloxicam",
+      "title": "Meloxicam",
+      "version": "1.0",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "graded-challenge",
+          "label": "Graded Challenge",
+          "test_type": "challenge",
+          "presentation": "Tablet",
+          "challenge": {
+            "steps": [
+              {
+                "dose": "2.5mg",
+                "volume": "2.5 mL",
+                "cumulative": "2.5mg"
+              },
+              {
+                "dose": "5mg",
+                "volume": "5 mL",
+                "cumulative": "7.5mg"
+              }
+            ]
+          },
           "under_review": false,
           "review_note": "",
           "needs_pharmacy_verification": false
@@ -3197,6 +3392,45 @@
       ]
     },
     {
+      "slug": "sugammadex-rocuronium",
+      "title": "Sugammadex (+ Rocuronium)",
+      "version": "1.0",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Reversal Agents"
+      },
+      "protocols": [
+        {
+          "id": "rocuronium",
+          "label": "+ Rocuronium",
+          "test_type": "skin",
+          "presentation": "Mix with Rocuronium 1:1",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100mg/10mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.1mg/0.01mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "1mg/0.1mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "sugammadex",
       "title": "Sugammadex",
       "version": "1.3",
@@ -3503,6 +3737,45 @@
       ]
     },
     {
+      "slug": "trimethoprim",
+      "title": "Trimethoprim",
+      "version": "1.0",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "oral-graded-challenge",
+          "label": "Oral Graded Challenge",
+          "test_type": "challenge",
+          "presentation": "Suspension",
+          "challenge": {
+            "steps": [
+              {
+                "dose": "20mg",
+                "volume": "2 mL",
+                "cumulative": "20mg"
+              },
+              {
+                "dose": "100mg",
+                "volume": "10 mL",
+                "cumulative": "120mg"
+              },
+              {
+                "dose": "200mg",
+                "volume": "20 mL",
+                "cumulative": "320mg"
+              }
+            ]
+          },
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "ultravist",
       "title": "Ultravist",
       "version": "1.2",
@@ -3716,6 +3989,45 @@
               "preparation": "0.1 mL neat + 0.9 mL NS"
             }
           ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "voltaren-diclofenac",
+      "title": "Voltaren (Diclofenac)",
+      "version": "1.0",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "graded-challenge",
+          "label": "Graded Challenge",
+          "test_type": "challenge",
+          "presentation": "Tablet",
+          "challenge": {
+            "steps": [
+              {
+                "dose": "25mg",
+                "volume": "1 tablet",
+                "cumulative": "25mg"
+              },
+              {
+                "dose": "50mg",
+                "volume": "1 tablet",
+                "cumulative": "75mg"
+              },
+              {
+                "dose": "100mg",
+                "volume": "2 tablets",
+                "cumulative": "175mg"
+              }
+            ]
+          },
           "under_review": false,
           "review_note": "",
           "needs_pharmacy_verification": false
