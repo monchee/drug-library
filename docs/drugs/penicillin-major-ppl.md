@@ -3,7 +3,27 @@ title: Penicillin Major (PPL)
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+
+dream:
+  category: Penicillins
+  drug_name: 'Penicillin Major'
+protocols:
+  - id: ppl
+    label: 'PPL'
+    test_type: skin
+    presentation: 'PPL'
+    diluent: 'Phosphate-buffered saline (1 mL supplied diluent — not plain saline)'
+    spt:
+      dilution: 'Neat'
+      concentration: '0.04mg/20.00mg/mL'
+    idt:
+      - dilution: '1:10'
+        concentration: '0.004mg/2mg'
+      - dilution: 'Neat'
+        concentration: '0.04mg/20.00mg'
+    under_review: false
+    review_note: ''
 ---
 
 # Penicillin Major (PPL)
@@ -38,11 +58,8 @@ version: 1.1
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (0.04/20.00 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+
+<!-- scratch:spt:ppl -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -51,14 +68,10 @@ version: 1.1
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:10 | 0.004/2 mg per mL | 0.1 mL neat + 0.9 mL normal saline |
-| 2 | Neat | 0.04/20.00 mg per mL | Undiluted |
+
+<!-- scratch:idt:ppl -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
-
----
 
 ## Notes
 - Use phosphate-buffered saline as diluent — not plain normal saline.

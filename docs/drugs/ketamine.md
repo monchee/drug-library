@@ -3,7 +3,41 @@ title: Ketamine
 tags: [iv, spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.2
+version: 1.3
+
+dream:
+  category: Hypnotics
+protocols:
+  - id: 1-1000-start
+    label: '1:1,000 start'
+    test_type: skin
+    presentation: '100mg/mL'
+    diluent: '0.9% sodium chloride'
+    spt:
+      dilution: 'Neat'
+      concentration: '100mg/mL'
+    idt:
+      - dilution: '1:1,000'
+        concentration: '0.1mg/mL'
+      - dilution: '1:100'
+        concentration: '1mg/mL'
+      - dilution: '1:10'
+        concentration: '10mg/mL'
+    under_review: false
+    review_note: ''
+  - id: 1-100-start
+    label: '1:100 start'
+    test_type: skin
+    presentation: '100mg/mL'
+    diluent: '0.9% sodium chloride'
+    spt:
+      dilution: 'Neat'
+      concentration: '100mg/mL'
+    idt:
+      - dilution: '1:1,000'
+        concentration: '0.1mg/mL'
+    under_review: false
+    review_note: ''
 ---
 
 # Ketamine
@@ -50,11 +84,16 @@ Prepare the following, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (100 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+
+### Variant 1: 1:1,000 start
+
+<!-- scratch:spt:1-1000-start -->
+
+**Interpretation:** Wheal ≥3 mm vs negative control = positive.
+
+### Variant 2: 1:100 start
+
+<!-- scratch:spt:1-100-start -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -62,14 +101,17 @@ Prepare the following, using a fresh syringe for each step.
 
 ## Intradermal test (IDT)
 
-### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:1,000 | 0.1 mg/mL | 0.1 mL of 1 mg/mL + 0.9 mL NS |
+### Variant 1: 1:1,000 start
+
+<!-- scratch:idt:1-1000-start -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 
----
+### Variant 2: 1:100 start
+
+<!-- scratch:idt:1-100-start -->
+
+**Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 
 ## Notes
 - **Spreadsheet 1 (authoritative):** IDT at 1:1,000 only.

@@ -3,7 +3,35 @@ title: Metacresol
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.0
+version: 1.1
+
+dream:
+  category: Others
+protocols:
+  - id: 1-1000-start
+    label: '1:1,000 start'
+    test_type: skin
+    presentation: '1034mg/mL'
+    diluent: '0.9% sodium chloride'
+    spt:
+      concentration: '1.5mg/mL'
+    idt:
+      - dilution: '1:20'
+        concentration: '0.075mg/mL'
+    under_review: false
+    review_note: ''
+  - id: 1-100-start
+    label: '1:100 start'
+    test_type: skin
+    presentation: '1034mg/mL'
+    diluent: '0.9% sodium chloride'
+    spt:
+      concentration: '3mg/mL'
+    idt:
+      - dilution: '1:20'
+        concentration: '0.15mg/mL'
+    under_review: false
+    review_note: ''
 ---
 
 # Metacresol
@@ -51,11 +79,16 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | 3 mg/mL (diluted) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+
+### Variant 1: 1:1,000 start
+
+<!-- scratch:spt:1-1000-start -->
+
+**Interpretation:** Wheal ≥3 mm vs negative control = positive.
+
+### Variant 2: 1:100 start
+
+<!-- scratch:spt:1-100-start -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -63,9 +96,15 @@ Prepare in this order, using a fresh syringe for each step.
 
 ## Intradermal test (IDT)
 
-### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:20 | 0.15 mg/mL | 0.1 mL of 3 mg/mL + 1.9 mL NS |
+### Variant 1: 1:1,000 start
+
+<!-- scratch:idt:1-1000-start -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
+
+### Variant 2: 1:100 start
+
+<!-- scratch:idt:1-100-start -->
+
+**Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
+

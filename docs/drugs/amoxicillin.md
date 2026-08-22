@@ -3,7 +3,42 @@ title: Amoxicillin
 tags: [spt, idt, oral]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.2
+version: 1.3
+
+dream:
+  category: Penicillins
+  drug_name: 'Amoxycillin'
+protocols:
+  - id: neat-spt
+    label: 'Neat SPT'
+    test_type: skin
+    presentation: '1g'
+    diluent: '0.9% sodium chloride (reconstitute with 5 mL WFI)'
+    spt:
+      dilution: 'Neat'
+      concentration: '100mg/mL'
+    idt:
+      - dilution: '1:100'
+        concentration: '1mg/mL'
+      - dilution: '1:10'
+        concentration: '10mg/mL'
+    under_review: false
+    review_note: ''
+  - id: 1-5-spt
+    label: '1:5 SPT'
+    test_type: skin
+    presentation: '1g'
+    diluent: '0.9% sodium chloride (reconstitute with 5 mL WFI)'
+    spt:
+      dilution: '1:5'
+      concentration: '20mg/mL'
+    idt:
+      - dilution: '1:10'
+        concentration: '10mg/mL'
+      - dilution: '1:5'
+        concentration: '20mg/mL'
+    under_review: false
+    review_note: ''
 ---
 
 # Amoxicillin
@@ -56,11 +91,16 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | 1:5 (20 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+
+### Variant 1: Neat SPT
+
+<!-- scratch:spt:neat-spt -->
+
+**Interpretation:** Wheal ≥3 mm vs negative control = positive.
+
+### Variant 2: 1:5 SPT
+
+<!-- scratch:spt:1-5-spt -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -68,30 +108,17 @@ Prepare in this order, using a fresh syringe for each step.
 
 ## Intradermal test (IDT)
 
-### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:10 | 10 mg/mL | 0.1 mL of stock (100 mg/mL) + 0.9 mL NS |
-| 2 | 1:5 | 20 mg/mL | 0.2 mL of stock (100 mg/mL) + 0.8 mL NS |
+### Variant 1: Neat SPT
 
-**Inject:** 0.02–0.05 mL intradermal. Read at 15–20 minutes.
+<!-- scratch:idt:neat-spt -->
 
----
+**Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 
-## Challenge (oral)
+### Variant 2: 1:5 SPT
 
-### Oral graded dose protocol
-**Preparation:** Amoxicillin oral suspension 125 mg/5 mL (25 mg/mL)
+<!-- scratch:idt:1-5-spt -->
 
-| Step | Dose | Volume | Interval |
-|---|---|---|---|
-| 1 | 12.5 mg | 0.5 mL | 20 min |
-| 2 | 25 mg | 1 mL | 20 min |
-| 3 | 50 mg | 2 mL | 20 min |
-| 4 | 125 mg | 5 mL | 20 min |
-| 5 | 250 mg | 10 mL | 60 min observation |
-
----
+**Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 
 ## Notes
 - Observe a minimum of 30–60 minutes after the final dose.

@@ -3,7 +3,27 @@ title: Penicillin Minor Determinant (MD)
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+
+dream:
+  category: Penicillins
+  drug_name: 'Penicillin Minor'
+protocols:
+  - id: md
+    label: 'MD'
+    test_type: skin
+    presentation: 'MD (Sodium Benzylpenilloate/Mannitol)'
+    diluent: 'Phosphate-buffered saline (1 mL supplied diluent — not plain saline)'
+    spt:
+      dilution: 'Neat'
+      concentration: '0.50mg/20.00mg/mL'
+    idt:
+      - dilution: '1:10'
+        concentration: '0.05mg/2.00mg'
+      - dilution: 'Neat'
+        concentration: '0.50mg/20.00mg'
+    under_review: false
+    review_note: ''
 ---
 
 # Penicillin Minor Determinant (MD)
@@ -38,11 +58,8 @@ version: 1.1
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (0.50/20.00 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+
+<!-- scratch:spt:md -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
@@ -51,14 +68,10 @@ version: 1.1
 ## Intradermal test (IDT)
 
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:10 | 0.05/2.00 mg per mL | 0.1 mL neat + 0.9 mL normal saline |
-| 2 | Neat | 0.50/20.00 mg per mL | Used for SPT and IDT final step |
+
+<!-- scratch:idt:md -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
-
----
 
 ## Notes
 - MD is critical for identifying patients with penicillin allergy who may be missed by PPL and Benzylpenicillin alone.

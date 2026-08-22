@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-08-20T23:24:09Z",
-  "source_commit": "2f820d8",
+  "generated_at": "2026-08-22T09:47:51Z",
+  "source_commit": "9b5ee12",
   "drugs": [
     {
       "slug": "actrapid",
@@ -78,6 +78,262 @@
       ]
     },
     {
+      "slug": "amoxicillin",
+      "title": "Amoxicillin",
+      "version": "1.3",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Penicillins",
+        "drug_name": "Amoxycillin"
+      },
+      "protocols": [
+        {
+          "id": "neat-spt",
+          "label": "Neat SPT",
+          "test_type": "skin",
+          "presentation": "1g",
+          "diluent": "0.9% sodium chloride (reconstitute with 5 mL WFI)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "1mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "10mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "1-5-spt",
+          "label": "1:5 SPT",
+          "test_type": "skin",
+          "presentation": "1g",
+          "diluent": "0.9% sodium chloride (reconstitute with 5 mL WFI)",
+          "spt": {
+            "dilution": "1:5",
+            "concentration": "20mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:10",
+              "concentration": "10mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:5",
+              "concentration": "20mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "ampicillin",
+      "title": "Ampicillin",
+      "version": "1.3",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Penicillins"
+      },
+      "protocols": [
+        {
+          "id": "neat-spt",
+          "label": "Neat SPT",
+          "test_type": "skin",
+          "presentation": "1g",
+          "diluent": "0.9% sodium chloride (reconstitute with 5 mL WFI)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "1mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "10mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:50",
+              "concentration": "2mg/0.2mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "1-5-spt",
+          "label": "1:5 SPT",
+          "test_type": "skin",
+          "presentation": "1g",
+          "diluent": "0.9% sodium chloride (reconstitute with 5 mL WFI)",
+          "spt": {
+            "dilution": "1:5",
+            "concentration": "20mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:10",
+              "concentration": "10mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:5",
+              "concentration": "20mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.06mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "control",
+          "label": "Control",
+          "test_type": "control",
+          "presentation": "1g",
+          "diluent": "0.9% sodium chloride (reconstitute with 5 mL WFI)",
+          "spt": {
+            "dilution": "1:5",
+            "concentration": "20mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:10",
+              "concentration": "10mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:5",
+              "concentration": "20mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.02mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "augmentin",
+      "title": "Augmentin (Amoxicillin / Clavulanate)",
+      "version": "1.3",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Penicillins",
+        "drug_name": "Augmentin"
+      },
+      "protocols": [
+        {
+          "id": "1-1000-start",
+          "label": "1:1,000 start",
+          "test_type": "skin",
+          "presentation": "2000mg/200mg",
+          "diluent": "0.9% sodium chloride (reconstitute with 50 mL WFI)",
+          "spt": {
+            "dilution": "1:5",
+            "concentration": "20mg/2mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:50",
+              "concentration": "2mg/0.2mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:5",
+              "concentration": "20mg/2mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.06mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "1-100-start",
+          "label": "1:100 start",
+          "test_type": "skin",
+          "presentation": "2000mg/200mg",
+          "diluent": "0.9% sodium chloride (reconstitute with 50 mL WFI)",
+          "spt": {
+            "dilution": "1:5",
+            "concentration": "20mg/2mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:50",
+              "concentration": "2mg/0.2mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:5",
+              "concentration": "20mg/2mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.2mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "azithromycin",
       "title": "Azithromycin",
       "version": "1.1",
@@ -108,6 +364,106 @@
               "dilution": "1:1,000",
               "concentration": "0.1 mg/mL",
               "preparation": "0.1 mL of 10 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "benzylpenicillin",
+      "title": "Benzylpenicillin",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Penicillins"
+      },
+      "protocols": [
+        {
+          "id": "1-1000-start",
+          "label": "1:1,000 start",
+          "test_type": "skin",
+          "presentation": "600mg",
+          "diluent": "0.9% sodium chloride (reconstitute with 1.6 mL)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "6mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.06mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "0.6mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "1-100-start",
+          "label": "1:100 start",
+          "test_type": "skin",
+          "presentation": "600mg",
+          "diluent": "0.9% sodium chloride (reconstitute with 1.6 mL)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "6mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.06mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "0.6mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:50",
+              "concentration": "2mg/0.2mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "control",
+          "label": "Control",
+          "test_type": "control",
+          "presentation": "600mg",
+          "diluent": "0.9% sodium chloride (reconstitute with 1.6 mL)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "6mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.06mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "0.6mg/mL",
+              "preparation": ""
             }
           ],
           "under_review": false,
@@ -1059,6 +1415,73 @@
       ]
     },
     {
+      "slug": "ketamine",
+      "title": "Ketamine",
+      "version": "1.3",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Hypnotics"
+      },
+      "protocols": [
+        {
+          "id": "1-1000-start",
+          "label": "1:1,000 start",
+          "test_type": "skin",
+          "presentation": "100mg/mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.1mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "1mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "10mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "1-100-start",
+          "label": "1:100 start",
+          "test_type": "skin",
+          "presentation": "100mg/mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.1mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "lansoprazole",
       "title": "Lansoprazole",
       "version": "1.2",
@@ -1260,6 +1683,61 @@
       ]
     },
     {
+      "slug": "metacresol",
+      "title": "Metacresol",
+      "version": "1.1",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Others"
+      },
+      "protocols": [
+        {
+          "id": "1-1000-start",
+          "label": "1:1,000 start",
+          "test_type": "skin",
+          "presentation": "1034mg/mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "concentration": "1.5mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:20",
+              "concentration": "0.075mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "1-100-start",
+          "label": "1:100 start",
+          "test_type": "skin",
+          "presentation": "1034mg/mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "concentration": "3mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:20",
+              "concentration": "0.15mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "methylprednisolone",
       "title": "Methylprednisolone",
       "version": "1.2",
@@ -1397,6 +1875,73 @@
               "dilution": "1:100",
               "concentration": "0.01 mg/mL",
               "preparation": "0.1 mL of 0.1 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "morphine",
+      "title": "Morphine",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Opioids"
+      },
+      "protocols": [
+        {
+          "id": "1-1000-start",
+          "label": "1:1,000 start",
+          "test_type": "skin",
+          "presentation": "10mg/mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "1:10",
+            "concentration": "1mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100,000",
+              "concentration": "0.0001mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.0005mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "1-100-start",
+          "label": "1:100 start",
+          "test_type": "skin",
+          "presentation": "10mg/mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "1:10",
+            "concentration": "1mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100,000",
+              "concentration": "0.0001mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.01mg/mL",
+              "preparation": ""
             }
           ],
           "under_review": false,
@@ -1849,6 +2394,163 @@
       ]
     },
     {
+      "slug": "penicillin-major-ppl",
+      "title": "Penicillin Major (PPL)",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Penicillins",
+        "drug_name": "Penicillin Major"
+      },
+      "protocols": [
+        {
+          "id": "ppl",
+          "label": "PPL",
+          "test_type": "skin",
+          "presentation": "PPL",
+          "diluent": "Phosphate-buffered saline (1 mL supplied diluent — not plain saline)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "0.04mg/20.00mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:10",
+              "concentration": "0.004mg/2mg",
+              "preparation": ""
+            },
+            {
+              "dilution": "Neat",
+              "concentration": "0.04mg/20.00mg",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "penicillin-minor-md",
+      "title": "Penicillin Minor Determinant (MD)",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Penicillins",
+        "drug_name": "Penicillin Minor"
+      },
+      "protocols": [
+        {
+          "id": "md",
+          "label": "MD",
+          "test_type": "skin",
+          "presentation": "MD (Sodium Benzylpenilloate/Mannitol)",
+          "diluent": "Phosphate-buffered saline (1 mL supplied diluent — not plain saline)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "0.50mg/20.00mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:10",
+              "concentration": "0.05mg/2.00mg",
+              "preparation": ""
+            },
+            {
+              "dilution": "Neat",
+              "concentration": "0.50mg/20.00mg",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "povidone-iodine",
+      "title": "Povidone Iodine",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Antiseptics"
+      },
+      "protocols": [
+        {
+          "id": "1-1000-start",
+          "label": "1:1,000 start",
+          "test_type": "skin",
+          "presentation": "10% w/v",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:10,000",
+              "concentration": "0.01mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.1mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "1mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "1-100-start",
+          "label": "1:100 start",
+          "test_type": "skin",
+          "presentation": "10% w/v",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "100mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:10,000",
+              "concentration": "0.01mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.1mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "1mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "propofol",
       "title": "Propofol",
       "version": "1.2",
@@ -1994,6 +2696,78 @@
       ]
     },
     {
+      "slug": "remifentanil",
+      "title": "Remifentanil",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Opioids"
+      },
+      "protocols": [
+        {
+          "id": "1-1000-start",
+          "label": "1:1,000 start",
+          "test_type": "skin",
+          "presentation": "1mg",
+          "diluent": "0.9% sodium chloride (reconstitute with 20 mL WFI)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "0.05mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.0005mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "0.005mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "1-100-start",
+          "label": "1:100 start",
+          "test_type": "skin",
+          "presentation": "1mg",
+          "diluent": "0.9% sodium chloride (reconstitute with 20 mL WFI)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "0.05mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:100",
+              "concentration": "0.0005mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "0.005mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.01mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
       "slug": "rocuronium",
       "title": "Rocuronium",
       "version": "1.4",
@@ -2024,6 +2798,83 @@
               "dilution": "1:100",
               "concentration": "0.1 mg/mL",
               "preparation": "0.1 mL of 1 mg/mL + 0.9 mL NS"
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "ropivacaine",
+      "title": "Ropivacaine",
+      "version": "1.3",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Local Anaesthetics"
+      },
+      "protocols": [
+        {
+          "id": "epidural-1",
+          "label": "Epidural Protocol 1",
+          "test_type": "skin",
+          "presentation": "40mg/20mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "2mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.002mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.02mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "0.2mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "Neat",
+              "concentration": "2mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "epidural-2",
+          "label": "Epidural Protocol 2",
+          "test_type": "skin",
+          "presentation": "40mg/20mL",
+          "diluent": "0.9% sodium chloride",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "2mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:10",
+              "concentration": "0.2mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "Neat",
+              "concentration": "2mg/mL",
+              "preparation": ""
             }
           ],
           "under_review": false,
@@ -2145,6 +2996,83 @@
           ],
           "under_review": true,
           "review_note": "Concentration discrepancy: Medication List specifies SPT at 1:10 (2 mg/mL Piperacillin), whereas calculation of 1:10 of 200 mg/mL gives 20 mg/mL. Concentration under clinical review.",
+          "needs_pharmacy_verification": false
+        }
+      ]
+    },
+    {
+      "slug": "thiopental",
+      "title": "Thiopental",
+      "version": "1.2",
+      "last_reviewed": "2026-03-28",
+      "dream": {
+        "category": "Hypnotics"
+      },
+      "protocols": [
+        {
+          "id": "1-1000-start",
+          "label": "1:1,000 start",
+          "test_type": "skin",
+          "presentation": "25mg/mL",
+          "diluent": "0.9% sodium chloride (reconstitute with 20 mL WFI or saline)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "25mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.025mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.25mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "2.5mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
+          "needs_pharmacy_verification": false
+        },
+        {
+          "id": "1-100-start",
+          "label": "1:100 start",
+          "test_type": "skin",
+          "presentation": "25mg/mL",
+          "diluent": "0.9% sodium chloride (reconstitute with 20 mL WFI or saline)",
+          "spt": {
+            "dilution": "Neat",
+            "concentration": "25mg/mL",
+            "positive_control": "Histamine 10 mg/mL",
+            "negative_control": "Normal saline"
+          },
+          "idt": [
+            {
+              "dilution": "1:1,000",
+              "concentration": "0.025mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:100",
+              "concentration": "0.25mg/mL",
+              "preparation": ""
+            },
+            {
+              "dilution": "1:10",
+              "concentration": "2.5mg/mL",
+              "preparation": ""
+            }
+          ],
+          "under_review": false,
+          "review_note": "",
           "needs_pharmacy_verification": false
         }
       ]
