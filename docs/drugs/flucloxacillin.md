@@ -2,8 +2,8 @@
 title: Flucloxacillin
 tags: [spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
-last_reviewed: 2026-03-28
-version: 1.2
+last_reviewed: 2026-08-22
+version: 1.3
 dream:
   category: Penicillins
 protocols:
@@ -21,6 +21,24 @@ protocols:
       - dilution: '1:10'
         concentration: 2 mg/mL
         preparation: 0.1 mL neat (20mg/ml) + 0.9 mL NS
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: false
+  - id: oral-graded-challenge
+    label: 'Oral Graded Challenge'
+    test_type: challenge
+    presentation: '125mg/5mL suspension'
+    challenge:
+      steps:
+        - dose: '50mg'
+          volume: '2 mL'
+          cumulative: '50mg'
+        - dose: '125mg'
+          volume: '5 mL'
+          cumulative: '175mg'
+        - dose: '325mg'
+          volume: '13 mL'
+          cumulative: '500mg'
     under_review: false
     review_note: ''
     needs_pharmacy_verification: false
@@ -93,3 +111,9 @@ protocols:
 *Note: The dilution ratios are relative to the 2 mg/mL IDT starting concentration.*
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
+
+---
+
+## Oral graded challenge
+
+<!-- scratch:challenge:oral-graded-challenge -->
