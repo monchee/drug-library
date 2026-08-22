@@ -3,7 +3,45 @@ title: Ciprofloxacin
 tags: [spt, oral, iv]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Others
+protocols:
+  - id: iv
+    label: 'IV'
+    test_type: skin
+    presentation: '200mg/100mL'
+    diluent: '0.9% sodium chloride'
+    spt:
+      dilution: 'Neat'
+      concentration: '2mg/mL'
+    idt:
+      - dilution: '1:100'
+        concentration: '0.04mg/mL'
+    under_review: false
+    review_note: ''
+  - id: oral-graded-challenge
+    label: 'Oral Graded Challenge'
+    test_type: challenge
+    presentation: 'Oral suspension'
+    diluent: ''
+    spt:
+    challenge:
+      steps:
+        - dose: '50mg'
+          volume: '1 mL'
+          cumulative: '50mg'
+        - dose: '125mg'
+          volume: '2.5 mL'
+          cumulative: '175mg'
+        - dose: '250mg'
+          volume: '5 mL'
+          cumulative: '425mg'
+        - dose: '500mg'
+          volume: '10 mL'
+          cumulative: '925mg'
+    under_review: false
+    review_note: ''
 ---
 
 # Ciprofloxacin
@@ -36,13 +74,21 @@ version: 1.1
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (2 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt:iv -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
+
+---
+
+## Intradermal test (IDT)
+
+### Dilution series
+
+<!-- scratch:idt:iv -->
+
+**Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
+
+---
 
 ---
 
@@ -53,12 +99,6 @@ version: 1.1
     Use **Ciprofloxacin 50 mg/mL Suspension** for precise dosing in oral challenges.
 
 ### Protocol
-| Step | Dose | Volume (Suspension) | Cumulative Dose |
-|---|---|---|---|
-| 1 | 25 mg | 0.5 mL | 25 mg |
-| 2 | 50 mg | 1.0 mL | 75 mg |
-| 3 | 100 mg | 2.0 mL | 175 mg |
-| 4 | 250 mg | 5.0 mL | 425 mg |
-
+<!-- scratch:challenge:oral-graded-challenge -->
 **Interval:** 20 minutes between steps.
 **Final Step:** Consider a full therapeutic dose (e.g., 500 mg tablet) if earlier steps are negative.
