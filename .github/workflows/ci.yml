@@ -92,17 +92,9 @@ jobs:
         run: |
           python scripts/export_protocols.py --check
 
-      - name: Build MkDocs site
-        run: |
-          mkdocs build --strict
-
       - name: Build Astro site
         run: |
           npx astro build
-
-      - name: Compare MkDocs and Astro rendered outputs
-        run: |
-          python scripts/compare_builds.py
 
       - name: Clinical sign-off gate (version bump on protocol change, date bump on dose change)
         if: github.event_name == 'pull_request'

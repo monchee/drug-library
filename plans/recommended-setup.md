@@ -1,3 +1,5 @@
+> **HISTORICAL (2026-08-22):** This document describes the original MkDocs/MaterialX setup. SCRATCH now builds with Astro/Starlight; the MkDocs pipeline was retired after the production cutover (PRs #15–#19). Kept for provenance.
+
 # Recommended Setup & Plugins for Drug Library
 
 ## Current State Summary
