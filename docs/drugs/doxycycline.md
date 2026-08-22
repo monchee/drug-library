@@ -3,7 +3,57 @@ title: Doxycycline
 tags: [spt, oral, iv]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Others
+protocols:
+  - id: 1-1000-start
+    label: '1:1,000 start'
+    test_type: skin
+    presentation: '100mg'
+    diluent: '0.9% sodium chloride (reconstitute with 10 mL WFI or saline)'
+    spt:
+      dilution: 'Neat'
+      concentration: '10mg/mL'
+    idt:
+      - dilution: '1:10,000'
+        concentration: '0.001mg/mL'
+      - dilution: '1:1,000'
+        concentration: '0.01mg/mL'
+      - dilution: '1:100'
+        concentration: '0.05mg/mL'
+    under_review: false
+    review_note: ''
+  - id: 1-100-start
+    label: '1:100 start'
+    test_type: skin
+    presentation: '100mg'
+    diluent: '0.9% sodium chloride (reconstitute with 10 mL WFI or saline)'
+    spt:
+      dilution: 'Neat'
+      concentration: '10mg/mL'
+    idt:
+      - dilution: '1:10,000'
+        concentration: '0.001mg/mL'
+      - dilution: '1:1,000'
+        concentration: '0.01mg/mL'
+      - dilution: '1:100'
+        concentration: '0.02mg/mL'
+    under_review: false
+    review_note: ''
+  - id: oral-graded-challenge
+    label: 'Oral Graded Challenge'
+    test_type: challenge
+    presentation: 'Oral'
+    diluent: ''
+    spt:
+    challenge:
+      steps:
+        - dose: '10mg'
+        - dose: '25mg'
+        - dose: '75mg'
+    under_review: false
+    review_note: ''
 ---
 
 # Doxycycline
@@ -59,25 +109,32 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (10 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+### Variant 1: 1:1,000 start
+
+<!-- scratch:spt:1-1000-start -->
+
+**Interpretation:** Wheal ≥3 mm vs negative control = positive.
+
+
+### Variant 2: 1:100 start
+
+<!-- scratch:spt:1-100-start -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
 ---
 
 ## Intradermal test (IDT)
+### Variant 1: 1:1,000 start
 
-### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:10,000 | 0.001 mg/mL | 0.1 mL of 0.01 mg/mL + 0.9 mL NS |
-| 2 | 1:1,000 | 0.01 mg/mL | 0.1 mL of 0.1 mg/mL + 0.9 mL NS |
-| 3 | 1:100 | 0.1 mg/mL | 0.1 mL of 1 mg/mL + 0.9 mL NS |
-| 4 | 1:10 | 1 mg/mL | 0.1 mL neat + 0.9 mL NS |
+<!-- scratch:idt:1-1000-start -->
+
+**Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
+
+
+### Variant 2: 1:100 start
+
+<!-- scratch:idt:1-100-start -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 
@@ -87,10 +144,5 @@ Prepare in this order, using a fresh syringe for each step.
 *Using APO-Doxycycline 100 mg tablets.*
 
 ### Protocol
-| Step | Dose | Formulation | Cumulative Dose |
-|---|---|---|---|
-| 1 | 25 mg | 1/4 Tablet | 25 mg |
-| 2 | 50 mg | 1/2 Tablet | 75 mg |
-| 3 | 100 mg | 1 Tablet | 175 mg |
-
+<!-- scratch:challenge:oral-graded-challenge -->
 **Interval:** 20 minutes between steps.

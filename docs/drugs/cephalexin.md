@@ -3,7 +3,50 @@ title: Cephalexin
 tags: [oral, spt, idt]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.2
+version: 1.3
+dream:
+  category: Penicillins
+protocols:
+  - id: iv
+    label: 'IV'
+    test_type: skin
+    presentation: '2mg/mL'
+    diluent: '0.9% sodium chloride'
+    spt:
+      dilution: 'Neat'
+      concentration: '2mg/mL'
+    idt:
+      - dilution: '1:100'
+        concentration: '0.02mg/mL'
+      - dilution: '1:10'
+        concentration: '0.2mg/mL'
+      - dilution: 'Neat'
+        concentration: '2mg/mL'
+    under_review: false
+    review_note: ''
+    needs_pharmacy_verification: true
+  - id: oral-graded-challenge
+    label: 'Oral Graded Challenge'
+    test_type: challenge
+    presentation: '125mg/5mL suspension'
+    diluent: ''
+    spt:
+    challenge:
+      steps:
+        - dose: '25mg'
+          volume: '1.0 mL'
+          cumulative: '25mg'
+        - dose: '50mg'
+          volume: '2.0 mL'
+          cumulative: '75mg'
+        - dose: '100mg'
+          volume: '4.0 mL'
+          cumulative: '175mg'
+        - dose: '250mg'
+          volume: '10 mL'
+          cumulative: '425mg'
+    under_review: false
+    review_note: ''
 ---
 
 # Cephalexin
@@ -49,24 +92,16 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (2 mg/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+<!-- scratch:spt:iv -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
 ---
 
 ## Intradermal test (IDT)
-
 ### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:100 | 0.02 mg/mL | 0.1 mL of 0.2 mg/mL + 0.9 mL NS |
-| 2 | 1:10 | 0.2 mg/mL | 0.1 mL neat + 0.9 mL NS |
-| 3 | Neat | 2 mg/mL | Undiluted stock |
+
+<!-- scratch:idt:iv -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
 
@@ -84,13 +119,7 @@ Prepare in this order, using a fresh syringe for each step.
 ### Step-by-step Challenge Protocol
 
 #### Using 125 mg/5 mL (25 mg/mL) Suspension:
-| Step | Dose | Volume | Cumulative Dose |
-|---|---|---|---|
-| 1 | 25 mg | 1.0 mL | 25 mg |
-| 2 | 50 mg | 2.0 mL | 75 mg |
-| 3 | 100 mg | 4.0 mL | 175 mg |
-| 4 | 250 mg | 10.0 mL | 425 mg |
-
+<!-- scratch:challenge:oral-graded-challenge -->
 ---
 
 ## Challenge Protocol

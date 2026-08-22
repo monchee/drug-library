@@ -3,7 +3,38 @@ title: Ultravist
 tags: [spt, idt, iv]
 reviewed_by: RPAH Clinical Immunology & Allergy
 last_reviewed: 2026-03-28
-version: 1.1
+version: 1.2
+dream:
+  category: Others
+protocols:
+  - id: iv-contrast
+    label: 'IV Contrast'
+    test_type: skin
+    presentation: '46.76g/75mL'
+    diluent: '0.9% sodium chloride'
+    spt:
+      dilution: 'Neat'
+    idt:
+      - dilution: '1:100'
+        concentration: ''
+      - dilution: '1:10'
+        concentration: ''
+    under_review: false
+    review_note: ''
+  - id: control
+    label: 'Control'
+    test_type: control
+    presentation: '46.76g/75mL'
+    diluent: '0.9% sodium chloride'
+    spt:
+      dilution: 'Neat'
+    idt:
+      - dilution: '1:100'
+        concentration: ''
+      - dilution: '1:10'
+        concentration: ''
+    under_review: false
+    review_note: ''
 ---
 
 # Ultravist (Iopromide)
@@ -47,23 +78,31 @@ Prepare in this order, using a fresh syringe for each step.
 ---
 
 ## Skin prick test (SPT)
-| Reagent | Concentration |
-|---|---|
-| Test solution | Neat (300 mg I/mL) |
-| Positive control | Histamine 10 mg/mL |
-| Negative control | Normal saline |
+### Variant 1: IV Contrast
+
+<!-- scratch:spt:iv-contrast -->
+
+**Interpretation:** Wheal ≥3 mm vs negative control = positive.
+
+
+### Variant 2: Control (control)
+
+<!-- scratch:spt:control -->
 
 **Interpretation:** Wheal ≥3 mm vs negative control = positive.
 
 ---
 
 ## Intradermal test (IDT)
+### Variant 1: IV Contrast
 
-### Dilution series
-| Step | Dilution | Concentration | Preparation |
-|---|---|---|---|
-| 1 | 1:100 | 3 mg I/mL | 0.1 mL of 1:10 + 0.9 mL NS |
-| 2 | 1:10 | 30 mg I/mL | 0.1 mL neat + 0.9 mL NS |
+<!-- scratch:idt:iv-contrast -->
 
 **Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
-**Delayed Reading:** If history is suggestive of a delayed reaction, re-read at 24 and 48 hours.
+
+
+### Variant 2: Control (control)
+
+<!-- scratch:idt:control -->
+
+**Inject:** 0.05 mL intradermal. Read at 15–20 minutes.
