@@ -83,6 +83,7 @@ export default defineConfig({
             {
               label: 'Penicillins',
               items: [
+                  { label: 'Methoxybenzylpenicillin', slug: 'drugs/methoxybenzylpenicillin' },
                   { label: 'Amoxycillin Suspension', slug: 'drugs/amoxycillin-suspension' },
                   { label: 'Amoxycillin/Clavulanic Acid', slug: 'drugs/amoxycillin-clavulanic-acid' },
                 { label: 'Amoxicillin', slug: 'drugs/amoxicillin' },
@@ -257,6 +258,9 @@ export default defineConfig({
             {
               label: 'Other',
               items: [
+                  { label: 'Atropine', slug: 'drugs/atropine' },
+                  { label: 'IV Contrast', slug: 'drugs/iv-contrast' },
+                  { label: 'Methylene Blue', slug: 'drugs/methylene-blue' },
                 { label: 'Chlorhexidine', slug: 'drugs/chlorhexidine' },
                 { label: 'Latex', slug: 'drugs/latex' },
                 { label: 'Metacresol', slug: 'drugs/metacresol' },
